@@ -92,7 +92,7 @@ author_profile: true
 
 ✅   [https://github.com/changsikkwon/Service-backend](https://github.com/changsikkwon/Service-backend)
 
-[https://youtu.be/oJ5L4m9CAvk](https://youtu.be/oJ5L4m9CAvk)
+<iframe width="848" height="530" src="https://www.youtube.com/embed/oJ5L4m9CAvk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### **담당 기능**
 
@@ -145,7 +145,7 @@ Front-end 3명 Back-end2명이 한 팀이 되어 진행하였습니다.
 
 ✅   [https://github.com/changsikkwon/2nd-project](https://github.com/changsikkwon/2nd-project)
 
-[https://www.youtube.com/watch?v=qiS5dv2H8Yo](https://www.youtube.com/watch?v=qiS5dv2H8Yo)
+<iframe width="848" height="530" src="https://www.youtube.com/embed/qiS5dv2H8Yo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### **담당 기능**
 
@@ -192,7 +192,7 @@ Front-end 4명 Back-end2명이 한 팀이 되어 진행하였습니다.
 
 ✅   [https://github.com/changsikkwon/1st-project](https://github.com/changsikkwon/1st-project)
 
-[https://www.youtube.com/watch?v=f84czHkMht8&feature=youtu.be](https://www.youtube.com/watch?v=f84czHkMht8&feature=youtu.be)
+<iframe width="848" height="517" src="https://www.youtube.com/embed/f84czHkMht8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### **담당 기능**
 
