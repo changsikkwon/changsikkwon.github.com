@@ -10,7 +10,7 @@ page.url != "/" and site.breadcrumbs %} {% unless paginator %} {% include breadc
 
     <div class="archive">
         {% unless page.header.overlay_color or page.header.overlay_image %}
-        <h1 id="page-title" class="page__title">{{ page.title }}</h1>
+        <h1 id="page-title" class="page__title"></h1>
         {% endunless %} {{ content }} {%- assign search_provider = site.search_provider | default: "lunr" -%} {%- case search_provider -%}
         {%- when "lunr" -%}
         <input
