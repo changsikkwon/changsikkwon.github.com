@@ -21,7 +21,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "권창식"
 description              : "An amazing website."
-url                      : "https://changsikkwon.github.io/"
+url                      : "https://changsikkwon.github.io"
 # baseurl                  : "https://changsikkwon.github.io"
 repository               : "changsikkwon/changsikkwon.github.com"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
