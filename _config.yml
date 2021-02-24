@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
@@ -24,8 +24,8 @@ description              : "An amazing website."
 url                      : "https://changsikkwon.github.io"
 # baseurl                  : "https://changsikkwon.github.io"
 repository               : "changsikkwon/changsikkwon.github.com"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+teaser                   : #"http://ojsfile.ohmynews.com/STD_IMG_FILE/2020/0724/IE002669287_STD.jpg"
+logo                     : #"http://ojsfile.ohmynews.com/STD_IMG_FILE/2020/0724/IE002669287_STD.jpg"
 masthead_title           : "Changsik's Blog"
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
@@ -95,8 +95,8 @@ analytics:
 # Site Author
 author:
   name             : "권창식"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  avatar           : "https://gigazine.kr/data/editor/1803/2fcff996628470bf3ef7e3fe40202ba5_1521093171_407.jpg"
+  bio              : "개발 꿈나무"
   location         : "Republic of Korea"
   email            : "kcs15987@gmail.com"
   links:
