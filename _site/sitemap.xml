@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://changsikkwon.github.io/react/JSX-copy/</loc>
+<loc>https://changsikkwon.github.io/react/JSX/</loc>
 <lastmod>2021-02-24T00:00:00+09:00</lastmod>
 </url>
 <url>
@@ -9,7 +9,7 @@
 <lastmod>2021-02-24T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>https://changsikkwon.github.io/os/os%EB%9E%80/</loc>
+<loc>https://changsikkwon.github.io/os/what-is-os/</loc>
 <lastmod>2021-02-24T00:00:00+09:00</lastmod>
 </url>
 <url>
@@ -17,6 +17,9 @@
 </url>
 <url>
 <loc>https://changsikkwon.github.io/</loc>
+</url>
+<url>
+<loc>https://changsikkwon.github.io/search/</loc>
 </url>
 <url>
 <loc>https://changsikkwon.github.io/tags/</loc>

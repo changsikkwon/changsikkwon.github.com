@@ -1,0 +1,82 @@
+I"s<h2 id="jsx">JSX</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">hi</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Hi<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;;</span>
+</code></pre></div></div>
+
+<p>위의 문법은 JSX라고 불리는 JS 확장버전이다. syntax extension for JS라고 한다. HTML과 아주 비슷하게 생겼고 JS 파일 내에서 작성할 수 있다.</p>
+
+<p>JSX는 원래의 JS 문법이 아니기 때문에, JS 파일내에 JSX 문법이 있으면 브라우저에서 해석하지 못한다.</p>
+
+<p>React.js를 사용하기 위해 JSX 문법이 포함되어 있으면, 해당 파일을 정규 JS 문법으로 변환시키는 컴파일 과정이 필요하다.</p>
+
+<h2 id="jsx-element">JSX element</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">hi</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Hi<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;;</span>
+
+<span class="kd">const</span> <span class="nx">myFavorite</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">food</span><span class="p">:</span> <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>샐러드<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;,</span>
+    <span class="na">animal</span><span class="p">:</span> <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>dog<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;,</span>
+    <span class="na">hobbyL</span><span class="p">:</span> <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>programming<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;,</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="jsx-attribute">JSX attribute</h2>
+
+<p>태그에 속성을 주고 싶을 때는 항상 ““로 감싸야한다.</p>
+
+<p>예를 들어, class를 주고 싶을 때 원래 속성명은 class이지만 JSX에서는 className을 사용해야 한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">hi</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">readOnly</span><span class="p">=</span><span class="si">{</span><span class="kc">true</span><span class="si">}</span> <span class="p">/&gt;;</span>
+
+<span class="kd">const</span> <span class="nx">myFavorite</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">food</span><span class="p">:</span> <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>샐러드<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;,</span>
+    <span class="na">animal</span><span class="p">:</span> <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>dog<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;,</span>
+    <span class="na">hobby</span><span class="p">:</span> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">className</span><span class="p">=</span><span class="s">"list-item"</span><span class="p">&gt;</span>programming<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;,</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h3 id="self-closing-tag">Self-Closing Tag</h3>
+
+<p>JSX에서는 어떤 태그라도 self closing tag가 항상 가능하다. <code class="language-plaintext highlighter-rouge">&lt;input&gt;</code>과 같이 하나의 태그가 요소인 경우에는 <code class="language-plaintext highlighter-rouge">&lt;input /&gt;</code>과 같이 항상 /로 끝내줘야한다.</p>
+
+<h2 id="nested-jsx">Nested JSX</h2>
+
+<p>중첩된 요소로 만들려면 ()로 감싸야한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">good</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>hi<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>위와 같이 제일 처음 요소가 sibling이면 안된다. 무조건 하나의 태그로 감싸저야 한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">wrong</span> <span class="o">=</span> <span class="p">(</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>list1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>list2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">);</span> <span class="c1">// 잘못된 코드</span>
+</code></pre></div></div>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">right</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>list1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>list2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">);</span> <span class="c1">// 맞는 코드</span>
+</code></pre></div></div>
+
+<h2 id="rendering">Rendering</h2>
+
+<p>html 요소, 또는 React 요소 등의 코드가 눈으로 볼 수 있도록 그려지는 것을 Rendering 이라고 말한다.</p>
+
+<p>React 요소가 DOM node에 추가되어 화면에 렌더되려면 <code class="language-plaintext highlighter-rouge">ReactDOM.render</code> 함수를 사용한다.</p>
+
+<p>첫 번째 인자에는 JSX로 React 요소를 인자로 넘기고, 두 번째 인자는 해당 요소를 렌더하고 싶은 container를 전달한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+	<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nx">getElementbyID</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+:ET
