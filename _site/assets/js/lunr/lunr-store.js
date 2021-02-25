@@ -11,10 +11,16 @@ var store = [{
         "url": "/os/Linux/",
         "teaser": null
       },{
+        "title": "Docker Images",
+        "excerpt":"Docker Images   Docker image는 파일시스템들의 layer로 만들어져 있다. 가장 base layer는 boot filesystem bootfs로 일반적인 Linux boot 파일시스템으로 되어있다. Docker 유저가 직접적으로 boot filesystem을 사용할 일은 없으며, 실제로 container가 부팅이 되면 메모리로 옴겨지고 boot 파일시스템은 unmount된다.   Boot layer 다음에는 rootfs 라고 하는 root 파일 시스템 layer이다. Root 파일 시스템은 실제 OS 가 설치된다. 원래 리눅스에서는 root filesystem은 처음 mount될때는 read-only로 mount가 된후 integrity check후 read-write으로 바뀐다. 하지만 Docker에서는 계속해서 read-only 모드이다. Read-write 모드로 변환하지 않는 이유는 Docker는 union mount를 사용해서 read-only 파일 시스템들을 root 파일 시스템 위에 덮는 구조로 이루어져 있기 때문이다.   Docker 구조에서는 이러한 파일 시스템 하나 하나가 바로 image이다. 그럼으로 image들을 서로 위에 layer시키는 구조로 되어있다. Base가 되는 이미지를 부모 이미지라고하며 맨 위의 이미지 부터 가장 밑 부분의 이미지 까지 횡단 하는 구조로 되어있다. 즉 filesystem / image를 수정하는 구조가 아니라 read-only filesystem / image 들을 서로 위에 layer 시키되 union mount 기법으로 마지막에는 하나의 파일 시스템으로 보이는 구조를 가지고 있는 것이다.   모든 read-only 파일시스템들이 mount가 되고 docker 컨테이너가 이미지로부터 시작될때 docker는 마지막으로 read-write 파일 시스템을 파일 시스템 layer 맨 위에 mount한다. 마지막에는 read-only가 아니라 read-write으로 올려놓는 이유는 read-write 파일 시스템에 컨테이너가 필요한 프로세스를 생성하고 실행하기 위해서이다.      이러한 pattern을 copy on write이라고 한다. 이 copy on write 구조는 Dockerfile 을 이용해 docker image 를 빌드할때 효과적이다. Docker image를 빌드할때 Dockerfile의 각각의 instruction이 바로 filesystem / image가 되는것이다.  ","categories": ["Docker"],
+        "tags": ["Docker"],
+        "url": "/docker/docker-images/",
+        "teaser": null
+      },{
         "title": "Docker",
-        "excerpt":"Docker   Docker는 가상화 기술이다. Docker 라는 회사가 container virtualization 을 개발하였고 그래서 docker가 container virtualization 기술의 또다른 이름으로 오해하시는 분들이 있는데 container virtualization은 docker 이전에 이미 개발되어 존재 하고 있었다. Docker는 가상화 컨테이너에 application 배포를 자동화 시켜주는 오픈소스 엔진이다.   Docker는 container 가상화 실행 환경 위에 application 배포 엔진을 더함으로서 사용자의 코드를 어디서든 빠르고 가볍게 실행시킬수 있는 기술을 제공한다.   Hypervisor 가상화 VS Container 가상화      Docker 구조      Docker client 와 server   Docker 이미지   Docker registries   Docker containers  ","categories": ["Os"],
-        "tags": ["Os"],
-        "url": "/os/docker/",
+        "excerpt":"Docker   Docker는 가상화 기술이다. Docker 라는 회사가 container virtualization 을 개발하였고 그래서 docker가 container virtualization 기술의 또다른 이름으로 오해하시는 분들이 있는데 container virtualization은 docker 이전에 이미 개발되어 존재 하고 있었다. Docker는 가상화 컨테이너에 application 배포를 자동화 시켜주는 오픈소스 엔진이다.   Docker는 container 가상화 실행 환경 위에 application 배포 엔진을 더함으로서 사용자의 코드를 어디서든 빠르고 가볍게 실행시킬수 있는 기술을 제공한다.   Hypervisor 가상화 VS Container 가상화      Docker 구조      Docker client 와 server   Docker 이미지   Docker registries   Docker containers  ","categories": ["Docker"],
+        "tags": ["Docker"],
+        "url": "/docker/docker/",
         "teaser": null
       },{
         "title": "Os란?",
