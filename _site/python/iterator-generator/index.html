@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>RDBMS - Changsik’s Blog</title>
-<meta name="description" content="RDBMS(관계형 데이터베이스)">
+<!-- begin _includes/seo.html --><title>Iterator, Generator - Changsik’s Blog</title>
+<meta name="description" content="Iterator">
 
 
   <meta name="author" content="권창식">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Changsik's Blog">
-<meta property="og:title" content="RDBMS">
-<meta property="og:url" content="https://changsikkwon.github.io/database/rdbms/">
+<meta property="og:title" content="Iterator, Generator">
+<meta property="og:url" content="https://changsikkwon.github.io/python/iterator-generator/">
 
 
-  <meta property="og:description" content="RDBMS(관계형 데이터베이스)">
+  <meta property="og:description" content="Iterator">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="https://changsikkwon.github.io/database/rdbms/">
+<link rel="canonical" href="https://changsikkwon.github.io/python/iterator-generator/">
 
 
 
@@ -175,7 +175,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#database" itemprop="item"><span itemprop="name">Database</span></a>
+          <a href="/categories/#python" itemprop="item"><span itemprop="name">Python</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -183,7 +183,7 @@
     
       
       
-        <li class="current">RDBMS</li>
+        <li class="current">Iterator, Generator</li>
       
     
   </ol>
@@ -321,10 +321,10 @@
     <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
         <meta
             itemprop="headline"
-            content="RDBMS"
+            content="Iterator, Generator"
         /> <meta
             itemprop="description"
-            content="RDBMS(관계형 데이터베이스)"
+            content="Iterator"
         /> <meta itemprop="datePublished" content="2021-02-25T00:00:00+09:00" /> 
 
         <div class="page__inner-wrap">
@@ -332,7 +332,7 @@
             <header>
                 
                 <h1 id="page-title" class="page__title" itemprop="headline">
-                    <p>RDBMS</p>
+                    <p>Iterator, Generator</p>
 
                 </h1>
                  
@@ -349,7 +349,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          2 분 소요
         
       </span>
     
@@ -360,54 +360,92 @@
             
 
             <section class="page__content" itemprop="text">
-                 <h1 id="rdbms관계형-데이터베이스">RDBMS(관계형 데이터베이스)</h1>
+                 <h2 id="iterator">Iterator</h2>
 
-<ul>
-  <li>이름 그대로, 관계형 데이터 모델에 기초를 둔 데이터베이스 시스템을 말한다.</li>
-  <li>관계형 데이터란 데이터를 서로 상호관련성을 가진 형태로 표현한 데이터를 말한다.
-    <ul>
-      <li>모든 데이터들은 2차원 테이블(table)들로 표현 된다.</li>
-      <li>각각의 테이블은 컬럼(column)과 row(로우)로 구성된다.</li>
-      <li>각각의 테이블들은 서로 상호관련성을 가지고 서로 연결될 수 있다.
-        <ul>
-          <li>테이블끼리의 연결에는 크게 3종류가 있다
-            <ul>
-              <li>one to one</li>
-              <li>one to many</li>
-              <li>many to many</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+<p>list, set, dictionary와 같은 컬렉션이나 문자열과 같은 문자 Sequence 등은 for 문을 써서 하나씩 데이터를 처리할 수 있는데, 이렇게 하나하나 처리할 수 있는 컬렉션이나 Sequence 들을 Iterable 객체라 부른다.</p>
 
-<h3 id="why-connect-the-tables">Why connect the tables?</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 
-<ul>
-  <li>하나의 테이블에 모든 정보를 다 넣으면 동일한 정보들이 불필요하게 중복되어 저장된다.더 많은 디스크를 사용하게되고 잘못된 데이터가 저장 될 가능성이 높아진다.</li>
-  <li>여러 테이블에 나누어서 저장한 후 필요한 테이블끼리 연결 시키면 위의 2문제가 사라진다. 중복된 데이터를 저장하지 않음으로 디스크를 더 호율적으로 쓰고, 또한 서로 같은 데이터 이지만 부분적으로 틀린 데이터가 생기는 문제가 없어진다. 이것을 normalization(정규화) 이라고 한다.</li>
-</ul>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s">"Hello World"</span><span class="p">:</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</code></pre></div></div>
 
-<h3 id="acid">ACID</h3>
+<p>내장 함수 iter()는 “iter(iterable객체)”와 같이 사용하여 그 Iterable 객체의 iterator를 리턴한다. Iterable 객체에서 실제 Iteration을 실행하는 것은 iterator로서, iterator는 next 메서드를 사용하여 다음 요소를 가져온다. 만약 더이상 next 요소가 없으면 StopIteration Exception을 발생시킨다.</p>
 
-<ul>
-  <li>원자성(Atomicity)은 트랜잭션과 관련된 작업들이 부분적으로 실행되다가 중단되지 않는 것을 보장하는 능력이다. 예를 들어, 자금 이체는 성공할 수도 실패할 수도 있지만 보내는 쪽에서 돈을 빼 오는 작업만 성공하고 받는 쪽에 돈을 넣는 작업을 실패해서는 안된다. 원자성은 이와 같이 중간 단계까지 실행되고 실패하는 일이 없도록 하는 것이다.</li>
-  <li>일관성(Consistency)은 트랜잭션이 실행을 성공적으로 완료하면 언제나 일관성 있는 데이터베이스 상태로 유지하는 것을 의미한다. 무결성 제약이 모든 계좌는 잔고가 있어야 한다면 이를 위반하는 트랜잭션은 중단된다.</li>
-  <li>고립성(Isolation)은 트랜잭션을 수행 시 다른 트랜잭션의 연산 작업이 끼어들지 못하도록 보장하는 것을 의미한다. 이것은 트랜잭션 밖에 있는 어떤 연산도 중간 단계의 데이터를 볼 수 없음을 의미한다. 은행 관리자는 이체 작업을 하는 도중에 쿼리를 실행하더라도 특정 계좌간 이체하는 양 쪽을 볼 수 없다. 공식적으로 고립성은 트랜잭션 실행내역은 연속적이어야 함을 의미한다. 성능관련 이유로 인해 이 특성은 가장 유연성 있는 제약 조건이다. 자세한 내용은 관련 문서를 참조해야 한다.</li>
-  <li>지속성(Durability)은 성공적으로 수행된 트랜잭션은 영원히 반영되어야 함을 의미한다. 시스템 문제, DB 일관성 체크 등을 하더라도 유지되어야 함을 의미한다. 전형적으로 모든 트랜잭션은 로그로 남고 시스템 장애 발생 전 상태로 되돌릴 수 있다. 트랜잭션은 로그에 모든 것이 저장된 후에만 commit 상태로 간주될 수 있다.</li>
-</ul>
+<p>Iterator의 next 메서드로서 Python2에서는 “iterator객체.next()”를 사용하고, python 3에서는 “iterator객체.<strong>next</strong>()” 메서드를 사용한다. 또한, 버전에 관계없이 사용할 수 있는 방식으로 내장 함수 “next(iterator객체)”를 사용할 수 있다.</p>
 
-<h3 id="트랜잭션">트랜잭션</h3>
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/954a486a-780c-4af0-bb30-20c7a6f9994c/_2021-01-03__5.23.02.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/954a486a-780c-4af0-bb30-20c7a6f9994c/_2021-01-03__5.23.02.png" /></p>
 
-<ul>
-  <li>ACID를 제공함으로 따라서 트랜잭션(일련의 작업들을 한번에 하나의 unit으로 실행하는것) 기능을 제공한다.
-    <ul>
-      <li>트랜잭션은 일련의 작업들이 마치 하나의 작업처럼 취급되어서 모두 다 성공하거나 아니면 모두 다 실패하는걸 이야기 한다.</li>
-    </ul>
-  </li>
-</ul>
+<p>어떤 클래스를 Iterable하게 하려면, 그 클래스의 iterator를 리턴하는 <code class="language-plaintext highlighter-rouge">__iter__()</code> 메서드를 작성해야 한다. 이 <code class="language-plaintext highlighter-rouge">__iter__()</code> 메서드를 리턴하는 iterator는 동일한 클래스 객체가 될 수도 있고, 별도로 작성된 iterator 클래스의 객채가 될 수도 있다. 어떠한 경우든 Iterator가 되는 클래스는 <code class="language-plaintext highlighter-rouge">__next__()</code> 메서드를 구현해야 한다. 실제 for 루프에 Iterable 객체를 사용하면, 해당 Iterable의 <code class="language-plaintext highlighter-rouge">__iter__()</code> 메서드를 호출하여 iterator를 가져온 후 그 iterator의 <code class="language-plaintext highlighter-rouge">__next__()</code> 메서드를 호출하여 루프를 돌게 된다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyCollection</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">size</span> <span class="o">=</span> <span class="mi">10</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">size</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="p">.</span><span class="n">size</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="nb">StopIteration</span>
+
+        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">index</span><span class="p">]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">n</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">MyCollection</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="generator">Generator</h2>
+
+<p>Generator는 iterator의 특수한 한 형태이다.</p>
+
+<p>Generator 함수는 함수안에 yield를 사용하여 데이터를 하나씩 리턴하는 함수이다. Generator 함수가 처음 호출되면, 그 함수 실행 중 처음으로 만나는 yield에서 값을 리턴한다.</p>
+
+<p>Generator 함수가 다시 호출되면, 직전에 실행되었던 yield문 다음부터 다음 yield문을 만날 때까지 문장들을 실행하게 된다. 이러한 Generator 함수를 변수에 할당하면 그 변수는 generator 클래스 객체가 된다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">gen</span><span class="p">():</span>
+    <span class="k">yield</span> <span class="mi">1</span>
+    <span class="k">yield</span> <span class="mi">2</span>
+    <span class="k">yield</span> <span class="mi">3</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="n">gen</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">g</span><span class="p">))</span> <span class="c1"># &lt;class 'generator'&gt;
+</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">g</span><span class="p">.</span><span class="n">__next__</span><span class="p">();</span> <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="c1">#1
+</span><span class="n">n</span> <span class="o">=</span> <span class="n">g</span><span class="p">.</span><span class="n">__next__</span><span class="p">();</span> <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="c1">#2
+</span><span class="n">n</span> <span class="o">=</span> <span class="n">g</span><span class="p">.</span><span class="n">__next__</span><span class="p">();</span> <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="c1">#3
+</span>
+<span class="c1">#for 루프 사용 가능
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>list나 set과 같은 컬렉션에 대한 iterator는 해당 컬렉션이 이미 모든 값을 가지고 있는 경우이나, Generator는 모든 데이터를 갖지 않은 상태에서 yield에 의해 하나씩만 데이터를 만들어 가져온다는 차이점이 있다. 이러한 Generator는 데이터가 무제한이어서 모든 데이터를 리턴할 수 없는 경우나, 데이터가 대량이어서 일부러 처리하는 것이 필요한 경우, 혹은 모든 데이터를 미리 계산하면 속도가 느려서 그때그때 on demand로 처리하는 것이 좋은 경우 등에 종종 사용되나.</p>
+
+<h2 id="generator-expression">Generator Expression</h2>
+
+<p>Generator Expression은 Generator Comprehension으로도 불리는데, List Comprehension광 외관상 유사하다. List Comprehension은 앞뒤를 []처럼 대괄호로 표현한다면, Generator Comprehension은 ()처럼 둥근 괄호를 사용한다. 하지만 Generator Comprehension은 List Comprehension과 달리 실제 리스트 컬렉션 데이터 전체를 리턴하지 않고, 그 표현식만 갖는 Generator 객체만 리턴한다. 즉 실제 실행은 하지 않고, 표현식만 가지며 위의 yield 방식으로 Lazy Operation을 수행하는 것이다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1001</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">g</span><span class="p">))</span> <span class="c1">#&lt;class 'generator'&gt;
+</span>
+<span class="c1">#리스트로 일괄 변환시
+#mylist = list(g)
+</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">g</span><span class="p">.</span><span class="n">__next__</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+<span class="c1"># 나머지 모두 출력
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">g</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
  
             </section>
 
@@ -422,7 +460,7 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#database" class="page__taxonomy-item" rel="tag">Database</a>
+      <a href="/tags/#python" class="page__taxonomy-item" rel="tag">Python</a>
     
     </span>
   </p>
@@ -439,7 +477,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#database" class="page__taxonomy-item" rel="tag">Database</a>
+      <a href="/categories/#python" class="page__taxonomy-item" rel="tag">Python</a>
     
     </span>
   </p>
@@ -455,20 +493,20 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=RDBMS%20https%3A%2F%2Fchangsikkwon.github.io%2Fdatabase%2Frdbms%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Iterator%2C+Generator%20https%3A%2F%2Fchangsikkwon.github.io%2Fpython%2Fiterator-generator%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Fdatabase%2Frdbms%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Fpython%2Fiterator-generator%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Fdatabase%2Frdbms%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Fpython%2Fiterator-generator%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
  
   <nav class="pagination">
     
-      <a href="/database/nosql/" class="pagination--pager" title="NoSQL
+      <a href="/react/component-props/" class="pagination--pager" title="Component &amp; Props
 ">이전</a>
     
     
-      <a href="/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/set-dictionary-hash/" class="pagination--pager" title="Set, Dictionary, Hash
+      <a href="/database/nosql/" class="pagination--pager" title="NoSQL
 ">다음</a>
     
   </nav>

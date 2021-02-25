@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>RDBMS - Changsik’s Blog</title>
-<meta name="description" content="RDBMS(관계형 데이터베이스)">
+<!-- begin _includes/seo.html --><title>Component &amp; Props - Changsik’s Blog</title>
+<meta name="description" content="Component">
 
 
   <meta name="author" content="권창식">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Changsik's Blog">
-<meta property="og:title" content="RDBMS">
-<meta property="og:url" content="https://changsikkwon.github.io/database/rdbms/">
+<meta property="og:title" content="Component &amp; Props">
+<meta property="og:url" content="https://changsikkwon.github.io/react/component-props/">
 
 
-  <meta property="og:description" content="RDBMS(관계형 데이터베이스)">
+  <meta property="og:description" content="Component">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="https://changsikkwon.github.io/database/rdbms/">
+<link rel="canonical" href="https://changsikkwon.github.io/react/component-props/">
 
 
 
@@ -175,7 +175,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#database" itemprop="item"><span itemprop="name">Database</span></a>
+          <a href="/categories/#react" itemprop="item"><span itemprop="name">React</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -183,7 +183,7 @@
     
       
       
-        <li class="current">RDBMS</li>
+        <li class="current">Component & Props</li>
       
     
   </ol>
@@ -321,10 +321,10 @@
     <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
         <meta
             itemprop="headline"
-            content="RDBMS"
+            content="Component &amp; Props"
         /> <meta
             itemprop="description"
-            content="RDBMS(관계형 데이터베이스)"
+            content="Component"
         /> <meta itemprop="datePublished" content="2021-02-25T00:00:00+09:00" /> 
 
         <div class="page__inner-wrap">
@@ -332,7 +332,7 @@
             <header>
                 
                 <h1 id="page-title" class="page__title" itemprop="headline">
-                    <p>RDBMS</p>
+                    <p>Component &amp; Props</p>
 
                 </h1>
                  
@@ -349,7 +349,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          최대 1 분 소요
         
       </span>
     
@@ -360,54 +360,50 @@
             
 
             <section class="page__content" itemprop="text">
-                 <h1 id="rdbms관계형-데이터베이스">RDBMS(관계형 데이터베이스)</h1>
+                 <h2 id="component">Component</h2>
 
-<ul>
-  <li>이름 그대로, 관계형 데이터 모델에 기초를 둔 데이터베이스 시스템을 말한다.</li>
-  <li>관계형 데이터란 데이터를 서로 상호관련성을 가진 형태로 표현한 데이터를 말한다.
-    <ul>
-      <li>모든 데이터들은 2차원 테이블(table)들로 표현 된다.</li>
-      <li>각각의 테이블은 컬럼(column)과 row(로우)로 구성된다.</li>
-      <li>각각의 테이블들은 서로 상호관련성을 가지고 서로 연결될 수 있다.
-        <ul>
-          <li>테이블끼리의 연결에는 크게 3종류가 있다
-            <ul>
-              <li>one to one</li>
-              <li>one to many</li>
-              <li>many to many</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+<p>Component란 재사용 가능한 UI 단위이다.</p>
 
-<h3 id="why-connect-the-tables">Why connect the tables?</h3>
+<p>컴포넌트는 함수랑 비슷하다. React 컴포넌트에서는 input을 Props라 말하고 return은 보여져야할 React요소가 return된다.</p>
 
-<ul>
-  <li>하나의 테이블에 모든 정보를 다 넣으면 동일한 정보들이 불필요하게 중복되어 저장된다.더 많은 디스크를 사용하게되고 잘못된 데이터가 저장 될 가능성이 높아진다.</li>
-  <li>여러 테이블에 나누어서 저장한 후 필요한 테이블끼리 연결 시키면 위의 2문제가 사라진다. 중복된 데이터를 저장하지 않음으로 디스크를 더 호율적으로 쓰고, 또한 서로 같은 데이터 이지만 부분적으로 틀린 데이터가 생기는 문제가 없어진다. 이것을 normalization(정규화) 이라고 한다.</li>
-</ul>
+<h2 id="component-만들기">Component 만들기</h2>
 
-<h3 id="acid">ACID</h3>
+<h3 id="함수로-컴포넌트-구현">함수로 컴포넌트 구현</h3>
 
-<ul>
-  <li>원자성(Atomicity)은 트랜잭션과 관련된 작업들이 부분적으로 실행되다가 중단되지 않는 것을 보장하는 능력이다. 예를 들어, 자금 이체는 성공할 수도 실패할 수도 있지만 보내는 쪽에서 돈을 빼 오는 작업만 성공하고 받는 쪽에 돈을 넣는 작업을 실패해서는 안된다. 원자성은 이와 같이 중간 단계까지 실행되고 실패하는 일이 없도록 하는 것이다.</li>
-  <li>일관성(Consistency)은 트랜잭션이 실행을 성공적으로 완료하면 언제나 일관성 있는 데이터베이스 상태로 유지하는 것을 의미한다. 무결성 제약이 모든 계좌는 잔고가 있어야 한다면 이를 위반하는 트랜잭션은 중단된다.</li>
-  <li>고립성(Isolation)은 트랜잭션을 수행 시 다른 트랜잭션의 연산 작업이 끼어들지 못하도록 보장하는 것을 의미한다. 이것은 트랜잭션 밖에 있는 어떤 연산도 중간 단계의 데이터를 볼 수 없음을 의미한다. 은행 관리자는 이체 작업을 하는 도중에 쿼리를 실행하더라도 특정 계좌간 이체하는 양 쪽을 볼 수 없다. 공식적으로 고립성은 트랜잭션 실행내역은 연속적이어야 함을 의미한다. 성능관련 이유로 인해 이 특성은 가장 유연성 있는 제약 조건이다. 자세한 내용은 관련 문서를 참조해야 한다.</li>
-  <li>지속성(Durability)은 성공적으로 수행된 트랜잭션은 영원히 반영되어야 함을 의미한다. 시스템 문제, DB 일관성 체크 등을 하더라도 유지되어야 함을 의미한다. 전형적으로 모든 트랜잭션은 로그로 남고 시스템 장애 발생 전 상태로 되돌릴 수 있다. 트랜잭션은 로그에 모든 것이 저장된 후에만 commit 상태로 간주될 수 있다.</li>
-</ul>
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Welcome</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>hello, <span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-<h3 id="트랜잭션">트랜잭션</h3>
+<h3 id="class로-컴포넌트-구현">class로 컴포넌트 구현</h3>
 
-<ul>
-  <li>ACID를 제공함으로 따라서 트랜잭션(일련의 작업들을 한번에 하나의 unit으로 실행하는것) 기능을 제공한다.
-    <ul>
-      <li>트랜잭션은 일련의 작업들이 마치 하나의 작업처럼 취급되어서 모두 다 성공하거나 아니면 모두 다 실패하는걸 이야기 한다.</li>
-    </ul>
-  </li>
-</ul>
+<p>class로 컴포넌트를 만들려면 <code class="language-plaintext highlighter-rouge">React.Component</code> 를 extend해서 생성한다. 컴포넌트를 생성할 때 <code class="language-plaintext highlighter-rouge">render()</code> 메서드는 무조건 정의해야하고, return도 해주어야한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Welcome</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, <span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="component-사용">Component 사용</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Welcome</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, <span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nc">Welcome</span> <span class="na">name</span><span class="p">=</span><span class="s">"A"</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nc">Welcome</span> <span class="na">name</span><span class="p">=</span><span class="s">"B"</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nc">Welcome</span> <span class="na">name</span><span class="p">=</span><span class="s">"C"</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(&lt;</span><span class="nc">App</span> <span class="p">/&gt;,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementByID</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">));</span>
+</code></pre></div></div>
  
             </section>
 
@@ -422,7 +418,7 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#database" class="page__taxonomy-item" rel="tag">Database</a>
+      <a href="/tags/#react" class="page__taxonomy-item" rel="tag">React</a>
     
     </span>
   </p>
@@ -439,7 +435,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#database" class="page__taxonomy-item" rel="tag">Database</a>
+      <a href="/categories/#react" class="page__taxonomy-item" rel="tag">React</a>
     
     </span>
   </p>
@@ -455,20 +451,20 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=RDBMS%20https%3A%2F%2Fchangsikkwon.github.io%2Fdatabase%2Frdbms%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Component+%26+Props%20https%3A%2F%2Fchangsikkwon.github.io%2Freact%2Fcomponent-props%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Fdatabase%2Frdbms%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Freact%2Fcomponent-props%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Fdatabase%2Frdbms%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Freact%2Fcomponent-props%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
  
   <nav class="pagination">
     
-      <a href="/database/nosql/" class="pagination--pager" title="NoSQL
+      <a href="/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/" class="pagination--pager" title="Array
 ">이전</a>
     
     
-      <a href="/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/set-dictionary-hash/" class="pagination--pager" title="Set, Dictionary, Hash
+      <a href="/python/iterator-generator/" class="pagination--pager" title="Iterator, Generator
 ">다음</a>
     
   </nav>
