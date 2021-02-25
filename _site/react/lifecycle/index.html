@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Iterator, Generator - Changsik’s Blog</title>
-<meta name="description" content="Iterator">
+<!-- begin _includes/seo.html --><title>Component의 Lifecycle - Changsik’s Blog</title>
+<meta name="description" content="">
 
 
   <meta name="author" content="권창식">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Changsik's Blog">
-<meta property="og:title" content="Iterator, Generator">
-<meta property="og:url" content="https://changsikkwon.github.io/python/iterator-generator/">
+<meta property="og:title" content="Component의 Lifecycle">
+<meta property="og:url" content="https://changsikkwon.github.io/react/lifecycle/">
 
 
-  <meta property="og:description" content="Iterator">
+  <meta property="og:description" content="">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="https://changsikkwon.github.io/python/iterator-generator/">
+<link rel="canonical" href="https://changsikkwon.github.io/react/lifecycle/">
 
 
 
@@ -175,7 +175,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#python" itemprop="item"><span itemprop="name">Python</span></a>
+          <a href="/categories/#react" itemprop="item"><span itemprop="name">React</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -183,7 +183,7 @@
     
       
       
-        <li class="current">Iterator, Generator</li>
+        <li class="current">Component의 Lifecycle</li>
       
     
   </ol>
@@ -321,10 +321,10 @@
     <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
         <meta
             itemprop="headline"
-            content="Iterator, Generator"
+            content="Component의 Lifecycle"
         /> <meta
             itemprop="description"
-            content="Iterator"
+            content=""
         /> <meta itemprop="datePublished" content="2021-02-25T00:00:00+09:00" /> 
 
         <div class="page__inner-wrap">
@@ -332,7 +332,7 @@
             <header>
                 
                 <h1 id="page-title" class="page__title" itemprop="headline">
-                    <p>Iterator, Generator</p>
+                    <p>Component의 Lifecycle</p>
 
                 </h1>
                  
@@ -349,7 +349,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 분 소요
+          최대 1 분 소요
         
       </span>
     
@@ -360,92 +360,56 @@
             
 
             <section class="page__content" itemprop="text">
-                 <h2 id="iterator">Iterator</h2>
+                 <p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/847f6771-4a65-4f24-ab42-d5b41c252500/Untitled.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/847f6771-4a65-4f24-ab42-d5b41c252500/Untitled.png" /></p>
 
-<p>list, set, dictionary와 같은 컬렉션이나 문자열과 같은 문자 Sequence 등은 for 문을 써서 하나씩 데이터를 처리할 수 있는데, 이렇게 하나하나 처리할 수 있는 컬렉션이나 Sequence 들을 Iterable 객체라 부른다.</p>
+<p><code class="language-plaintext highlighter-rouge">render</code>, <code class="language-plaintext highlighter-rouge">componentDidMount</code>, <code class="language-plaintext highlighter-rouge">componentDidUpdate</code>, <code class="language-plaintext highlighter-rouge">componentWillUnmount</code> 등의 함수는 <code class="language-plaintext highlighter-rouge">React.Component</code> class 에서 제공하는 메서드이다. 컴포넌트를 만들 때 class로 생성하면 위의 메서드를 사용할 수 있고, 컴포넌트가 lifecycle에 따라 각자의 메서드가 호출된다.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Clock</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">();</span>
 
-<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s">"Hello World"</span><span class="p">:</span>
-   <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="na">date</span><span class="p">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
+
+    <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">timerID</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">tick</span><span class="p">(),</span> <span class="mi">1000</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">componentWillUnmount</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">clearInterval</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">timerID</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">tick</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+            <span class="na">date</span><span class="p">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>It is <span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">date</span><span class="p">.</span><span class="nx">toLocaleTimeString</span><span class="p">()</span><span class="si">}</span>.<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(&lt;</span><span class="nc">Clock</span> <span class="p">/&gt;,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">));</span>
 </code></pre></div></div>
 
-<p>내장 함수 iter()는 “iter(iterable객체)”와 같이 사용하여 그 Iterable 객체의 iterator를 리턴한다. Iterable 객체에서 실제 Iteration을 실행하는 것은 iterator로서, iterator는 next 메서드를 사용하여 다음 요소를 가져온다. 만약 더이상 next 요소가 없으면 StopIteration Exception을 발생시킨다.</p>
-
-<p>Iterator의 next 메서드로서 Python2에서는 “iterator객체.next()”를 사용하고, python 3에서는 “iterator객체.<strong>next</strong>()” 메서드를 사용한다. 또한, 버전에 관계없이 사용할 수 있는 방식으로 내장 함수 “next(iterator객체)”를 사용할 수 있다.</p>
-
-<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/954a486a-780c-4af0-bb30-20c7a6f9994c/_2021-01-03__5.23.02.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/954a486a-780c-4af0-bb30-20c7a6f9994c/_2021-01-03__5.23.02.png" /></p>
-
-<p>어떤 클래스를 Iterable하게 하려면, 그 클래스의 iterator를 리턴하는 <code class="language-plaintext highlighter-rouge">__iter__()</code> 메서드를 작성해야 한다. 이 <code class="language-plaintext highlighter-rouge">__iter__()</code> 메서드를 리턴하는 iterator는 동일한 클래스 객체가 될 수도 있고, 별도로 작성된 iterator 클래스의 객채가 될 수도 있다. 어떠한 경우든 Iterator가 되는 클래스는 <code class="language-plaintext highlighter-rouge">__next__()</code> 메서드를 구현해야 한다. 실제 for 루프에 Iterable 객체를 사용하면, 해당 Iterable의 <code class="language-plaintext highlighter-rouge">__iter__()</code> 메서드를 호출하여 iterator를 가져온 후 그 iterator의 <code class="language-plaintext highlighter-rouge">__next__()</code> 메서드를 호출하여 루프를 돌게 된다.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyCollection</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">size</span> <span class="o">=</span> <span class="mi">10</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">size</span><span class="p">))</span>
-
-    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">return</span> <span class="bp">self</span>
-
-    <span class="k">def</span> <span class="nf">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="p">.</span><span class="n">size</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="nb">StopIteration</span>
-
-        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">index</span><span class="p">]</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">return</span> <span class="n">n</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">MyCollection</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h2 id="generator">Generator</h2>
-
-<p>Generator는 iterator의 특수한 한 형태이다.</p>
-
-<p>Generator 함수는 함수안에 yield를 사용하여 데이터를 하나씩 리턴하는 함수이다. Generator 함수가 처음 호출되면, 그 함수 실행 중 처음으로 만나는 yield에서 값을 리턴한다.</p>
-
-<p>Generator 함수가 다시 호출되면, 직전에 실행되었던 yield문 다음부터 다음 yield문을 만날 때까지 문장들을 실행하게 된다. 이러한 Generator 함수를 변수에 할당하면 그 변수는 generator 클래스 객체가 된다.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">gen</span><span class="p">():</span>
-    <span class="k">yield</span> <span class="mi">1</span>
-    <span class="k">yield</span> <span class="mi">2</span>
-    <span class="k">yield</span> <span class="mi">3</span>
-
-<span class="n">g</span> <span class="o">=</span> <span class="n">gen</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">g</span><span class="p">))</span> <span class="c1"># &lt;class 'generator'&gt;
-</span>
-<span class="n">n</span> <span class="o">=</span> <span class="n">g</span><span class="p">.</span><span class="n">__next__</span><span class="p">();</span> <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="c1">#1
-</span><span class="n">n</span> <span class="o">=</span> <span class="n">g</span><span class="p">.</span><span class="n">__next__</span><span class="p">();</span> <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="c1">#2
-</span><span class="n">n</span> <span class="o">=</span> <span class="n">g</span><span class="p">.</span><span class="n">__next__</span><span class="p">();</span> <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="c1">#3
-</span>
-<span class="c1">#for 루프 사용 가능
-</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>list나 set과 같은 컬렉션에 대한 iterator는 해당 컬렉션이 이미 모든 값을 가지고 있는 경우이나, Generator는 모든 데이터를 갖지 않은 상태에서 yield에 의해 하나씩만 데이터를 만들어 가져온다는 차이점이 있다. 이러한 Generator는 데이터가 무제한이어서 모든 데이터를 리턴할 수 없는 경우나, 데이터가 대량이어서 일부러 처리하는 것이 필요한 경우, 혹은 모든 데이터를 미리 계산하면 속도가 느려서 그때그때 on demand로 처리하는 것이 좋은 경우 등에 종종 사용되나.</p>
-
-<h2 id="generator-expression">Generator Expression</h2>
-
-<p>Generator Expression은 Generator Comprehension으로도 불리는데, List Comprehension광 외관상 유사하다. List Comprehension은 앞뒤를 []처럼 대괄호로 표현한다면, Generator Comprehension은 ()처럼 둥근 괄호를 사용한다. 하지만 Generator Comprehension은 List Comprehension과 달리 실제 리스트 컬렉션 데이터 전체를 리턴하지 않고, 그 표현식만 갖는 Generator 객체만 리턴한다. 즉 실제 실행은 하지 않고, 표현식만 가지며 위의 yield 방식으로 Lazy Operation을 수행하는 것이다.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1001</span><span class="p">))</span>
-
-<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">g</span><span class="p">))</span> <span class="c1">#&lt;class 'generator'&gt;
-</span>
-<span class="c1">#리스트로 일괄 변환시
-#mylist = list(g)
-</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">value</span> <span class="o">=</span> <span class="n">g</span><span class="p">.</span><span class="n">__next__</span><span class="p">()</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-
-<span class="c1"># 나머지 모두 출력
-</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">g</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</code></pre></div></div>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">ReactDOM.render()</code> 에서 첫 인자로 <code class="language-plaintext highlighter-rouge">&lt;Clock /&gt;</code> 을 넘길 때, React는 Clock 컴포넌트의 <code class="language-plaintext highlighter-rouge">constructor</code> 를 호출한다.</li>
+  <li>Clock에서 초기 시간이 필요하므로 <code class="language-plaintext highlighter-rouge">this.state</code> 에 현재 시간으로 초기화 한다.</li>
+  <li>Clock 컴포넌트의 <code class="language-plaintext highlighter-rouge">render()</code> 메서드가 호출된다.</li>
+  <li>DOM에 <code class="language-plaintext highlighter-rouge">render()</code> 의 return된 요소가 추가되면 <code class="language-plaintext highlighter-rouge">componentDidMount</code> 함수가 호출된다.</li>
+  <li>Clock 컴포넌트의 <code class="language-plaintext highlighter-rouge">tick</code> 메서드가 매 초 호출될 수 있도록 timer를 추가한다.</li>
+  <li>매 초 브라우저가 <code class="language-plaintext highlighter-rouge">tick</code> 메서드를 호출하면서 <a href="http://this.state.date"><code class="language-plaintext highlighter-rouge">this.state.date</code></a> 값이 변한다.</li>
+  <li>state가 변경되면 원래 <code class="language-plaintext highlighter-rouge">componentDidUpdate</code> 함수가 호출되지만, 위에서 정의하지 않았으므로 <code class="language-plaintext highlighter-rouge">render()</code> 가 다시 호출되면서 바뀐 부분이 변경된다.</li>
+  <li>DOM에서 Clock 컴포넌트가 삭제될 때, <code class="language-plaintext highlighter-rouge">componentWillUnmount</code> 가 호출되고 timer도 같이 멈추게 된다.</li>
+</ol>
  
             </section>
 
@@ -460,7 +424,7 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#python" class="page__taxonomy-item" rel="tag">Python</a>
+      <a href="/tags/#react" class="page__taxonomy-item" rel="tag">React</a>
     
     </span>
   </p>
@@ -477,7 +441,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#python" class="page__taxonomy-item" rel="tag">Python</a>
+      <a href="/categories/#react" class="page__taxonomy-item" rel="tag">React</a>
     
     </span>
   </p>
@@ -493,20 +457,20 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Iterator%2C+Generator%20https%3A%2F%2Fchangsikkwon.github.io%2Fpython%2Fiterator-generator%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Component%EC%9D%98+Lifecycle%20https%3A%2F%2Fchangsikkwon.github.io%2Freact%2Flifecycle%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Fpython%2Fiterator-generator%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Freact%2Flifecycle%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Fpython%2Fiterator-generator%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Freact%2Flifecycle%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
  
   <nav class="pagination">
     
-      <a href="/react/component-props/" class="pagination--pager" title="Component &amp; Props
+      <a href="/python/iterator-generator/" class="pagination--pager" title="Iterator, Generator
 ">이전</a>
     
     
-      <a href="/react/lifecycle/" class="pagination--pager" title="Component의 Lifecycle
+      <a href="/database/nosql/" class="pagination--pager" title="NoSQL
 ">다음</a>
     
   </nav>
