@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Go 연산자 - Changsik’s Blog</title>
-<meta name="description" content="산술연산자">
+<!-- begin _includes/seo.html --><title>Go 반복문 - Changsik’s Blog</title>
+<meta name="description" content="for 문">
 
 
   <meta name="author" content="권창식">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Changsik's Blog">
-<meta property="og:title" content="Go 연산자">
-<meta property="og:url" content="https://changsikkwon.github.io/go/go-data-type/">
+<meta property="og:title" content="Go 반복문">
+<meta property="og:url" content="https://changsikkwon.github.io/go/go-for/">
 
 
-  <meta property="og:description" content="산술연산자">
+  <meta property="og:description" content="for 문">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="https://changsikkwon.github.io/go/go-data-type/">
+<link rel="canonical" href="https://changsikkwon.github.io/go/go-for/">
 
 
 
@@ -183,7 +183,7 @@
     
       
       
-        <li class="current">Go 연산자</li>
+        <li class="current">Go 반복문</li>
       
     
   </ol>
@@ -321,10 +321,10 @@
     <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
         <meta
             itemprop="headline"
-            content="Go 연산자"
+            content="Go 반복문"
         /> <meta
             itemprop="description"
-            content="산술연산자"
+            content="for 문"
         /> <meta itemprop="datePublished" content="2021-02-25T00:00:00+09:00" /> 
 
         <div class="page__inner-wrap">
@@ -332,7 +332,7 @@
             <header>
                 
                 <h1 id="page-title" class="page__title" itemprop="headline">
-                    <p>Go 연산자</p>
+                    <p>Go 반복문</p>
 
                 </h1>
                  
@@ -349,7 +349,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          1 분 소요
         
       </span>
     
@@ -360,88 +360,109 @@
             
 
             <section class="page__content" itemprop="text">
-                 <h2 id="산술연산자">산술연산자</h2>
+                 <h4 id="for-문">for 문</h4>
 
-<p>산술연산자는 사칙연산자(+, -, *, /, % (Modulus))와 증감연산자(++, –)를 사용한다.</p>
+<p>Go 언어에서 반복문은 for 루프를 이용한다. Go는 반복문에 for 하나 밖에 없다. for 루프는 다른 언어와 비슷하게 “for 초기값; 조건식; 증감 {…}” 의 형식을 따른다.</p>
 
 <div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
 
-<span class="k">import</span> <span class="s">"fmt"</span>
-
 <span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">a</span><span class="o">:=</span><span class="m">5</span>
-  <span class="n">b</span><span class="o">:=</span><span class="m">10</span>
-  <span class="n">c</span><span class="o">:=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span> <span class="o">/</span> <span class="m">5</span>
-  <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c">// 3</span>
+	<span class="n">sum</span> <span class="o">:=</span> <span class="m">0</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="o">:=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="m">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">{</span>
+		<span class="n">sum</span> <span class="o">+=</span> <span class="n">i</span>
+	<span class="p">}</span>
+	<span class="nb">println</span><span class="p">(</span><span class="n">sum</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h2 id="관계연산자">관계연산자</h2>
+<h2 id="for-문---조건식만-쓰는-for-루프">for 문 - 조건식만 쓰는 for 루프</h2>
 
-<p>관계연산자는 서로의 크기를 비교하거나 동일함을 체크하는데 사용된다.</p>
+<p>Go에서 for 루프는 초기값과 증감식을 생략하고 조건식만을 사용할 수 있는데, 이는 마치 for 루프가 다른 언어의 while과 같이 쓰이도록 한다.</p>
 
 <div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
 
-<span class="k">import</span> <span class="s">"fmt"</span>
-
 <span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">a</span><span class="o">:=</span><span class="m">5</span>
-  <span class="n">b</span><span class="o">:=</span><span class="m">10</span>
-  <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="p">)</span> <span class="c">// false</span>
-  <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">a</span><span class="o">!=</span><span class="n">b</span><span class="p">)</span> <span class="c">// true</span>
-  <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">a</span><span class="o">&lt;=</span><span class="n">b</span><span class="p">)</span> <span class="c">// true</span>
+	<span class="n">n</span> <span class="o">:=</span> <span class="m">1</span>
+	<span class="k">for</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="m">100</span> <span class="p">{</span>
+		<span class="n">n</span><span class="o">*=</span><span class="m">2</span>
+	<span class="p">}</span>
+	<span class="nb">println</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h2 id="논리연산자">논리연산자</h2>
+<h2 id="for-문---무한루프">for 문 - 무한루프</h2>
 
-<p>논리연산자는 AND, OR, NOT을 표현하는데 사용된다.</p>
-
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">A</span> <span class="o">&amp;&amp;</span> <span class="n">B</span>
-<span class="n">A</span> <span class="o">||</span> <span class="o">!</span><span class="p">(</span><span class="n">C</span> <span class="o">&amp;&amp;</span> <span class="n">B</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h2 id="bitwise연산자">Bitwise연산자</h2>
-
-<p>Bitwise연산자는 비트단위 연산을 위해 사용되는데, 바이너리 AND, OR, XOR과 바이너리 쉬프트 연산자가 있다.</p>
+<p>for 루프로 무한루프를 만들려면 “초기값; 조건식; 증감” 모두를 생략하면 된다.</p>
 
 <div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
 
-<span class="k">import</span> <span class="s">"fmt"</span>
-
 <span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">a</span><span class="o">:=</span><span class="m">3</span>
-  <span class="n">b</span><span class="o">:=</span><span class="m">2</span>
-  <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"%08b"</span><span class="p">,</span> <span class="n">a</span><span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="c">// 00000010</span>
-  <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"%08b"</span><span class="p">,</span> <span class="n">a</span><span class="o">|</span><span class="n">b</span><span class="p">)</span> <span class="c">// 00000011</span>
-  <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"%08b"</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="n">b</span><span class="p">)</span> <span class="c">// 00000001</span>
-	<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"%08b"</span><span class="p">,</span> <span class="n">a</span><span class="o">&lt;&lt;</span><span class="m">2</span><span class="p">)</span><span class="c">// 00001100</span>
-	<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"%08b"</span><span class="p">,</span> <span class="n">a</span><span class="o">&lt;&lt;</span><span class="m">1</span><span class="p">)</span><span class="c">// 00000001</span>
+	<span class="k">for</span> <span class="p">{</span>
+		<span class="nb">println</span><span class="p">(</span><span class="s">"Infinite loop"</span><span class="p">)</span>
+	<span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h2 id="할당연산자">할당연산자</h2>
+<h2 id="for-range-문">for range 문</h2>
 
-<p>할당연산자는 값을 할당하는 = 연산자 외에 사칙연산, 비트연산을 축약한 +=, &amp;=, «= 같은 연산자들도 있다.</p>
+<p>for range 문은 컬렉션으로 부터 한 요소씩 가져와 차례로 for 블럭의 문장들을 실행한다.</p>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="m">100</span>
-<span class="n">a</span> <span class="o">*=</span> <span class="m">10</span>
-<span class="n">a</span> <span class="o">&gt;&gt;=</span><span class="m">2</span>
-<span class="n">a</span> <span class="o">|=</span> <span class="m">1</span>
-</code></pre></div></div>
-
-<h2 id="포인터연산자">포인터연산자</h2>
-
-<p>포인터연산자는 &amp;혹은 *을 사용하여 해당 변수의 주소를 얻어내거나 이를 반대로 Dereference 할 때 사용한다. Go는 비록 포인터연산자를 제공하지만 포인터 산술 즉 포인터에 더하고 빼는 기능은 제공하지 않는다.</p>
+<p>for range 문은 “for 인덱스, 요소값 := range 컬렉션” 같이 for 루프를 구성하는데, range 키워드 다음의 컬렉션으로부터 하나씩 요소를 리턴해서 그 요소의 위치인덱스와 값을 for 키워드 다음의 2개의 변수에 각각 할당한다.</p>
 
 <div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
 
-<span class="k">import</span> <span class="s">"fmt"</span>
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">names</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">"홍길동"</span><span class="p">,</span> <span class="s">"김철수"</span><span class="p">,</span> <span class="s">"김영희"</span><span class="p">}</span>
+
+	<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">name</span> <span class="o">:=</span> <span class="k">range</span> <span class="n">names</span> <span class="p">{</span>
+		<span class="nb">println</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="break-continue-goto-문">break, continue, goto 문</h2>
+
+<p>경우에 따라 for 루프내에서 즉시 빠져나올 필요가 있는데, 이때 break 문을 사용한다. 만약 for 루프 중간에서 나머지 문장들을 실행하지 않고 for 루프 시작부분으로 바로 가려면 continue 문을 사용한다. 그리고 기타 임의의 문장으로 이동하기 위해 goto 문을 사용할 수 있다. goto 문은 for 루프와 관련없이 사용될 수 있다.</p>
+
+<p>break 문은 for 루프 이외에 switch 문이나 select 문에서도 사용할 수 있다. 하지만, continue 문은 for 루프와 연관되어 사용된다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
 
 <span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">a</span><span class="o">:=</span><span class="m">10</span>
-  <span class="n">p</span><span class="o">:=&amp;</span><span class="n">a</span> <span class="c">// a의 주소를 할당</span>
-  <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="c">// p가 가르키는 주소에 있는 실제 내용출력</span>
+	<span class="n">a</span> <span class="o">:=</span> <span class="m">1</span>
+	<span class="k">for</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="m">15</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="m">5</span> <span class="p">{</span>
+			<span class="n">a</span> <span class="o">+=</span> <span class="n">a</span>
+			<span class="k">continue</span>
+		<span class="p">}</span>
+		<span class="n">a</span><span class="o">++</span>
+		<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="m">10</span> <span class="p">{</span>
+			<span class="k">break</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="m">11</span> <span class="p">{</span>
+		<span class="k">goto</span> <span class="n">END</span>
+	<span class="p">}</span>
+	<span class="nb">println</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">END</span><span class="o">:</span>
+	<span class="nb">println</span><span class="p">(</span><span class="s">"END"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>break 문은 보통 단독으로 사용되지만, 경우에 따라 “break 레이블”과 같이 사용하여 지정된 레이블로 이동할 수도 있다. break의 “레이블은” 보통 현재의 for 루프를 바로 위에 적게 되는데, 이러한 “break 레이블”은 현재의 로프를 빠져나와 지정된 레이블로 이동하고, break 문의 직속 for 로프 전체의 다음 문장을 실행하게 한다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">i</span> <span class="o">:=</span> <span class="m">0</span>
+
+<span class="n">L1</span><span class="o">:</span>
+	<span class="k">for</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="m">0</span> <span class="p">{</span>
+			<span class="k">break</span> <span class="n">L1</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="nb">println</span><span class="p">(</span><span class="s">"OK"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div></div>
  
@@ -491,20 +512,20 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Go+%EC%97%B0%EC%82%B0%EC%9E%90%20https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-data-type%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Go+%EB%B0%98%EB%B3%B5%EB%AC%B8%20https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-for%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-data-type%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-for%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-data-type%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-for%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
  
   <nav class="pagination">
     
-      <a href="/react/component-props/" class="pagination--pager" title="Component &amp; Props
+      <a href="/go/go-data-type/" class="pagination--pager" title="Go 연산자
 ">이전</a>
     
     
-      <a href="/go/go-for/" class="pagination--pager" title="Go 반복문
+      <a href="/go/go-if/" class="pagination--pager" title="Go 조건문
 ">다음</a>
     
   </nav>
