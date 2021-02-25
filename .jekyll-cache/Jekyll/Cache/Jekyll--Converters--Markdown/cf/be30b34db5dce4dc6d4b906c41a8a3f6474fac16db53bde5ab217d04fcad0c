@@ -1,0 +1,61 @@
+I"�<h2 id="state">State</h2>
+
+<p>state란 말 그대로 컴포넌트의 상태 값이다.</p>
+
+<p>state와 props는 둘 다 object 이고, 화면에 보여줄 정보를 가지고 있다는 점에서 서로 비슷한 역할을 한다. props는 컴포넌트를 사용하는 부모쪽에서 전달해야만 사용할 수 있고, state는 컴포넌트 내에서 정의하고 사용한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Button</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">();</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="na">clicked</span><span class="p">:</span> <span class="nx">flase</span><span class="p">,</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
+
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">div</span>
+                <span class="na">className</span><span class="p">=</span><span class="s">"btn"</span>
+                <span class="na">onClick</span><span class="p">=</span><span class="si">{</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">clicked</span><span class="p">:</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">clicked</span> <span class="p">});</span>
+                <span class="p">}</span><span class="si">}</span>
+            <span class="p">&gt;</span>
+                <span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">clicked</span> <span class="p">?</span> <span class="dl">'</span><span class="s1">좋아요</span><span class="dl">'</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">싫어요</span><span class="dl">'</span><span class="si">}</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">ReactDom</span><span class="p">.</span><span class="nx">render</span><span class="p">(&lt;</span><span class="nc">Button</span> <span class="p">/&gt;,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementByID</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">));</span>
+</code></pre></div></div>
+
+<h3 id="onclickthissetstate-clicked-thisstateclicked-"><code class="language-plaintext highlighter-rouge">onClick={()=&gt;{this.setState({ clicked: !this.state.clicked })}}</code></h3>
+
+<ul>
+  <li>click하면 clicked라는 state를 수정한다. <code class="language-plaintext highlighter-rouge">this.setState()</code> 함수로 state를 업데이트 할 수 있다.</li>
+  <li><code class="language-plaintext highlighter-rouge">!this.state.clicked</code> 로 업데이트 한다는 말은 현재 clicked의 반대로 저장한다는 말이다.</li>
+</ul>
+
+<h3 id="thisstateclicked--좋아요--싫어요"><code class="language-plaintext highlighter-rouge">{this.state.clicked ? ‘좋아요’ : ‘싫어요’}</code></h3>
+
+<ul>
+  <li>clicked staterk true면 ‘좋아요’를 보여주고 false면 ‘싫어요’를 보여준다.</li>
+</ul>
+
+<h3 id="constructor"><code class="language-plaintext highlighter-rouge">constructor()</code></h3>
+
+<p>constructor는 class의 인스턴스가 생성될 때 항상 호출되는 함수이다. 초기화할 값들을 constructor에서 세팅해준다고 보면 된다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">super</span><span class="p">();</span>
+
+		<span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+			<span class="na">clicked</span><span class="p">:</span> <span class="nx">flase</span>
+	<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Button 컴포넌트를 그리려면 <code class="language-plaintext highlighter-rouge">this.state.clicked</code> 값이 필요한데, 제일 최초에는 값이 없으므로 constructor에서 값을 지정해준다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">super()</code> 라는 키워드를 꼭 작성해야 <code class="language-plaintext highlighter-rouge">React.Component</code> class에 있는 메서드를 사용할 수 있다.</p>
+:ET

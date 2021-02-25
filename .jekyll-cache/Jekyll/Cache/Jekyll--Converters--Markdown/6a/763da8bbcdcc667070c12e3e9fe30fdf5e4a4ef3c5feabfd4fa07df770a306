@@ -1,0 +1,51 @@
+I"�<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/847f6771-4a65-4f24-ab42-d5b41c252500/Untitled.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/847f6771-4a65-4f24-ab42-d5b41c252500/Untitled.png" /></p>
+
+<p><code class="language-plaintext highlighter-rouge">render</code>, <code class="language-plaintext highlighter-rouge">componentDidMount</code>, <code class="language-plaintext highlighter-rouge">componentDidUpdate</code>, <code class="language-plaintext highlighter-rouge">componentWillUnmount</code> 등의 함수는 <code class="language-plaintext highlighter-rouge">React.Component</code> class 에서 제공하는 메서드이다. 컴포넌트를 만들 때 class로 생성하면 위의 메서드를 사용할 수 있고, 컴포넌트가 lifecycle에 따라 각자의 메서드가 호출된다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Clock</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">();</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="na">date</span><span class="p">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
+
+    <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">timerID</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">tick</span><span class="p">(),</span> <span class="mi">1000</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">componentWillUnmount</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">clearInterval</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">timerID</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">tick</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+            <span class="na">date</span><span class="p">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>It is <span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">date</span><span class="p">.</span><span class="nx">toLocaleTimeString</span><span class="p">()</span><span class="si">}</span>.<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(&lt;</span><span class="nc">Clock</span> <span class="p">/&gt;,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">));</span>
+</code></pre></div></div>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">ReactDOM.render()</code> 에서 첫 인자로 <code class="language-plaintext highlighter-rouge">&lt;Clock /&gt;</code> 을 넘길 때, React는 Clock 컴포넌트의 <code class="language-plaintext highlighter-rouge">constructor</code> 를 호출한다.</li>
+  <li>Clock에서 초기 시간이 필요하므로 <code class="language-plaintext highlighter-rouge">this.state</code> 에 현재 시간으로 초기화 한다.</li>
+  <li>Clock 컴포넌트의 <code class="language-plaintext highlighter-rouge">render()</code> 메서드가 호출된다.</li>
+  <li>DOM에 <code class="language-plaintext highlighter-rouge">render()</code> 의 return된 요소가 추가되면 <code class="language-plaintext highlighter-rouge">componentDidMount</code> 함수가 호출된다.</li>
+  <li>Clock 컴포넌트의 <code class="language-plaintext highlighter-rouge">tick</code> 메서드가 매 초 호출될 수 있도록 timer를 추가한다.</li>
+  <li>매 초 브라우저가 <code class="language-plaintext highlighter-rouge">tick</code> 메서드를 호출하면서 <a href="http://this.state.date"><code class="language-plaintext highlighter-rouge">this.state.date</code></a> 값이 변한다.</li>
+  <li>state가 변경되면 원래 <code class="language-plaintext highlighter-rouge">componentDidUpdate</code> 함수가 호출되지만, 위에서 정의하지 않았으므로 <code class="language-plaintext highlighter-rouge">render()</code> 가 다시 호출되면서 바뀐 부분이 변경된다.</li>
+  <li>DOM에서 Clock 컴포넌트가 삭제될 때, <code class="language-plaintext highlighter-rouge">componentWillUnmount</code> 가 호출되고 timer도 같이 멈추게 된다.</li>
+</ol>
+:ET
