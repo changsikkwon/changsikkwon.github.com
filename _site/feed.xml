@@ -1,39 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://changsikkwon.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://changsikkwon.github.io/" rel="alternate" type="text/html" /><updated>2021-02-25T12:53:20+09:00</updated><id>https://changsikkwon.github.io/feed.xml</id><title type="html">Changsik’s Blog</title><subtitle>An amazing website.</subtitle><author><name>권창식</name><email>kcs15987@gmail.com</email></author><entry><title type="html">Tree</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree/" rel="alternate" type="text/html" title="Tree" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree/">&lt;h1 id=&quot;tree&quot;&gt;Tree&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Tree는 일반적으로 대상 정보의 각 항목들을 계층적으로 연관되도록 구조화 시키고자 할 때 사용하는 비선형 자료구조이다.&lt;/li&gt;
-  &lt;li&gt;데이터 요소들의 단순한 나열이 아닌 부모 - 자식 관곅의 계층적 구조로 표현된다.&lt;/li&gt;
-  &lt;li&gt;Tree는 그래프의 한 종류이며 사이클이 없다.&lt;/li&gt;
-  &lt;li&gt;Tree 자료구조는 여러유형이 있지만 그 중 가장 기본은 binary tree 구조가 대표적이다.&lt;/li&gt;
-  &lt;li&gt;binary tree는 두개의 자식노드를 가진 트리 형태이다.&lt;/li&gt;
-  &lt;li&gt;Tree의 자료구조는 데이터를 거꾸로된 나무 형태로 저장하는 모양이다.&lt;/li&gt;
-  &lt;li&gt;계층적인 관계의 표현에 쓰이고, 윈도우와 리눅스의 파일시스템 구조도 Tree로 표현된다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;용어&quot;&gt;용어&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://media.vlpt.us/images/kcs15987/post/375d9ee2-73ce-4b23-ae79-4b9c3359a229/image.png&quot; alt=&quot;https://media.vlpt.us/images/kcs15987/post/375d9ee2-73ce-4b23-ae79-4b9c3359a229/image.png&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Node : Tree구조의 교점이다. Node가 데이터를 가지고 있고 또한 자식노드를 가지고 있다. Tree 자료구조는 노드를 기본으로 구성된다.&lt;/li&gt;
-  &lt;li&gt;Root Node: Tree구조의 가장 위 노드.&lt;/li&gt;
-  &lt;li&gt;Edge: Tree를 구성하기 위해 노드와 노드를 연결하는 선이다.&lt;/li&gt;
-  &lt;li&gt;level: Tree의 특정 깊이를 가지는 노드의 집합이다.&lt;/li&gt;
-  &lt;li&gt;degree: 하위 Tree개수 / 각 노드가 지닌 가지의 수를 말한다.&lt;/li&gt;
-  &lt;li&gt;Internal Node : Leaf노드를 제외한 중간에 위치한 노드들을 말한다.&lt;/li&gt;
-  &lt;li&gt;Leaf Node: 하위에 다른 노드가 연결되어 있지 않은 노드이다.&lt;/li&gt;
-  &lt;li&gt;Tree의 속성 중 가장 중요한 것이 ‘루트 노드를 제외한 모든 노드는 단 하나의 부모노드만을 가진다’는 것이다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;tree의-탐색&quot;&gt;Tree의 탐색&lt;/h1&gt;
-
-&lt;h3 id=&quot;tree의-순회란-tree의-각-노드를-체계적인-방법으로-방문하는-과정을-말한다&quot;&gt;Tree의 순회란 Tree의 각 노드를 체계적인 방법으로 방문하는 과정을 말한다.&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;전위순회(preorder)루트노드 - 왼쪽 서브Tree - 오른쪽 서브Tree 순으로 순회하는 방식이다.&lt;/li&gt;
-  &lt;li&gt;중위순회(inorder)루트노드에서 시작해서 왼쪽 서브Tree - 노드 - 오른쪽 서브Tree 순으로 순회하는 방식이다.&lt;/li&gt;
-  &lt;li&gt;후위순회(postorder)루트노드에서 시작해서 왼쪽 서브Tree - 오른쪽 서브Tree - 노드 순으로 순회하는 방식이다.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="자료구조" /><category term="Data Structure" /><category term="자료구조" /><category term="Data Structure" /><summary type="html">Tree</summary></entry><entry><title type="html">Tuple</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tuple/" rel="alternate" type="text/html" title="Tuple" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tuple</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tuple/">&lt;h2 id=&quot;특징&quot;&gt;특징&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://changsikkwon.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://changsikkwon.github.io/" rel="alternate" type="text/html" /><updated>2021-02-25T12:56:37+09:00</updated><id>https://changsikkwon.github.io/feed.xml</id><title type="html">Changsik’s Blog</title><subtitle>An amazing website.</subtitle><author><name>권창식</name><email>kcs15987@gmail.com</email></author><entry><title type="html">Tuple</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tuple/" rel="alternate" type="text/html" title="Tuple" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tuple</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tuple/">&lt;h2 id=&quot;특징&quot;&gt;특징&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;List와 마찬가지로 데이터를 순차적으로 저장할 수 있는 순열 자료구조이다.&lt;/li&gt;
@@ -90,7 +55,90 @@
 &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="자료구조" /><category term="Data Structure" /><category term="자료구조" /><category term="Data Structure" /><summary type="html">특징</summary></entry><entry><title type="html">Go 변수와 상수</title><link href="https://changsikkwon.github.io/go/go-variable/" rel="alternate" type="text/html" title="Go 변수와 상수" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/go/go-variable</id><content type="html" xml:base="https://changsikkwon.github.io/go/go-variable/">&lt;h2 id=&quot;변수&quot;&gt;변수&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="자료구조" /><category term="Data Structure" /><category term="자료구조" /><category term="Data Structure" /><summary type="html">특징</summary></entry><entry><title type="html">Unit Test</title><link href="https://changsikkwon.github.io/unittest/" rel="alternate" type="text/html" title="Unit Test" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/unittest</id><content type="html" xml:base="https://changsikkwon.github.io/unittest/">&lt;h2 id=&quot;unit-test란&quot;&gt;Unit Test란?&lt;/h2&gt;
+
+&lt;p&gt;내가 작성한 코드의 가장 작은 단위인 함수를 테스트하는 메소드이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;testing-pyramid&quot;&gt;Testing Pyramid&lt;/h2&gt;
+
+&lt;p&gt;Google Test Automation Conference에서 제안된 테스트 피라미드이며 UI Testing은 10%, intergrating Testing은 20%, 그리고 Unit Testing을 70% 전체 테스트 converage를 구현 하는것이 권장된다.
+&lt;img src=&quot;https://images.velog.io/images/kcs15987/post/d0e49113-af4f-40f9-abbd-10f2f8345ff8/image.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;UI Testing / End-To-End Testing&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;크롬 브라우저를 띄운 다음에 내가 만든 검색페이지로 들어가서 검색을 해보고 검색한 내용이 제대로 나오는지 화면상에서 확인하거나 직접 회원가입을 해보고 회원가입후에 로그인이되는지 직접 브라우저에서 값을 입력해서 테스트 하는방법&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Intergration Testing&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;최소 두개이상의 클래스 또는 서브 시스템의 결합을 테스트하는 방법&lt;/li&gt;
+      &lt;li&gt;Postman 또는 httpie로 호출해서 Json Response가 제대로 출력되는지 확인&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Unit Testing&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;unit-test-장점&quot;&gt;Unit Test 장점&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Unit Test는 UI Test 또는 Intergration Test 보다 테스트 비용이 싸다. 왜냐하면 UI Test는 백엔드 서버와 프론트를 연동하여 사람이 직접 테스트하지만, Unit Test는 사람이 슼립트로 한꺼번에 자동으로 실행하기 때문이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Unit Test는 다른 테스트에 비해서 실행 속도가 매우 빠르다. 그래서 Unit Test를 활용하면 하루에도 배포를 여러번 할 수 있어 개발 및 배포 속도에 중요한 영향을 주기 때문에 개발할 때 최대한 활용하는게 좋다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;새로운 기능ㅇ르 구현할때 Unit Test를 잘 작성해놓으면 중장기적으로 유지보수가 쉬운 장점이 있다. 이전에 통과했던 테스트 집합을 가지고 버그를 찾기 위해서 이전에 테스트 되었던 유닛테스트를 반복하는 것을 regressin 테스트라고 하는데 Unit Test만 반복하면 되기 때문에 regression 테스트도 반복적으로 수행 할 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Unit Test를 잘 짜놓으면 Unit Test가 되었던 코드에서는 버그가 거의 발견되지 않고 대부분 버그가 발견되는 경우는 Unit Test가 없어서 발생하는 경우가 많다. 만약 사후에 발견된 버그에 대해서도 버그를 수정한 후 Unit Test를 작성해놓으면 버그를 방지할 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;unit-test의-일반-원칙&quot;&gt;Unit Test의 일반 원칙&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;테스트 유닛은 각 기능의 가장 작은 단위에 집중하여, 해당 기능이 정확히 동작하는지를 증명해야한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;각 테스트 유닛은 반드시 독립적이어야한다. 각 테스트는 혼자서도 실행 가능해야하고, 테스트 슈트로도 실행 가능해야한다. 이 때 호출되는 순서와 무관하게 잘 동작해야한다. 새로운 데이터 셋으로 각각의 테스트를 로딩해야하고, 그 실행 결과는 반드시 삭제해야한다. 보통 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setUP()&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tearDown()&lt;/code&gt; 메소드로 이런 작업을 한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;테스트가 빠르게 돌 수 있도록 만들기 위해 노력해야한다. 테스트 하나가 실행하는데 몇 밀리세컨드 이상의 시간이 걸린다면, 개발 속도가 느려지거나 테스트가 충분히 자주 수행되지 못할 것이다. 테스트에 필요한 데이터 구조가 너무 복잡하고, 테스트를 하려면 매번 이 복잡한 데이터를 불러와야 해서 테스트를 빠르게 만들 수 없는 경우도 있다. 이럴 때는 무거운 테스트는 따로 분리하여 별도의 테스트슈트를 만들어 주고 스케줄 작업을 걸어두면 된다. 그리고 그 외의 다른 모든 테스트는 필요한 만큼 자주 수행하면 된다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;지금 사용하고 있는 Tool이 개별 테스트나 테스트 케이스를 어떻게 수행하는지 배워야한다. 모듈안에 들어있는 함수를 개발하고 있다면 그 함수의 테스트를 자주, 가능하다면 코드를 저장할 때마다 자동으로 돌려야한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;그날의 코딩을 시작하기전에 항상 풀 테스트 슈트를 돌려야한다. 끝난후에도 마찬가지이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;모두가 공유하는 저장소에다가 코드를 집어넣기 전에 자동으로 모든 테스트를 수행하도록 하는 구현을 하는 것이 좋다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;지금 한창 개발 중인데 그만두고 잠시 다른일을 해야한다면, 다음에 개발할 부분에다가 일부러 고장난 유닛 테스트를 작성하는 것도 좋은 생각이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;코드를 디버깅할 때 가장 먼저 시작할 일은 버그를 찝어내는 새로운 테스트를 작성하는 것이다. 이런일이 언제나 가능한 것은 아니지만, 이런 버그잡이 테스트들이야말로 당신의 프로젝트에서 가장 가치있는 코드 조각이 될 것이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;테스트 함수에는 길고 서술적인 이름을 사용해야한다. 테스트에서의 스타일 안내서는 짧은 이름보다 선호하는 다른 일반적인 코드와는 조금 다르다. 테스트 함수는 절대 직접 호출되지 않기 때문이다. 실제로 돌아가는 코드에서는 square()라든가 심지어 sqr() 조차도 괜찮지만 테스트 코드에서는 test_square_of_number_2(), test_square_negative_number() 같은 이름을 붙혀야한다. 이런 함수명들은 테스트가 실패할 때보인다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;무언가 잘못되었거나 뜯어고쳐야만 할 경우, 괜찮은 코드에 테스트 셋이 있다면 당신이나 다른 유지보수 담당자들은 오류를 수정하거나 프로그램의 동작을 수정할 때 필시 그 테스트 슈트에 전적으로 의지할 것이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;테스트 코드의 또 다른 사용 방법은 개발자들을 위한 안내서로 쓰는 방법이다. 이미 만들어져 있는 코드에서 작업해야할 경우, 관련 테스틀코드를 돌려보고 읽어보는 것이야말로 가장 좋은 시작점일 경우가 많다. 이렇게 테스트 코드를 돌려보면 어느 지점이 문제인지, 수정하기 어려운 곳은 어디일지, 막다른 골목은 어디일지를 발견하게 된다. 몇 가지 기능을 추가해야 한다면 가장 먼저 해야할 일은 그 새로운 기능이 아직 돌아가지 않음을 확인할 수 있는 테스트를 붙혀넣는 것이다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><summary type="html">Unit Test란?</summary></entry><entry><title type="html">Go 변수와 상수</title><link href="https://changsikkwon.github.io/go/go-variable/" rel="alternate" type="text/html" title="Go 변수와 상수" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/go/go-variable</id><content type="html" xml:base="https://changsikkwon.github.io/go/go-variable/">&lt;h2 id=&quot;변수&quot;&gt;변수&lt;/h2&gt;
 
 &lt;p&gt;변수는 Go 키워드 var를 사용하여 선언한다. var 키워드 뒤에 변수명을 적고, 그 뒤에 변수 타입을 적는다.&lt;/p&gt;
 
