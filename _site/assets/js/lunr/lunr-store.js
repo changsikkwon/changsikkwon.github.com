@@ -29,10 +29,16 @@ var store = [{
         "url": "/react/component-props/",
         "teaser": null
       },{
+        "title": "Go 연산자",
+        "excerpt":"산술연산자   산술연산자는 사칙연산자(+, -, *, /, % (Modulus))와 증감연산자(++, –)를 사용한다.   package main  import \"fmt\"  func main() {   a:=5   b:=10   c:=(a+b) / 5   fmt.Println(c) // 3 }   관계연산자   관계연산자는 서로의 크기를 비교하거나 동일함을 체크하는데 사용된다.   package main  import \"fmt\"  func main() {   a:=5   b:=10   fmt.Println(a==b) // false   fmt.Println(a!=b) // true   fmt.Println(a&lt;=b) // true }   논리연산자   논리연산자는 AND, OR, NOT을 표현하는데 사용된다.   A &amp;&amp; B A || !(C &amp;&amp; B)   Bitwise연산자   Bitwise연산자는 비트단위 연산을 위해 사용되는데, 바이너리 AND, OR, XOR과 바이너리 쉬프트 연산자가 있다.   package main  import \"fmt\"  func main() {   a:=3   b:=2   fmt.Printf(\"%08b\", a&amp;b) // 00000010   fmt.Printf(\"%08b\", a|b) // 00000011   fmt.Printf(\"%08b\", a^b) // 00000001 \tfmt.Printf(\"%08b\", a&lt;&lt;2)// 00001100 \tfmt.Printf(\"%08b\", a&lt;&lt;1)// 00000001 }   할당연산자   할당연산자는 값을 할당하는 = 연산자 외에 사칙연산, 비트연산을 축약한 +=, &amp;=, «= 같은 연산자들도 있다.   a = 100 a *= 10 a &gt;&gt;=2 a |= 1   포인터연산자   포인터연산자는 &amp;혹은 *을 사용하여 해당 변수의 주소를 얻어내거나 이를 반대로 Dereference 할 때 사용한다. Go는 비록 포인터연산자를 제공하지만 포인터 산술 즉 포인터에 더하고 빼는 기능은 제공하지 않는다.   package main  import \"fmt\"  func main() {   a:=10   p:=&amp;a // a의 주소를 할당   fmt.Println(*p) // p가 가르키는 주소에 있는 실제 내용출력 }  ","categories": ["Go"],
+        "tags": ["Go"],
+        "url": "/go/go-data-type/",
+        "teaser": null
+      },{
         "title": "Go Data type",
         "excerpt":"데이터 타입   Go 프로그래밍 언어는 다음과 같은 기본적인 데이터 타입들을 갖고 있다.   제목 없음   문자열   문자열 리터럴은 Back Quote(``) 혹은 이중인용부호(“ “)를 사용하여 표현할 수 있다.      Back Quote로 둘러싸인 문자열은 Raw String Literal이라고 부르는데, 이 안에 있는 문자열은 별도로 해석되지 않고 Raw string 그대로의 값을 갖는다.   이중인용부호로 둘러싸인 문자열은 Interpreted String Literal이라 부르는데, 복수 라인에 걸쳐 쓸수 없으며, 인용부호 안의 escape 문자열들은 특별한 의미로 해석된다. 예를 들어, 문자열 안에 \\n 이 있을 경우 이는 NewLine으로 해석된다. 이중인용부호를 이용해 문자열을 여러 라인에 걸쳐 쓰기 위해서는 + 연산자를 이용해 결합하여 사용한다.   package main  import \"fmt\"  func main() { \t\t// Raw String Literal. 복수라인. \t\trawLiteral := `hello wolrd\\n hello wolrd\\n \thello wolrd`  \t\tinterLiteral := \"hello world\\nhello wolrd\" \t// or interLiteral := \"hello world\\n\" + \t//\t\t\t\t\t\t\t\t\t\t\"hello wolrd\"  \t\tfmt.Println(rawLiteral)     fmt.Println()     fmt.Println(interLiteral)  \t// 출력 hello world\\n hello world\\n   hello world  hello world hello world }   데이터 타입 변환   하나의 데이타 타입에서 다른 데이타 타입으로 변환하기 위해서는 T(v) 와 같이 표현하고 이를 Type Conversion이라 부르는데, 여기서 T는 변환하고자 하는 타입을 표시하고, v는 변환될 값(value)을 지정한 것이다. 예를 들어, 정수 100을 float로 변경하기 위하여 float32(100) 처럼 표현하고, 문자열을 바이트배열로 변경하기 위하여 []byte(“ABC”) 처럼 표현할 수 있다.   주의할 점은 Go에서 타입간 변환은 명시적으로 지정해 주어야 한다는 점인데, 예를 들어 정수형 int에서 uint로 변환할 때, 암묵적(implicit) 변환이 일어나지 않으므로 uint(i) 처럼 반드시 변환을 지정해 주어야 한다. 만약 명시적 지정이 없이 변환이 일어나면 런타임 에러가 발생한다.   func main() {     var i int = 100     var u uint = uint(i)     var f float32 = float32(i)     println(f, u)      str := \"ABC\"     bytes := []byte(str)     str2 := string(bytes)     println(bytes, str2) }  ","categories": ["Go"],
         "tags": ["Go"],
-        "url": "/go/go-data-type/",
+        "url": "/go/go-operator/",
         "teaser": null
       },{
         "title": "Go Print",
