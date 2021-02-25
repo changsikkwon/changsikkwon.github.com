@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Array - Changsik’s Blog</title>
-<meta name="description" content="특징">
+<!-- begin _includes/seo.html --><title>RDBMS - Changsik’s Blog</title>
+<meta name="description" content="RDBMS(관계형 데이터베이스)">
 
 
   <meta name="author" content="권창식">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Changsik's Blog">
-<meta property="og:title" content="Array">
-<meta property="og:url" content="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/">
+<meta property="og:title" content="RDBMS">
+<meta property="og:url" content="https://changsikkwon.github.io/database/rdbms/">
 
 
-  <meta property="og:description" content="특징">
+  <meta property="og:description" content="RDBMS(관계형 데이터베이스)">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/">
+<link rel="canonical" href="https://changsikkwon.github.io/database/rdbms/">
 
 
 
@@ -175,7 +175,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0" itemprop="item"><span itemprop="name">%ec%9e%90%eb%a3%8c%ea%b5%ac%ec%a1%b0</span></a>
+          <a href="/categories/#database" itemprop="item"><span itemprop="name">Database</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -183,17 +183,7 @@
     
       
       
-        
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#data-structure" itemprop="item"><span itemprop="name">Data structure</span></a>
-          <meta itemprop="position" content="3" />
-        </li>
-        <span class="sep">/</span>
-      
-    
-      
-      
-        <li class="current">Array</li>
+        <li class="current">RDBMS</li>
       
     
   </ol>
@@ -331,10 +321,10 @@
     <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
         <meta
             itemprop="headline"
-            content="Array"
+            content="RDBMS"
         /> <meta
             itemprop="description"
-            content="특징"
+            content="RDBMS(관계형 데이터베이스)"
         /> <meta itemprop="datePublished" content="2021-02-25T00:00:00+09:00" /> 
 
         <div class="page__inner-wrap">
@@ -342,7 +332,7 @@
             <header>
                 
                 <h1 id="page-title" class="page__title" itemprop="headline">
-                    <p>Array</p>
+                    <p>RDBMS</p>
 
                 </h1>
                  
@@ -370,53 +360,54 @@
             
 
             <section class="page__content" itemprop="text">
-                 <h2 id="특징">특징</h2>
+                 <h1 id="rdbms관계형-데이터베이스">RDBMS(관계형 데이터베이스)</h1>
 
 <ul>
-  <li>가장 큰 특징은 순차적으로 데이터를 저장한다는 것이다.</li>
-  <li>주로 서로 연결된 데이터들을 순차적으로 저정할때 사용한다.</li>
-  <li>순서가 상관 없더라도 서로 연결된 데이터들을 저장할때 일반적으로 사용된다.</li>
-  <li>이미 생성된 리스트도 수정 가능하다.</li>
-  <li>동일한 값도 여러번 삽입 가능하다.</li>
-  <li>Multi-dimensional Array(다중차원 배열)이다.</li>
+  <li>이름 그대로, 관계형 데이터 모델에 기초를 둔 데이터베이스 시스템을 말한다.</li>
+  <li>관계형 데이터란 데이터를 서로 상호관련성을 가진 형태로 표현한 데이터를 말한다.
+    <ul>
+      <li>모든 데이터들은 2차원 테이블(table)들로 표현 된다.</li>
+      <li>각각의 테이블은 컬럼(column)과 row(로우)로 구성된다.</li>
+      <li>각각의 테이블들은 서로 상호관련성을 가지고 서로 연결될 수 있다.
+        <ul>
+          <li>테이블끼리의 연결에는 크게 3종류가 있다
+            <ul>
+              <li>one to one</li>
+              <li>one to many</li>
+              <li>many to many</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
 
-<h2 id="내부구조">내부구조</h2>
+<h3 id="why-connect-the-tables">Why connect the tables?</h3>
 
 <ul>
-  <li>순서가 있다보니 당연하 순차적으로 번호를 지정할 수 있다. 이 번호를 index라고 한다.</li>
-  <li>index는 0부터 시작되며 마이너스 부호를 가질 수도 있다. 마이너스 index는 맨 마지막 요소부터 시작한다. 예를 들어 맨 마지막 요소의 index는 -1이다.</li>
+  <li>하나의 테이블에 모든 정보를 다 넣으면 동일한 정보들이 불필요하게 중복되어 저장된다.더 많은 디스크를 사용하게되고 잘못된 데이터가 저장 될 가능성이 높아진다.</li>
+  <li>여러 테이블에 나누어서 저장한 후 필요한 테이블끼리 연결 시키면 위의 2문제가 사라진다. 중복된 데이터를 저장하지 않음으로 디스크를 더 호율적으로 쓰고, 또한 서로 같은 데이터 이지만 부분적으로 틀린 데이터가 생기는 문제가 없어진다. 이것을 normalization(정규화) 이라고 한다.</li>
 </ul>
 
-<h2 id="단점">단점</h2>
+<h3 id="acid">ACID</h3>
 
-<h3 id="1-removing-or-adding-elements">1. Removing or Adding Elements</h3>
+<ul>
+  <li>원자성(Atomicity)은 트랜잭션과 관련된 작업들이 부분적으로 실행되다가 중단되지 않는 것을 보장하는 능력이다. 예를 들어, 자금 이체는 성공할 수도 실패할 수도 있지만 보내는 쪽에서 돈을 빼 오는 작업만 성공하고 받는 쪽에 돈을 넣는 작업을 실패해서는 안된다. 원자성은 이와 같이 중간 단계까지 실행되고 실패하는 일이 없도록 하는 것이다.</li>
+  <li>일관성(Consistency)은 트랜잭션이 실행을 성공적으로 완료하면 언제나 일관성 있는 데이터베이스 상태로 유지하는 것을 의미한다. 무결성 제약이 모든 계좌는 잔고가 있어야 한다면 이를 위반하는 트랜잭션은 중단된다.</li>
+  <li>고립성(Isolation)은 트랜잭션을 수행 시 다른 트랜잭션의 연산 작업이 끼어들지 못하도록 보장하는 것을 의미한다. 이것은 트랜잭션 밖에 있는 어떤 연산도 중간 단계의 데이터를 볼 수 없음을 의미한다. 은행 관리자는 이체 작업을 하는 도중에 쿼리를 실행하더라도 특정 계좌간 이체하는 양 쪽을 볼 수 없다. 공식적으로 고립성은 트랜잭션 실행내역은 연속적이어야 함을 의미한다. 성능관련 이유로 인해 이 특성은 가장 유연성 있는 제약 조건이다. 자세한 내용은 관련 문서를 참조해야 한다.</li>
+  <li>지속성(Durability)은 성공적으로 수행된 트랜잭션은 영원히 반영되어야 함을 의미한다. 시스템 문제, DB 일관성 체크 등을 하더라도 유지되어야 함을 의미한다. 전형적으로 모든 트랜잭션은 로그로 남고 시스템 장애 발생 전 상태로 되돌릴 수 있다. 트랜잭션은 로그에 모든 것이 저장된 후에만 commit 상태로 간주될 수 있다.</li>
+</ul>
 
-<p>중간의 특정 요소를 삭제해야 하는 경우</p>
+<h3 id="트랜잭션">트랜잭션</h3>
 
-<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f9bf4489-a0ff-4b98-b17b-23fe9298f195/Untitled.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f9bf4489-a0ff-4b98-b17b-23fe9298f195/Untitled.png" /></p>
-
-<p>순차적으로 담겨있는 데이터 중 특정 위치에 있는 중간의 요소가 삭제 되는 경우에, 항상 메모리가 순차적으로 이어져있어야 하기 때문에, 삭제된 요소로부터 뒤에 있는 모든 요소들을 앞으로 한칸씩 이동시켜주어야 한다.</p>
-
-<p>그러므로 배열에서 요소를 삭제하는 것은 다른 자료구조에 비해 느릴 수 있다.</p>
-
-<p>요소를 삭제하는 과정이 코드 상에서는 한 줄 이지만 실제 메모리 상에서 이루어지는 작업은 훨씬 커진다.</p>
-
-<p>중간에 요소가 추가 되는 경우도 마찬가지이다. 특정 위치에 새롭게 요소가 추가되는 경우에는 그 뒤의 요소들이 하나씩 밀리게 된다.</p>
-
-<p>그렇기 때문에 Array는 정보가 자주 삭제 되거나 추가되는 데이터를 담기에는 적절치 않다.</p>
-
-<h3 id="2-array-resizing">2. Array Resizing</h3>
-
-<p>배열은 메모리가 순차적으로 채워지기 때문에 배열이 처음 생성될 때 어느정도 메모리를 미리 할당한다.</p>
-
-<p>메모리를 할당 함으로써 새로 추가되는 요소들도 순차적으로 메모리에 저장될 수 있다.</p>
-
-<p>하지만 요소들이 처음 할당한 메모리 이상으로 많아지면 resizing이 필요하다.</p>
-
-<p>즉 메모리를 추가 할당해야한다. 그리고 추가적으로 할당된 메모리 또한 순차적이어야 하기때문에 resizing은 오래걸리는 작업이다.</p>
-
-<p>그렇기 때문에 Array는 사이즈 예측이 잘 안되는 데이터를 다루기에 적절치 않다.</p>
+<ul>
+  <li>ACID를 제공함으로 따라서 트랜잭션(일련의 작업들을 한번에 하나의 unit으로 실행하는것) 기능을 제공한다.
+    <ul>
+      <li>트랜잭션은 일련의 작업들이 마치 하나의 작업처럼 취급되어서 모두 다 성공하거나 아니면 모두 다 실패하는걸 이야기 한다.</li>
+    </ul>
+  </li>
+</ul>
  
             </section>
 
@@ -431,9 +422,7 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#data-structure" class="page__taxonomy-item" rel="tag">Data Structure</a><span class="sep">, </span>
-    
-      <a href="/tags/#%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0" class="page__taxonomy-item" rel="tag">자료구조</a>
+      <a href="/tags/#database" class="page__taxonomy-item" rel="tag">Database</a>
     
     </span>
   </p>
@@ -450,9 +439,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#data-structure" class="page__taxonomy-item" rel="tag">Data Structure</a><span class="sep">, </span>
-    
-      <a href="/categories/#%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0" class="page__taxonomy-item" rel="tag">자료구조</a>
+      <a href="/categories/#database" class="page__taxonomy-item" rel="tag">Database</a>
     
     </span>
   </p>
@@ -468,20 +455,20 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Array%20https%3A%2F%2Fchangsikkwon.github.io%2F%25EC%259E%2590%25EB%25A3%258C%25EA%25B5%25AC%25EC%25A1%25B0%2Fdata%2520structure%2Farray%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=RDBMS%20https%3A%2F%2Fchangsikkwon.github.io%2Fdatabase%2Frdbms%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2F%25EC%259E%2590%25EB%25A3%258C%25EA%25B5%25AC%25EC%25A1%25B0%2Fdata%2520structure%2Farray%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Fdatabase%2Frdbms%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2F%25EC%259E%2590%25EB%25A3%258C%25EA%25B5%25AC%25EC%25A1%25B0%2Fdata%2520structure%2Farray%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Fdatabase%2Frdbms%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
  
   <nav class="pagination">
     
-      <a href="/os/what-is-os/" class="pagination--pager" title="Os란?
+      <a href="/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/" class="pagination--pager" title="Array
 ">이전</a>
     
     
-      <a href="/database/rdbms/" class="pagination--pager" title="RDBMS
+      <a href="/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/set-dictionary-hash/" class="pagination--pager" title="Set, Dictionary, Hash
 ">다음</a>
     
   </nav>

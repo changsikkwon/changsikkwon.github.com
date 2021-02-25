@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://changsikkwon.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://changsikkwon.github.io/" rel="alternate" type="text/html" /><updated>2021-02-25T12:20:44+09:00</updated><id>https://changsikkwon.github.io/feed.xml</id><title type="html">Changsik’s Blog</title><subtitle>An amazing website.</subtitle><author><name>권창식</name><email>kcs15987@gmail.com</email></author><entry><title type="html">Tree</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree/" rel="alternate" type="text/html" title="Tree" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree/">&lt;h1 id=&quot;tree&quot;&gt;Tree&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://changsikkwon.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://changsikkwon.github.io/" rel="alternate" type="text/html" /><updated>2021-02-25T12:22:24+09:00</updated><id>https://changsikkwon.github.io/feed.xml</id><title type="html">Changsik’s Blog</title><subtitle>An amazing website.</subtitle><author><name>권창식</name><email>kcs15987@gmail.com</email></author><entry><title type="html">Tree</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree/" rel="alternate" type="text/html" title="Tree" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree/">&lt;h1 id=&quot;tree&quot;&gt;Tree&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Tree는 일반적으로 대상 정보의 각 항목들을 계층적으로 연관되도록 구조화 시키고자 할 때 사용하는 비선형 자료구조이다.&lt;/li&gt;
@@ -90,58 +90,54 @@
 &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="자료구조" /><category term="Data Structure" /><category term="자료구조" /><category term="Data Structure" /><summary type="html">특징</summary></entry><entry><title type="html">Set, Dictionary, Hash</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/set-dictionary-hash/" rel="alternate" type="text/html" title="Set, Dictionary, Hash" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/set-dictionary-hash</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/set-dictionary-hash/">&lt;h1 id=&quot;set&quot;&gt;Set&lt;/h1&gt;
-
-&lt;p&gt;set는 list처럼 순열 자료구조이다. 하지만 set는 순서라는 개념이 존재하지 않는다.&lt;/p&gt;
-
-&lt;h3 id=&quot;특징&quot;&gt;특징&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="자료구조" /><category term="Data Structure" /><category term="자료구조" /><category term="Data Structure" /><summary type="html">특징</summary></entry><entry><title type="html">RDBMS</title><link href="https://changsikkwon.github.io/database/rdbms/" rel="alternate" type="text/html" title="RDBMS" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/database/rdbms</id><content type="html" xml:base="https://changsikkwon.github.io/database/rdbms/">&lt;h1 id=&quot;rdbms관계형-데이터베이스&quot;&gt;RDBMS(관계형 데이터베이스)&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;데이터를 비순차적으로 저장할 수 있는 순열 자료구조이다.&lt;/li&gt;
-  &lt;li&gt;삽입 순서대로 저장되지 않는다.&lt;/li&gt;
-  &lt;li&gt;수정가능하다.&lt;/li&gt;
-  &lt;li&gt;동일한 값을 여러번 삽입 불가능하다. 동일한값이 여러번 삽입 되면 하나의 값만 저장된다.&lt;/li&gt;
-  &lt;li&gt;Fast Lookup이 필요할 때 주로 쓰인다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;구조&quot;&gt;구조&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.velog.io/images/kcs15987/post/0f3e5c2e-e950-4ac8-a6c6-09d2fd2c27f4/image.png&quot; alt=&quot;https://images.velog.io/images/kcs15987/post/0f3e5c2e-e950-4ac8-a6c6-09d2fd2c27f4/image.png&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;set요소들이 저장될 때 순서는 다음과 같다.
+  &lt;li&gt;이름 그대로, 관계형 데이터 모델에 기초를 둔 데이터베이스 시스템을 말한다.&lt;/li&gt;
+  &lt;li&gt;관계형 데이터란 데이터를 서로 상호관련성을 가진 형태로 표현한 데이터를 말한다.
     &lt;ul&gt;
-      &lt;li&gt;저장할 요소읙 값의 hash 값을 구한다.&lt;/li&gt;
-      &lt;li&gt;hash값에 해당하는 공간(bucket)에 값을 저장한다.&lt;/li&gt;
+      &lt;li&gt;모든 데이터들은 2차원 테이블(table)들로 표현 된다.&lt;/li&gt;
+      &lt;li&gt;각각의 테이블은 컬럼(column)과 row(로우)로 구성된다.&lt;/li&gt;
+      &lt;li&gt;각각의 테이블들은 서로 상호관련성을 가지고 서로 연결될 수 있다.
+        &lt;ul&gt;
+          &lt;li&gt;테이블끼리의 연결에는 크게 3종류가 있다
+            &lt;ul&gt;
+              &lt;li&gt;one to one&lt;/li&gt;
+              &lt;li&gt;one to many&lt;/li&gt;
+              &lt;li&gt;many to many&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;이렇게 set는 저장하고자 하는 값의 해쉬값에 해당하는 bucket에 값을 저장하기 때문에 순서가 없다. 순서가 없기 때문에 indexing도 없다.&lt;/li&gt;
-  &lt;li&gt;hash값을 기반으로 저장하기 때문에 look up이 굉장히 빠르다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;dictionary&quot;&gt;Dictionary&lt;/h1&gt;
-
-&lt;p&gt;Dictionary는 key-value 형태의 값을 저장할 수 있는 자료구조이다.&lt;/p&gt;
-
-&lt;h3 id=&quot;특징-1&quot;&gt;특징&lt;/h3&gt;
+&lt;h3 id=&quot;why-connect-the-tables&quot;&gt;Why connect the tables?&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;set와 마찬가지로 특정 순서대로 데이터를 리턴하지 않는다.&lt;/li&gt;
-  &lt;li&gt;key의 값은 중복될수 없다.(만일 중복된 key가 있으면 먼저 있던 key와 value를 대체한다.)&lt;/li&gt;
-  &lt;li&gt;수정 가능하다.&lt;/li&gt;
+  &lt;li&gt;하나의 테이블에 모든 정보를 다 넣으면 동일한 정보들이 불필요하게 중복되어 저장된다.더 많은 디스크를 사용하게되고 잘못된 데이터가 저장 될 가능성이 높아진다.&lt;/li&gt;
+  &lt;li&gt;여러 테이블에 나누어서 저장한 후 필요한 테이블끼리 연결 시키면 위의 2문제가 사라진다. 중복된 데이터를 저장하지 않음으로 디스크를 더 호율적으로 쓰고, 또한 서로 같은 데이터 이지만 부분적으로 틀린 데이터가 생기는 문제가 없어진다. 이것을 normalization(정규화) 이라고 한다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;구조-1&quot;&gt;구조&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.velog.io/images/kcs15987/post/1472d860-6766-44cd-a754-53925ac9748c/image.png&quot; alt=&quot;https://images.velog.io/images/kcs15987/post/1472d860-6766-44cd-a754-53925ac9748c/image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;acid&quot;&gt;ACID&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;set와 비슷하게 key값의 hash값을 구한 후 hash값에 속해있는 bucket에 값을 저장한다.&lt;/li&gt;
+  &lt;li&gt;원자성(Atomicity)은 트랜잭션과 관련된 작업들이 부분적으로 실행되다가 중단되지 않는 것을 보장하는 능력이다. 예를 들어, 자금 이체는 성공할 수도 실패할 수도 있지만 보내는 쪽에서 돈을 빼 오는 작업만 성공하고 받는 쪽에 돈을 넣는 작업을 실패해서는 안된다. 원자성은 이와 같이 중간 단계까지 실행되고 실패하는 일이 없도록 하는 것이다.&lt;/li&gt;
+  &lt;li&gt;일관성(Consistency)은 트랜잭션이 실행을 성공적으로 완료하면 언제나 일관성 있는 데이터베이스 상태로 유지하는 것을 의미한다. 무결성 제약이 모든 계좌는 잔고가 있어야 한다면 이를 위반하는 트랜잭션은 중단된다.&lt;/li&gt;
+  &lt;li&gt;고립성(Isolation)은 트랜잭션을 수행 시 다른 트랜잭션의 연산 작업이 끼어들지 못하도록 보장하는 것을 의미한다. 이것은 트랜잭션 밖에 있는 어떤 연산도 중간 단계의 데이터를 볼 수 없음을 의미한다. 은행 관리자는 이체 작업을 하는 도중에 쿼리를 실행하더라도 특정 계좌간 이체하는 양 쪽을 볼 수 없다. 공식적으로 고립성은 트랜잭션 실행내역은 연속적이어야 함을 의미한다. 성능관련 이유로 인해 이 특성은 가장 유연성 있는 제약 조건이다. 자세한 내용은 관련 문서를 참조해야 한다.&lt;/li&gt;
+  &lt;li&gt;지속성(Durability)은 성공적으로 수행된 트랜잭션은 영원히 반영되어야 함을 의미한다. 시스템 문제, DB 일관성 체크 등을 하더라도 유지되어야 함을 의미한다. 전형적으로 모든 트랜잭션은 로그로 남고 시스템 장애 발생 전 상태로 되돌릴 수 있다. 트랜잭션은 로그에 모든 것이 저장된 후에만 commit 상태로 간주될 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;hash&quot;&gt;Hash&lt;/h1&gt;
+&lt;h3 id=&quot;트랜잭션&quot;&gt;트랜잭션&lt;/h3&gt;
 
-&lt;p&gt;hash란 단 방향 암호화이다. 입력 데이터를 변환하여 원본 데이터로 복호화할 수 없도록 하는 과정이다.&lt;/p&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="자료구조" /><category term="Data Structure" /><category term="자료구조" /><category term="Data Structure" /><summary type="html">Set</summary></entry><entry><title type="html">Array</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/" rel="alternate" type="text/html" title="Array" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/">&lt;h2 id=&quot;특징&quot;&gt;특징&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;ACID를 제공함으로 따라서 트랜잭션(일련의 작업들을 한번에 하나의 unit으로 실행하는것) 기능을 제공한다.
+    &lt;ul&gt;
+      &lt;li&gt;트랜잭션은 일련의 작업들이 마치 하나의 작업처럼 취급되어서 모두 다 성공하거나 아니면 모두 다 실패하는걸 이야기 한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="Database" /><category term="Database" /><summary type="html">RDBMS(관계형 데이터베이스)</summary></entry><entry><title type="html">Array</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/" rel="alternate" type="text/html" title="Array" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/">&lt;h2 id=&quot;특징&quot;&gt;특징&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;가장 큰 특징은 순차적으로 데이터를 저장한다는 것이다.&lt;/li&gt;
@@ -211,7 +207,58 @@
       &lt;dd&gt;데이터 항목 사이의 관계가 1:n 또는 n:m (ex. Graphs, Trees )&lt;/dd&gt;
     &lt;/dl&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="자료구조" /><category term="Data Structure" /><category term="자료구조" /><category term="Data Structure" /><summary type="html">자료구조란 데이터에 편리하게 접근하고 조작하기 위한 데이터를 저장하거나 조직하는 방법이다. 자료구조의 종류에는 여라가지가 있습니다. 하지만 모든 목적에 부합하는 자료구조는 없다. 따라서 각각의 자료구조가 갖는 장점과 한계를 잘 이해하고 상황에 맞게 올바른 자료구조를 선택하고 사용하는 것이 중요하다. 자료구조는 언어별로 지원하는 양상이 다르다. 각 언어가 가진 자료구조의 종류와 그것에 대한 사용 방법을 익히는 것이 중요하지만, 무엇보다 각 자료구조의 본질과 컨셉을 이해하고 상황에 맞는 적절한 자료 구조를 선택하는 것이 중요하다.</summary></entry><entry><title type="html">Stack &amp;amp; Queue</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/stack-queue/" rel="alternate" type="text/html" title="Stack &amp;amp; Queue" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/stack-queue</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/stack-queue/">&lt;h1 id=&quot;stack&quot;&gt;Stack&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="자료구조" /><category term="Data Structure" /><category term="자료구조" /><category term="Data Structure" /><summary type="html">자료구조란 데이터에 편리하게 접근하고 조작하기 위한 데이터를 저장하거나 조직하는 방법이다. 자료구조의 종류에는 여라가지가 있습니다. 하지만 모든 목적에 부합하는 자료구조는 없다. 따라서 각각의 자료구조가 갖는 장점과 한계를 잘 이해하고 상황에 맞게 올바른 자료구조를 선택하고 사용하는 것이 중요하다. 자료구조는 언어별로 지원하는 양상이 다르다. 각 언어가 가진 자료구조의 종류와 그것에 대한 사용 방법을 익히는 것이 중요하지만, 무엇보다 각 자료구조의 본질과 컨셉을 이해하고 상황에 맞는 적절한 자료 구조를 선택하는 것이 중요하다.</summary></entry><entry><title type="html">Set, Dictionary, Hash</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/set-dictionary-hash/" rel="alternate" type="text/html" title="Set, Dictionary, Hash" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/set-dictionary-hash</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/set-dictionary-hash/">&lt;h1 id=&quot;set&quot;&gt;Set&lt;/h1&gt;
+
+&lt;p&gt;set는 list처럼 순열 자료구조이다. 하지만 set는 순서라는 개념이 존재하지 않는다.&lt;/p&gt;
+
+&lt;h3 id=&quot;특징&quot;&gt;특징&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;데이터를 비순차적으로 저장할 수 있는 순열 자료구조이다.&lt;/li&gt;
+  &lt;li&gt;삽입 순서대로 저장되지 않는다.&lt;/li&gt;
+  &lt;li&gt;수정가능하다.&lt;/li&gt;
+  &lt;li&gt;동일한 값을 여러번 삽입 불가능하다. 동일한값이 여러번 삽입 되면 하나의 값만 저장된다.&lt;/li&gt;
+  &lt;li&gt;Fast Lookup이 필요할 때 주로 쓰인다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;구조&quot;&gt;구조&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://images.velog.io/images/kcs15987/post/0f3e5c2e-e950-4ac8-a6c6-09d2fd2c27f4/image.png&quot; alt=&quot;https://images.velog.io/images/kcs15987/post/0f3e5c2e-e950-4ac8-a6c6-09d2fd2c27f4/image.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;set요소들이 저장될 때 순서는 다음과 같다.
+    &lt;ul&gt;
+      &lt;li&gt;저장할 요소읙 값의 hash 값을 구한다.&lt;/li&gt;
+      &lt;li&gt;hash값에 해당하는 공간(bucket)에 값을 저장한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;이렇게 set는 저장하고자 하는 값의 해쉬값에 해당하는 bucket에 값을 저장하기 때문에 순서가 없다. 순서가 없기 때문에 indexing도 없다.&lt;/li&gt;
+  &lt;li&gt;hash값을 기반으로 저장하기 때문에 look up이 굉장히 빠르다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;dictionary&quot;&gt;Dictionary&lt;/h1&gt;
+
+&lt;p&gt;Dictionary는 key-value 형태의 값을 저장할 수 있는 자료구조이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;특징-1&quot;&gt;특징&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;set와 마찬가지로 특정 순서대로 데이터를 리턴하지 않는다.&lt;/li&gt;
+  &lt;li&gt;key의 값은 중복될수 없다.(만일 중복된 key가 있으면 먼저 있던 key와 value를 대체한다.)&lt;/li&gt;
+  &lt;li&gt;수정 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;구조-1&quot;&gt;구조&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://images.velog.io/images/kcs15987/post/1472d860-6766-44cd-a754-53925ac9748c/image.png&quot; alt=&quot;https://images.velog.io/images/kcs15987/post/1472d860-6766-44cd-a754-53925ac9748c/image.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;set와 비슷하게 key값의 hash값을 구한 후 hash값에 속해있는 bucket에 값을 저장한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;hash&quot;&gt;Hash&lt;/h1&gt;
+
+&lt;p&gt;hash란 단 방향 암호화이다. 입력 데이터를 변환하여 원본 데이터로 복호화할 수 없도록 하는 과정이다.&lt;/p&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="자료구조" /><category term="Data Structure" /><category term="자료구조" /><category term="Data Structure" /><summary type="html">Set</summary></entry><entry><title type="html">Stack &amp;amp; Queue</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/stack-queue/" rel="alternate" type="text/html" title="Stack &amp;amp; Queue" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/stack-queue</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/stack-queue/">&lt;h1 id=&quot;stack&quot;&gt;Stack&lt;/h1&gt;
 
 &lt;p&gt;stack은 LIFO(Last In First Out)라고 한다. 마지막으로 저장한 데이터가 처음으로 읽힌다는 뜻이다.&lt;/p&gt;
 
