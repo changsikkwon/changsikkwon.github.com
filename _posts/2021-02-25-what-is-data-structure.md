@@ -15,8 +15,6 @@ tags:
 
 ## 자료구조의 분류
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a1a9adb4-339c-41f6-9aa0-dbffb19b8aa2/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a1a9adb4-339c-41f6-9aa0-dbffb19b8aa2/Untitled.png)
-
 -   **Primitive Data Structure(단순 구조)**
     : 프로그래밍에서 사용되는 기본 데이터 타입
 -   **None-Primitive Data Structure(비단순 구조)**
