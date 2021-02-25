@@ -1,0 +1,75 @@
+---
+title: Stack & Queue
+categories:
+    - 자료구조
+    - Data Structure
+tags:
+    - 자료구조
+    - Data Structure
+---
+
+# Stack
+
+stack은 LIFO(Last In First Out)라고 한다. 마지막으로 저장한 데이터가 처음으로 읽힌다는 뜻이다.
+
+![https://media.vlpt.us/images/kcs15987/post/a0edda8a-2d3d-4f15-951f-60766a843a04/image.png](https://media.vlpt.us/images/kcs15987/post/a0edda8a-2d3d-4f15-951f-60766a843a04/image.png)
+
+-   Stack에서 데이터 저장은 push라고 한다.
+-   데이터를 읽어들이는 건 pop라고 한다. 다만 pop은 읽어들임과 동시에 stack에서 삭제한다.
+
+### 리스트를 사용한 Stack 구현 예제
+
+```
+class Stack:
+   def __init__(self):
+     self._stack = []
+
+   def push(self, data):
+     self._stack.append(data)
+
+   def pop(self):
+     if len(self._stack) == 0:
+       return None
+
+     data = self._stack[-1]
+     del self._stack[-1]
+
+     return data
+
+   def peek(self):
+     if len(self._stack) == 0:
+       return None
+
+     data = self._stack[-1]
+
+     return data
+```
+
+# Queue
+
+Stack과 반대로 FIFO(First In First Out)이다. 즉 먼저 push 된게 먼저 pop된다는 말이다.
+
+![https://media.vlpt.us/images/kcs15987/post/4732bfc8-7e27-450d-90de-1eab20ef2234/image.png](https://media.vlpt.us/images/kcs15987/post/4732bfc8-7e27-450d-90de-1eab20ef2234/image.png)
+
+### 리스트를 사용한 Queue 구현 예제
+
+```
+class Queue:
+    def __init__(self):
+        self._queue = []
+
+    def push(self, data):
+        return self._queue.append(data)
+
+    def pop(self)
+        if len(self._queue) == 0:
+            return None
+
+        return self._queue.pop()
+
+    def peek(self):
+        if len(self._queue) == 0:
+            return None
+
+        return self[0]
+```
