@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Go 조건문 - Changsik’s Blog</title>
-<meta name="description" content="if 문">
+<!-- begin _includes/seo.html --><title>Go 함수 - Changsik’s Blog</title>
+<meta name="description" content="함수">
 
 
   <meta name="author" content="권창식">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Changsik's Blog">
-<meta property="og:title" content="Go 조건문">
-<meta property="og:url" content="https://changsikkwon.github.io/go/go-if/">
+<meta property="og:title" content="Go 함수">
+<meta property="og:url" content="https://changsikkwon.github.io/go/go-function/">
 
 
-  <meta property="og:description" content="if 문">
+  <meta property="og:description" content="함수">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="https://changsikkwon.github.io/go/go-if/">
+<link rel="canonical" href="https://changsikkwon.github.io/go/go-function/">
 
 
 
@@ -183,7 +183,7 @@
     
       
       
-        <li class="current">Go 조건문</li>
+        <li class="current">Go 함수</li>
       
     
   </ol>
@@ -321,10 +321,10 @@
     <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
         <meta
             itemprop="headline"
-            content="Go 조건문"
+            content="Go 함수"
         /> <meta
             itemprop="description"
-            content="if 문"
+            content="함수"
         /> <meta itemprop="datePublished" content="2021-02-25T00:00:00+09:00" /> 
 
         <div class="page__inner-wrap">
@@ -332,7 +332,7 @@
             <header>
                 
                 <h1 id="page-title" class="page__title" itemprop="headline">
-                    <p>Go 조건문</p>
+                    <p>Go 함수</p>
 
                 </h1>
                  
@@ -349,7 +349,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          2 분 소요
         
       </span>
     
@@ -360,103 +360,132 @@
             
 
             <section class="page__content" itemprop="text">
-                 <h2 id="if-문">if 문</h2>
+                 <h2 id="함수">함수</h2>
 
-<p>if문은 해당 조건이 맞으면 {} 블럭안의 내용을 실행한다. Go의 if 조건문은 괄호()로 둘러 싸지 않아도 된다. 그리고 반드시 조건 블럭 시작 {}를 if문과 같은 라인에 두어야한다.</p>
-
-<p>그리고 한가지 주목할 점은 if문의 조건식은 반드시 Boolean식으로 표현되어야 한다는 것이다.</p>
+<p>함수는 여러 문장을 묶어서 실행하는 코드 블럭의 단위이다. Go에서 함수는 func 키워드를 사용하여 정의한다. func 뒤에 함수명을 적고 괄호() 안에 그 함수에 전달하는 파라미터들을 적게 된다. 함수 파라미터는 0개 이상 사용할 수 있는데, 각 파라미터는 파라미터명 뒤에 int, string 등의 파라미터 타입을 적어서 정의한다. 함수의 리턴 타입은 괄호() 뒤에 적게 되는데, 이는 C와 같은 다른 언어에서 리턴 타입을 함수명 앞에 쓰는 것과 대조적이다. 함수는 패키지 안에 정의되며 호출되는 함수가 호출하는 함수의 반드시 앞에 위치해야 할 필요는 없다.</p>
 
 <div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
 
-<span class="k">import</span> <span class="s">"fmt"</span>
-
-<span class="k">var</span> <span class="n">k</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">1</span>
 <span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="n">k</span><span class="o">==</span><span class="m">1</span><span class="p">{</span>
-    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"one"</span><span class="p">)</span> <span class="c">// one</span>
-  <span class="p">}</span>
+	<span class="n">msg</span> <span class="o">:=</span> <span class="s">"Hello"</span>
+	<span class="n">say</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="n">say</span><span class="p">(</span><span class="n">msg</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nb">println</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>if문은 else if, 혹은 else문을 함께 가질 수 있다. else if문은 if 조건문이 거짓일 대 다시 다른 if 조건식을 검사하는데 사용되며, else문은 이전의 if 문들이 모두 거짓일 때 실행된다.</p>
+<h2 id="pass-by-reference">Pass By Reference</h2>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
-
-<span class="k">import</span> <span class="s">"fmt"</span>
-
-<span class="k">var</span> <span class="n">k</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">1</span>
-<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="n">k</span><span class="o">==</span><span class="m">1</span><span class="p">{</span>
-    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"one"</span><span class="p">)</span> <span class="c">// one</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">k</span><span class="o">==</span><span class="m">2</span><span class="p">{</span>
-		<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"two"</span><span class="p">)</span> <span class="c">// k가 2일경우 two</span>
-	<span class="p">}</span> <span class="k">else</span><span class="p">{</span>
-		<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"other"</span><span class="p">)</span> <span class="c">// k가 1 혹은 2가 아닐경우 other</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>if문에서 조건식을 사용하기 이전에 간단한 문장을 함께 실행할 수 있다. 즉 아래 코드 처럼 <code class="language-plaintext highlighter-rouge">a:= k+1</code> 라는 문장을 조건식 이전에 실행할 수 있는데, 여기서 주의할 점은 이때 정의된 변수 a는 if문 블럭 scope 안에서만 사용할 수 있다는 것이다.</p>
-
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
-
-<span class="k">import</span> <span class="s">"fmt"</span>
-
-<span class="k">var</span> <span class="n">k</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">1</span>
-<span class="k">var</span> <span class="n">b</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">5</span>
-<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="n">a</span><span class="o">:=</span> <span class="n">k</span><span class="o">+</span><span class="m">1</span><span class="p">;</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">b</span> <span class="p">{</span>
-    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c">// 2</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="switch-문">switch 문</h2>
-
-<p>여러 값을 비교해야 하는 경우 혹은 다수의 조건식을 체크해야 하는 경우 switch 문을 사용한다. 다른 언어들과 비슷하게 switch 문 뒤에 하나의 변수를 지정하고, case 문에 해당 변수가 가질 수 있는 값들을 지정하여 각 경우에 다른 문장 블럭들을 실행할 수 있다.</p>
-
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
-
-<span class="k">import</span> <span class="s">"fmt"</span>
-
-<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-	<span class="k">var</span> <span class="n">name</span> <span class="kt">string</span>
-	<span class="k">var</span> <span class="n">number</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">1</span>
-  <span class="k">switch</span> <span class="n">number</span><span class="p">{</span>
-	<span class="k">case</span> <span class="m">1</span><span class="o">:</span>
-		<span class="n">name</span> <span class="o">=</span> <span class="s">"John"</span>
-	<span class="k">case</span> <span class="m">2</span><span class="o">:</span>
-		<span class="n">name</span> <span class="o">=</span> <span class="s">"Mike"</span>
-	<span class="k">case</span> <span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="o">:</span>
-		<span class="n">name</span> <span class="o">=</span> <span class="s">"Harry"</span>
-	<span class="k">default</span><span class="o">:</span>
-		<span class="n">name</span> <span class="o">=</span> <span class="s">"Nothing"</span>
-	<span class="p">}</span>
-	<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c">// John</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>다음은 Go언어만의 특별한 switch 용법들이다.</p>
+<p>Go에서 파라미터를 전달하는 방식은 크게 Pass By Value와 Pass By Reference로 나뉜다.</p>
 
 <ul>
   <li>
-    <p><strong>switch 뒤에 표현이 없을 수 있음</strong></p>
+    <p><strong>Pass By Value</strong></p>
 
-    <p>다른 언어는 switch 키워드 뒤에 변수나 표현을 반드시 두지만, Go는 이를 쓰지 않아도 된다. 이 경우 Go는 switch 표현을 true로 생각하고 첫번째 case문으로 이동하여 검사한다.</p>
-  </li>
-  <li><strong>case문에 표현을 쓸 수 있음</strong>
-다른 언어의 case 문은 일반적으로 리터럴 값만을 갖지만, Go는 case문에 복잡한 표현을 가질 수 있다.</li>
-  <li>
-    <p><strong>No default fall through</strong></p>
-
-    <p>다른 언어의 case문은 break를 쓰지 않는 한 다음 case로 이동하지만, Go는 다음 case로 가지 않는다.</p>
+    <p>위의 함수 예제에서는 msg의 값 “Hello” 문자열이 복사되어 함수 say()에 전달된다. 즉, 만약 파라미터 msg의 값이 say() 함수 내에서 변경된다 하더라도 호출함수 main()에서의 msg 변수는 변함이 없다.</p>
   </li>
   <li>
-    <p><strong>type switch</strong></p>
+    <p><strong>Pass By Reference</strong></p>
 
-    <p>다른 언어의 switch는 일반적으로 변수의 값을 기준으로 case로 분기하지만, Go는 그 변수의 type에 따라 case로 분기할 수 있다.</p>
+    <p>아래의 예제에서처럼 msg 변수앞에 &amp; 부호를 붙이면 msg 변수의 주소를 표시하게 된다. 흔이 포인터라 불리우는 이 용법을 사용하면 함수에 msg 변수의 값을 복사하지 않고 msg 변수의 주소를 전달하게 된다. 피호출 함수 say()에서는 *string 과 같이 파라미터가 포인터임을 표시하고 이때 say함수의 msg는 문자열이 아니라 문자열을 갖는 메모리 영역의 주소를 갖게 된다. msg 주소에 데이터를 쓰기 위해서는 *msg=”” 과 같이 앞에 *를 붙이는데 이를 흔히 Dereferencing 이라 한다.</p>
   </li>
 </ul>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">msg</span> <span class="o">:=</span> <span class="s">"Hello"</span>
+	<span class="n">say</span><span class="p">(</span><span class="o">&amp;</span><span class="n">msg</span><span class="p">)</span>
+	<span class="nb">println</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="n">say</span><span class="p">(</span><span class="n">msg</span><span class="o">*</span><span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nb">println</span><span class="p">(</span><span class="o">*</span><span class="n">msg</span><span class="p">)</span>
+	<span class="o">*</span><span class="n">msg</span> <span class="o">=</span> <span class="s">"Changed"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="variadic-function-가변인자함수">Variadic Function (가변인자함수)</h2>
+
+<p>함수에 고정된 수의 파라미터들을 전달하지 않고 다양한 숫자의 파라미ㅣ터를 전달하고자 할 때 가변 파라미터를 나타내는 …을 사용한다. 즉 문자열 가변 파라미터를 나타내기 위해서 …string과 같이 표현한다. 가변 파라미터를 갖는 함수를 호출할 때는 0개, 1개, 2개, 혹은 n개의 동일타입 파라미터를 전달할 수 잇다. 이렇게 가변 파라미터를 받아들이는 함수를 Vriadic Function (가변인자함수)라고 부른다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">say</span><span class="p">(</span><span class="s">"This"</span><span class="p">,</span> <span class="s">"is"</span><span class="p">,</span> <span class="s">"an"</span><span class="p">,</span> <span class="s">"apple"</span><span class="p">)</span>
+	<span class="n">say</span><span class="p">(</span><span class="s">"Hi"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="n">say</span><span class="p">(</span><span class="n">msg</span> <span class="o">...</span><span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">s</span> <span class="o">:=</span> <span class="k">range</span> <span class="n">msg</span> <span class="p">{</span>
+		<span class="nb">println</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="함수-리턴값">함수 리턴값</h2>
+
+<p>Go 프로그래밍 언어에서 함수는 리턴값이 없을 수도, 리턴값이 하나 일 수도, 또는 리턴값이 복수 개일 수도 있다. C언어에서 void 혹은 하나의 값만을 리턴하는 것과 대조적으로 Go 언어는 복수개의 값을 리턴할 수 있다.</p>
+
+<p>Go 언어는 또한 Named Return Parameter 라는 기능을 제공하는데, 이는 리턴되는 값들을 리턴 파라미터들에 할당할 수 있는 기능이다.</p>
+
+<p>함수에서 리턴값이 있는 경우는 func 문의 마지막에 리턴값의 타입을 정의해 준다. 그리고 값을 리턴하기 위해 함수내에서 return 키워드를 사용한다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">total</span> <span class="o">:=</span> <span class="n">sum</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">9</span><span class="p">)</span>
+	<span class="nb">println</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="n">sum</span><span class="p">(</span><span class="n">nums</span> <span class="o">...</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+	<span class="n">s</span> <span class="o">:=</span> <span class="m">0</span>
+	<span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">n</span> <span class="o">:=</span> <span class="k">range</span> <span class="n">nums</span> <span class="p">{</span>
+		<span class="n">s</span> <span class="o">+=</span> <span class="n">n</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="n">s</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Go에서 복수 개의 값을 리턴하기 위해서는 해당 리턴 타입들을 괄호() 안에 적어준다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">count</span><span class="p">,</span> <span class="n">total</span> <span class="o">:=</span> <span class="n">sum</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">9</span><span class="p">)</span>
+	<span class="nb">println</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="n">sum</span><span class="p">(</span><span class="n">nums</span> <span class="o">...</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">s</span> <span class="o">:=</span> <span class="m">0</span>
+	<span class="n">count</span> <span class="o">:=</span> <span class="m">0</span>
+	<span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">n</span> <span class="o">:=</span> <span class="k">range</span> <span class="n">nums</span> <span class="p">{</span>
+		<span class="n">s</span> <span class="o">+=</span> <span class="n">n</span>
+		<span class="n">count</span><span class="o">++</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="n">count</span><span class="p">,</span> <span class="n">s</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Go에서 Named Return Parameter들에 리턴값들을 할당하여 리턴할 수 있는데, 이는 리턴되는 값들이 여러 개일 때, 코드 가독성을 높이는 장점이 있다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">count</span><span class="p">,</span> <span class="n">total</span> <span class="o">:=</span> <span class="n">sum</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">9</span><span class="p">)</span>
+	<span class="nb">println</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="n">sum</span><span class="p">(</span><span class="n">nums</span> <span class="o">...</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">count</span> <span class="kt">int</span><span class="p">,</span> <span class="n">total</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">n</span> <span class="o">:=</span> <span class="k">range</span> <span class="n">nums</span> <span class="p">{</span>
+		<span class="n">total</span> <span class="o">+=</span> <span class="n">n</span>
+	<span class="p">}</span>
+	<span class="n">count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+	<span class="k">return</span>
+<span class="p">}</span>
+</code></pre></div></div>
  
             </section>
 
@@ -504,20 +533,20 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Go+%EC%A1%B0%EA%B1%B4%EB%AC%B8%20https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-if%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Go+%ED%95%A8%EC%88%98%20https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-function%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-if%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-function%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-if%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-function%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
  
   <nav class="pagination">
     
-      <a href="/go/go-function/" class="pagination--pager" title="Go 함수
+      <a href="/go/go-for/" class="pagination--pager" title="Go 반복문
 ">이전</a>
     
     
-      <a href="/go/go-operator/" class="pagination--pager" title="Go Data type
+      <a href="/go/go-if/" class="pagination--pager" title="Go 조건문
 ">다음</a>
     
   </nav>
