@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://changsikkwon.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://changsikkwon.github.io/" rel="alternate" type="text/html" /><updated>2021-02-25T13:11:19+09:00</updated><id>https://changsikkwon.github.io/feed.xml</id><title type="html">Changsik’s Blog</title><subtitle>An amazing website.</subtitle><author><name>권창식</name><email>kcs15987@gmail.com</email></author><entry><title type="html">Component의 State</title><link href="https://changsikkwon.github.io/react/state/" rel="alternate" type="text/html" title="Component의 State" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/react/state</id><content type="html" xml:base="https://changsikkwon.github.io/react/state/">&lt;h2 id=&quot;state&quot;&gt;State&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://changsikkwon.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://changsikkwon.github.io/" rel="alternate" type="text/html" /><updated>2021-02-25T19:02:34+09:00</updated><id>https://changsikkwon.github.io/feed.xml</id><title type="html">Changsik’s Blog</title><subtitle>An amazing website.</subtitle><author><name>권창식</name><email>kcs15987@gmail.com</email></author><entry><title type="html">Component의 State</title><link href="https://changsikkwon.github.io/react/state/" rel="alternate" type="text/html" title="Component의 State" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/react/state</id><content type="html" xml:base="https://changsikkwon.github.io/react/state/">&lt;h2 id=&quot;state&quot;&gt;State&lt;/h2&gt;
 
 &lt;p&gt;state란 말 그대로 컴포넌트의 상태 값이다.&lt;/p&gt;
 
@@ -232,62 +232,119 @@
   &lt;li&gt;
     &lt;p&gt;테스트 코드의 또 다른 사용 방법은 개발자들을 위한 안내서로 쓰는 방법이다. 이미 만들어져 있는 코드에서 작업해야할 경우, 관련 테스틀코드를 돌려보고 읽어보는 것이야말로 가장 좋은 시작점일 경우가 많다. 이렇게 테스트 코드를 돌려보면 어느 지점이 문제인지, 수정하기 어려운 곳은 어디일지, 막다른 골목은 어디일지를 발견하게 된다. 몇 가지 기능을 추가해야 한다면 가장 먼저 해야할 일은 그 새로운 기능이 아직 돌아가지 않음을 확인할 수 있는 테스트를 붙혀넣는 것이다.&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><summary type="html">Unit Test란?</summary></entry><entry><title type="html">Go Print</title><link href="https://changsikkwon.github.io/go/go-print/" rel="alternate" type="text/html" title="Go Print" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/go/go-print</id><content type="html" xml:base="https://changsikkwon.github.io/go/go-print/">&lt;p&gt;Go에서 표준출력 및 입력을 하기 위해선 fmt라는 패키지를 사용해야 한다. 기능에 따라 여러 print가 존재한다. 또한 데이터를 출력 및 받고자 할 때 데이터 타입에 따라 사용해야 하는 포맷이 다르기 때문에 확인을 하고 사용해야 합니다.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><summary type="html">Unit Test란?</summary></entry><entry><title type="html">Go Data type</title><link href="https://changsikkwon.github.io/go/go-operator/" rel="alternate" type="text/html" title="Go Data type" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/go/go-operator</id><content type="html" xml:base="https://changsikkwon.github.io/go/go-operator/">&lt;h2 id=&quot;데이터-타입&quot;&gt;데이터 타입&lt;/h2&gt;
 
-&lt;h2 id=&quot;fmtfprintos&quot;&gt;fmt.Fprint(OS)&lt;/h2&gt;
+&lt;p&gt;Go 프로그래밍 언어는 다음과 같은 기본적인 데이터 타입들을 갖고 있다.&lt;/p&gt;
 
-&lt;p&gt;print 앞에 F가 붙으면 파일 입출력에 해당한다. fprint는 파일에 쓰는 용도이다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.notion.so/6d4d011314f1495c9d10975d08cfa5f3&quot;&gt;제목 없음&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;func-fprint-fprintf-fprintlin&quot;&gt;func Fprint, Fprintf, Fprintlin&lt;/h3&gt;
+&lt;h2 id=&quot;문자열&quot;&gt;문자열&lt;/h2&gt;
 
-&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Fprint&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Fprint가 여러번 호출되도 한 줄로 이어서 파일에 쓰임&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fprint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;파일&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;파일에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;쓰고자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;데이터&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;p&gt;문자열 리터럴은 Back Quote(``) 혹은 이중인용부호(“ “)를 사용하여 표현할 수 있다.&lt;/p&gt;
 
-&lt;span class=&quot;n&quot;&gt;Fprintln&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Fprintln 여러번 호출될 때마다 마지막 줄에 줄넘김이 추가됨&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fprintln&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;파일&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;파일에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;쓰고자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;데이터&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;ol&gt;
+  &lt;li&gt;Back Quote로 둘러싸인 문자열은 Raw String Literal이라고 부르는데, 이 안에 있는 문자열은 별도로 해석되지 않고 Raw string 그대로의 값을 갖는다.&lt;/li&gt;
+  &lt;li&gt;이중인용부호로 둘러싸인 문자열은 Interpreted String Literal이라 부르는데, 복수 라인에 걸쳐 쓸수 없으며, 인용부호 안의 escape 문자열들은 특별한 의미로 해석된다. 예를 들어, 문자열 안에 \n 이 있을 경우 이는 NewLine으로 해석된다. 이중인용부호를 이용해 문자열을 여러 라인에 걸쳐 쓰기 위해서는 + 연산자를 이용해 결합하여 사용한다.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;span class=&quot;n&quot;&gt;Fprintf&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Fprintf가 호출될 때마다 사용자가 추가한 구분자로 구분&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fprintf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;파일&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;파일에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;쓰고자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;데이터&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;fmt&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;c&quot;&gt;// Raw String Literal. 복수라인.&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;rawLiteral&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;`hello wolrd\n
+hello wolrd\n
+	hello wolrd`&lt;/span&gt;
+
+		&lt;span class=&quot;n&quot;&gt;interLiteral&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;hello world&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;hello wolrd&quot;&lt;/span&gt;
+	&lt;span class=&quot;c&quot;&gt;// or interLiteral := &quot;hello world\n&quot; +&lt;/span&gt;
+	&lt;span class=&quot;c&quot;&gt;//										&quot;hello wolrd&quot;&lt;/span&gt;
+
+		&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rawLiteral&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;interLiteral&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+	&lt;span class=&quot;c&quot;&gt;// 출력&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;world&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;world&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;world&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;world&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;world&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;fmtprint표준출력&quot;&gt;fmt.Print(표준출력)&lt;/h2&gt;
+&lt;h2 id=&quot;데이터-타입-변환&quot;&gt;데이터 타입 변환&lt;/h2&gt;
 
-&lt;p&gt;일반적으로 많이 사용하는 print에 대한 출력이다.&lt;/p&gt;
+&lt;p&gt;하나의 데이타 타입에서 다른 데이타 타입으로 변환하기 위해서는 T(v) 와 같이 표현하고 이를 Type Conversion이라 부르는데, 여기서 T는 변환하고자 하는 타입을 표시하고, v는 변환될 값(value)을 지정한 것이다. 예를 들어, 정수 100을 float로 변경하기 위하여 float32(100) 처럼 표현하고, 문자열을 바이트배열로 변경하기 위하여 []byte(“ABC”) 처럼 표현할 수 있다.&lt;/p&gt;
 
-&lt;h3 id=&quot;func-print-printf-println&quot;&gt;func Print, Printf, Println&lt;/h3&gt;
+&lt;p&gt;주의할 점은 Go에서 타입간 변환은 명시적으로 지정해 주어야 한다는 점인데, 예를 들어 정수형 int에서 uint로 변환할 때, 암묵적(implicit) 변환이 일어나지 않으므로 uint(i) 처럼 반드시 변환을 지정해 주어야 한다. 만약 명시적 지정이 없이 변환이 일어나면 런타임 에러가 발생한다.&lt;/p&gt;
 
-&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Print&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Print가 여러번 호출되도 한 줄로 이어서 출력&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello world&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float32&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;Println&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Println가 여러번 호출되면 다음줄에 출력&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello world&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ABC&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;bytes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;str2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="Go" /><category term="Go" /><summary type="html">데이터 타입</summary></entry><entry><title type="html">소프트웨어 아키텍처</title><link href="https://changsikkwon.github.io/architecture/" rel="alternate" type="text/html" title="소프트웨어 아키텍처" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/architecture</id><content type="html" xml:base="https://changsikkwon.github.io/architecture/">&lt;h2 id=&quot;설계&quot;&gt;설계&lt;/h2&gt;
 
-&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Printf가 호출될 때마다 사용자가 추가한 포맷에 해당하여 입력된 변수값을 출력&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;포맷&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;출력하고자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;데이터&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;소프트웨어 아키텍쳐는 소프트웨어의 골격이 되는 기본 구조이자, 소프트웨어를 구성 하는 요소들 간의 관계를 표현하는 시스템의 구조 또는 구조체이다.&lt;/p&gt;
 
-&lt;h2 id=&quot;fmtsprint&quot;&gt;fmt.Sprint&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;소프트웨어 개발 시 적용되는 원칙과 지침이며, 이해 관계자들의 의사소통 도구로 활용된다.&lt;/li&gt;
+  &lt;li&gt;소프트웨어 아키텍처의 설계는 기본적으로 좋은 품질을 유지하면서 사용자의 비기능적 요구사항으로 나타난 제약을 반영하고, 기능적 요구사항을 구현하는 방법을 찾는 해결 과정이다.&lt;/li&gt;
+  &lt;li&gt;애플리케이션의 분할 방법과 분활된 모듈에 할당될 기능, 모듈 간의 인터페이스 등을 결정한다.&lt;/li&gt;
+  &lt;li&gt;소프트웨어 아키텍처 설계의 기본 원리로는 모듈화, 추상화, 단계적 분해, 정보 은닉이 있다.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;사용법은 fmt.Print와 같지만 해당 문법을 사용하면 표준 출력을 하진 않는다. 해당 문법을 사용하는 경우는 출력되는 값을 string 타입으로 return 할 때 사용한다.&lt;/p&gt;
+&lt;h3 id=&quot;모듈화&quot;&gt;모듈화&lt;/h3&gt;
 
-&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Sprint&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Sprint가 여러번 호출되도 한 줄로 이어서 출력&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sprint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;출력하고자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;데이터&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;p&gt;모듈화란 소프트웨어의 성능을 향상시키거나 시스템의 수정 및 재사용, 유지 관리 등이 용이하도록 시스템의 기능들을 모듈 단위로 나누는 것을 의미한다.&lt;/p&gt;
 
-&lt;span class=&quot;n&quot;&gt;Sprintln&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Sprintln가 여러번 호출되면 다음줄에 출력&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sprintln&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;출력하고자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;데이터&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;ul&gt;
+  &lt;li&gt;자주 사용되는 계산식이나 사용자 인증과 같은 기능들을 공통 모듈로 구성하여 프로젝트의 재사용성을 향상시킬 수 있다.&lt;/li&gt;
+  &lt;li&gt;모듈의 크기를 너무 작게 나누면 개수가 많아져 모듈간의 통합 비용이 많이 들고 너무 크게 나누면 개수가 적어 통합 비용은 적게 들지만 모듈 하나의 개발 비용이 많이든다.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;span class=&quot;n&quot;&gt;Sprintf&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Sprintf가 호출될 때마다 사용자가 추가한 포맷에 해당하여 입력된 변수값을 string 타입으로 출력&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;포맷&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;출력하고자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;데이터&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="Go" /><category term="Go" /><summary type="html">Go에서 표준출력 및 입력을 하기 위해선 fmt라는 패키지를 사용해야 한다. 기능에 따라 여러 print가 존재한다. 또한 데이터를 출력 및 받고자 할 때 데이터 타입에 따라 사용해야 하는 포맷이 다르기 때문에 확인을 하고 사용해야 합니다.</summary></entry><entry><title type="html">Array</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/" rel="alternate" type="text/html" title="Array" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/">&lt;h2 id=&quot;특징&quot;&gt;특징&lt;/h2&gt;
+&lt;h3 id=&quot;추상화&quot;&gt;추상화&lt;/h3&gt;
+
+&lt;p&gt;추상화는 문제의 전체적이고 포괄적인 개념을 설계한 후 차례로 세분화하여 구체화 시켜 나가는 것이다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;인간이 복잡한 문제를 다룰 때 가장 기본적으로 사용하는 방법으로, 완전한 시스템을 구축하기 전에 그 시스템과 유사한 모델을 만들어서 여러 가지 요인들을 테스트할 수 있다.&lt;/li&gt;
+  &lt;li&gt;최소의 비용으로 실제 상황에 대처할 수 있고, 시스템의 구조 및 구성을 대략적으로 파악할 수 있게 해준다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;추상화의 유형&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;과정 추상화 : 자세한 수행 과정을 정의하지 않고, 전반적인 흐름만 파악할 수 있게 설계하는 방법&lt;/li&gt;
+      &lt;li&gt;데이터 추상화 : 데이터의 세부적인 속성이나 용도를 정의하지 않고, 데이터 구조를 대표할 수 있는 표현으로 대체하는 방법&lt;/li&gt;
+      &lt;li&gt;제어 추상화 : 이벤트 발생의 정확한 절차나 방법을 정의하지 않고, 대표할 수 있는 표현으로 대체하는 방법&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;단계적-분해&quot;&gt;단계적 분해&lt;/h3&gt;
+
+&lt;p&gt;단계적 분해는 Niklaus Wirth에 의해 제안된 하향식 설계 전략으로, 문제를 상위의 중요 개념으로부터의 하위 개념으로 구체화시키는 분할 기법이다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;추상화의 반복에 의해 세분화된다.&lt;/li&gt;
+  &lt;li&gt;소프트웨어의 기능에서부터 시작하여 점차적으로 구체화하고, 알고리즘, 자료 구조 등 상세한 내역은 가능 한 뒤로 미루어 진행한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;정보-은닉&quot;&gt;정보 은닉&lt;/h3&gt;
+
+&lt;p&gt;정보 은닉은 한 모듈 내부에 포함된 절차와 자료들의 정보가 감추어져 다른 모듈이 접근하거나 변경하지 못하도록 하는 기법이다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;어떤 모듈이 소프트웨어 기능을 수행하는데 반드시 필요한 기능이 있어 정보 은닉된 모듈과 커뮤니케이션할 필요가 있을 때는 필요한 정보만 인터페이스를 통해 주고 받는다.&lt;/li&gt;
+  &lt;li&gt;정보 은닉을 통해 모듈을 독립적으로 수행할 수 있고, 하나의 모듈이 변경되더라도 다른 모듈에 영향을 주지 않으므로 수정, 시험, 유지보수가 용이하다.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><summary type="html">설계</summary></entry><entry><title type="html">Array</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/" rel="alternate" type="text/html" title="Array" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/">&lt;h2 id=&quot;특징&quot;&gt;특징&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;가장 큰 특징은 순차적으로 데이터를 저장한다는 것이다.&lt;/li&gt;
@@ -459,108 +516,4 @@
   &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:=&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;// a의 주소를 할당&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;// p가 가르키는 주소에 있는 실제 내용출력&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="Go" /><category term="Go" /><summary type="html">산술연산자</summary></entry><entry><title type="html">Go 반복문</title><link href="https://changsikkwon.github.io/go/go-for/" rel="alternate" type="text/html" title="Go 반복문" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/go/go-for</id><content type="html" xml:base="https://changsikkwon.github.io/go/go-for/">&lt;h2 id=&quot;for-문&quot;&gt;for 문&lt;/h2&gt;
-
-&lt;p&gt;Go 언어에서 반복문은 for 루프를 이용한다. Go는 반복문에 for 하나 밖에 없다. for 루프는 다른 언어와 비슷하게 “for 초기값; 조건식; 증감 {…}” 의 형식을 따른다.&lt;/p&gt;
-
-&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;nb&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;for-문---조건식만-쓰는-for-루프&quot;&gt;for 문 - 조건식만 쓰는 for 루프&lt;/h2&gt;
-
-&lt;p&gt;Go에서 for 루프는 초기값과 증감식을 생략하고 조건식만을 사용할 수 있는데, 이는 마치 for 루프가 다른 언어의 while과 같이 쓰이도록 한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;nb&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;for-문---무한루프&quot;&gt;for 문 - 무한루프&lt;/h2&gt;
-
-&lt;p&gt;for 루프로 무한루프를 만들려면 “초기값; 조건식; 증감” 모두를 생략하면 된다.&lt;/p&gt;
-
-&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;nb&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Infinite loop&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;for-range-문&quot;&gt;for range 문&lt;/h2&gt;
-
-&lt;p&gt;for range 문은 컬렉션으로 부터 한 요소씩 가져와 차례로 for 블럭의 문장들을 실행한다.&lt;/p&gt;
-
-&lt;p&gt;for range 문은 “for 인덱스, 요소값 := range 컬렉션” 같이 for 루프를 구성하는데, range 키워드 다음의 컬렉션으로부터 하나씩 요소를 리턴해서 그 요소의 위치인덱스와 값을 for 키워드 다음의 2개의 변수에 각각 할당한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;names&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;홍길동&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;김철수&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;김영희&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;range&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;names&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;nb&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;break-continue-goto-문&quot;&gt;break, continue, goto 문&lt;/h2&gt;
-
-&lt;p&gt;경우에 따라 for 루프내에서 즉시 빠져나올 필요가 있는데, 이때 break 문을 사용한다. 만약 for 루프 중간에서 나머지 문장들을 실행하지 않고 for 루프 시작부분으로 바로 가려면 continue 문을 사용한다. 그리고 기타 임의의 문장으로 이동하기 위해 goto 문을 사용할 수 있다. goto 문은 for 루프와 관련없이 사용될 수 있다.&lt;/p&gt;
-
-&lt;p&gt;break 문은 for 루프 이외에 switch 문이나 select 문에서도 사용할 수 있다. 하지만, continue 문은 for 루프와 연관되어 사용된다.&lt;/p&gt;
-
-&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;
-			&lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;goto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;END&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;nb&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;END&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-	&lt;span class=&quot;nb&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;END&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;break 문은 보통 단독으로 사용되지만, 경우에 따라 “break 레이블”과 같이 사용하여 지정된 레이블로 이동할 수도 있다. break의 “레이블은” 보통 현재의 for 루프를 바로 위에 적게 되는데, 이러한 “break 레이블”은 현재의 로프를 빠져나와 지정된 레이블로 이동하고, break 문의 직속 for 로프 전체의 다음 문장을 실행하게 한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;L1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L1&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;nb&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;OK&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="Go" /><category term="Go" /><summary type="html">for 문</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="Go" /><category term="Go" /><summary type="html">산술연산자</summary></entry></feed>

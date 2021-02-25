@@ -9,28 +9,32 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Changsik's Blog - 페이지 5</title>
-<meta name="description" content="An amazing website.">
+<!-- begin _includes/seo.html --><title>소프트웨어 아키텍처 - Changsik’s Blog</title>
+<meta name="description" content="설계">
 
 
   <meta name="author" content="권창식">
   
+  <meta property="article:author" content="권창식">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Changsik's Blog">
-<meta property="og:title" content="Changsik’s Blog">
-<meta property="og:url" content="https://changsikkwon.github.io/page5/">
+<meta property="og:title" content="소프트웨어 아키텍처">
+<meta property="og:url" content="https://changsikkwon.github.io/architecture/">
 
 
-  <meta property="og:description" content="An amazing website.">
-
-
-
+  <meta property="og:description" content="설계">
 
 
 
+
+
+
+
+  <meta property="article:published_time" content="2021-02-25T00:00:00+09:00">
 
 
 
@@ -41,13 +45,9 @@
   
 
 
-<link rel="canonical" href="https://changsikkwon.github.io/page5/">
+<link rel="canonical" href="https://changsikkwon.github.io/architecture/">
 
 
-  <link rel="prev" href="https://changsikkwon.github.io/page4/">
-
-
-  <link rel="next" href="https://changsikkwon.github.io/page6/">
 
 
 <script type="application/ld+json">
@@ -106,7 +106,7 @@
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--single">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -157,6 +157,28 @@
 
     <div class="initial-content">
          
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="https://changsikkwon.github.io/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">소프트웨어 아키텍처</li>
+      
+    
+  </ol>
+</nav>
+  
 
 <div id="main" role="main">
     
@@ -286,24 +308,155 @@
 
 
 
-    <div class="archive">
-        
-        <h1 id="page-title" class="page__title"></h1>
-         
+    <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+        <meta
+            itemprop="headline"
+            content="소프트웨어 아키텍처"
+        /> <meta
+            itemprop="description"
+            content="설계"
+        /> <meta itemprop="datePublished" content="2021-02-25T00:00:00+09:00" /> 
 
-<h3 class="archive__subtitle">최근 포스트</h3>
+        <div class="page__inner-wrap">
+            
+            <header>
+                
+                <h1 id="page-title" class="page__title" itemprop="headline">
+                    <p>소프트웨어 아키텍처</p>
+
+                </h1>
+                 
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+            </header>
+            
+
+            <section class="page__content" itemprop="text">
+                 <h2 id="설계">설계</h2>
+
+<p>소프트웨어 아키텍쳐는 소프트웨어의 골격이 되는 기본 구조이자, 소프트웨어를 구성 하는 요소들 간의 관계를 표현하는 시스템의 구조 또는 구조체이다.</p>
+
+<ul>
+  <li>소프트웨어 개발 시 적용되는 원칙과 지침이며, 이해 관계자들의 의사소통 도구로 활용된다.</li>
+  <li>소프트웨어 아키텍처의 설계는 기본적으로 좋은 품질을 유지하면서 사용자의 비기능적 요구사항으로 나타난 제약을 반영하고, 기능적 요구사항을 구현하는 방법을 찾는 해결 과정이다.</li>
+  <li>애플리케이션의 분할 방법과 분활된 모듈에 할당될 기능, 모듈 간의 인터페이스 등을 결정한다.</li>
+  <li>소프트웨어 아키텍처 설계의 기본 원리로는 모듈화, 추상화, 단계적 분해, 정보 은닉이 있다.</li>
+</ul>
+
+<h3 id="모듈화">모듈화</h3>
+
+<p>모듈화란 소프트웨어의 성능을 향상시키거나 시스템의 수정 및 재사용, 유지 관리 등이 용이하도록 시스템의 기능들을 모듈 단위로 나누는 것을 의미한다.</p>
+
+<ul>
+  <li>자주 사용되는 계산식이나 사용자 인증과 같은 기능들을 공통 모듈로 구성하여 프로젝트의 재사용성을 향상시킬 수 있다.</li>
+  <li>모듈의 크기를 너무 작게 나누면 개수가 많아져 모듈간의 통합 비용이 많이 들고 너무 크게 나누면 개수가 적어 통합 비용은 적게 들지만 모듈 하나의 개발 비용이 많이든다.</li>
+</ul>
+
+<h3 id="추상화">추상화</h3>
+
+<p>추상화는 문제의 전체적이고 포괄적인 개념을 설계한 후 차례로 세분화하여 구체화 시켜 나가는 것이다.</p>
+
+<ul>
+  <li>인간이 복잡한 문제를 다룰 때 가장 기본적으로 사용하는 방법으로, 완전한 시스템을 구축하기 전에 그 시스템과 유사한 모델을 만들어서 여러 가지 요인들을 테스트할 수 있다.</li>
+  <li>최소의 비용으로 실제 상황에 대처할 수 있고, 시스템의 구조 및 구성을 대략적으로 파악할 수 있게 해준다.</li>
+  <li><strong>추상화의 유형</strong>
+    <ul>
+      <li>과정 추상화 : 자세한 수행 과정을 정의하지 않고, 전반적인 흐름만 파악할 수 있게 설계하는 방법</li>
+      <li>데이터 추상화 : 데이터의 세부적인 속성이나 용도를 정의하지 않고, 데이터 구조를 대표할 수 있는 표현으로 대체하는 방법</li>
+      <li>제어 추상화 : 이벤트 발생의 정확한 절차나 방법을 정의하지 않고, 대표할 수 있는 표현으로 대체하는 방법</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="단계적-분해">단계적 분해</h3>
+
+<p>단계적 분해는 Niklaus Wirth에 의해 제안된 하향식 설계 전략으로, 문제를 상위의 중요 개념으로부터의 하위 개념으로 구체화시키는 분할 기법이다.</p>
+
+<ul>
+  <li>추상화의 반복에 의해 세분화된다.</li>
+  <li>소프트웨어의 기능에서부터 시작하여 점차적으로 구체화하고, 알고리즘, 자료 구조 등 상세한 내역은 가능 한 뒤로 미루어 진행한다.</li>
+</ul>
+
+<h3 id="정보-은닉">정보 은닉</h3>
+
+<p>정보 은닉은 한 모듈 내부에 포함된 절차와 자료들의 정보가 감추어져 다른 모듈이 접근하거나 변경하지 못하도록 하는 기법이다.</p>
+
+<ul>
+  <li>어떤 모듈이 소프트웨어 기능을 수행하는데 반드시 필요한 기능이 있어 정보 은닉된 모듈과 커뮤니케이션할 필요가 있을 때는 필요한 정보만 인터페이스를 통해 주고 받는다.</li>
+  <li>정보 은닉을 통해 모듈을 독립적으로 수행할 수 있고, 하나의 모듈이 변경되더라도 다른 모듈에 영향을 주지 않으므로 수정, 시험, 유지보수가 용이하다.</li>
+</ul>
+ 
+            </section>
+
+            <footer class="page__meta">
+                 
 
  
-<div class="entries-list"> 
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2021-02-25T00:00:00+09:00">February 25, 2021</time></p>
+
+
+            </footer>
+
+            <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4+%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98%20https%3A%2F%2Fchangsikkwon.github.io%2Farchitecture%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Farchitecture%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Farchitecture%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+ 
+  <nav class="pagination">
+    
+      <a href="/os/what-is-os/" class="pagination--pager" title="Os란?
+">이전</a>
+    
+    
+      <a href="/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/" class="pagination--pager" title="Array
+">다음</a>
+    
+  </nav>
+
+        </div>
+
+        
+    </article>
+
+     
+    <div class="page__related">
+        <h4 class="page__related-title">참고</h4>
+        <div class="grid__wrapper">
+             
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/react/component-props/" rel="permalink">Component &amp; Props
+        <a href="/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/what-is-data-structure/" rel="permalink">자료구조란?
 </a>
       
     </h2>
@@ -328,20 +481,21 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Component
-</p>
+    <p class="archive__item-excerpt" itemprop="description">
+  자료구조란 데이터에 편리하게 접근하고 조작하기 위한 데이터를 저장하거나 조직하는 방법이다.
+  자료구조의 종류에는 여라가지가 있습니다. 하지만 모든 목적에 부합하는 자료구조는 없다. 따라서 각각의 자료구조가 갖는 장점과 한계를 잘 이해하고 상황에 맞게 올바른 자료구조를 선택하...</p>
   </article>
 </div>
   
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/" rel="permalink">Array
+        <a href="/unittest/" rel="permalink">Unit Test
 </a>
       
     </h2>
@@ -359,7 +513,45 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Unit Test란?
+</p>
+  </article>
+</div>
+  
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tuple/" rel="permalink">Tuple
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
         
       </span>
     
@@ -374,12 +566,12 @@
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/architecture/" rel="permalink">소프트웨어 아키텍처
+        <a href="/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree/" rel="permalink">Tree
 </a>
       
     </h2>
@@ -404,153 +596,14 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">설계
+    <p class="archive__item-excerpt" itemprop="description">Tree
 </p>
   </article>
 </div>
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/os/what-is-os/" rel="permalink">Os란?
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Operating System의 약자로 사용자가 컴퓨터를 쉽게 다룰 수 있게 해주는 인터페이스이다.
-개인뿐 아니라 업무용 서버 등의 컴퓨터를 관리하고 제어하며, 컴퓨터를 작동시키기 위한 토대를 만드는 소프트웨어를 말한다.
-</p>
-  </article>
-</div>
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/docker/docker/" rel="permalink">Docker
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Docker
-</p>
-  </article>
-</div>
- </div>
-
-
-<nav class="pagination">
-  
-  <ul>
-    
-    
-      
-        <li><a href="/page4/">이전</a></li>
-      
-    
-
-    
-    
-      <li><a href="/">1</a></li>
-    
-
-    
-    
-      
-      
-      <li><a href="#" class="disabled">&hellip;</a></li>
-    
-
-    
-    
-    
-
-    
-      
-        
-        
-        
-        <li><a href="/page3/">3</a></li>
-      
-    
-      
-        
-        
-        
-        <li><a href="/page4/">4</a></li>
-      
-    
-      
-        <li><a href="/page5/" class="disabled current">5</a></li>
-      
-    
-
-    
-    
-
-    
-      <li><a href="/page6/">6</a></li>
-    
-
-    
-    
-      <li><a href="/page6/">다음</a></li>
-    
-  </ul>
-</nav>
-
-
-
+ 
+        </div>
     </div>
+     
 </div>
 
     </div>
