@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Component &amp; Props - Changsik’s Blog</title>
-<meta name="description" content="Component">
+<!-- begin _includes/seo.html --><title>Go Print - Changsik’s Blog</title>
+<meta name="description" content="Go에서 표준출력 및 입력을 하기 위해선 fmt라는 패키지를 사용해야 한다. 기능에 따라 여러 print가 존재한다. 또한 데이터를 출력 및 받고자 할 때 데이터 타입에 따라 사용해야 하는 포맷이 다르기 때문에 확인을 하고 사용해야 합니다.">
 
 
   <meta name="author" content="권창식">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Changsik's Blog">
-<meta property="og:title" content="Component &amp; Props">
-<meta property="og:url" content="https://changsikkwon.github.io/react/component-props/">
+<meta property="og:title" content="Go Print">
+<meta property="og:url" content="https://changsikkwon.github.io/go/go-print/">
 
 
-  <meta property="og:description" content="Component">
+  <meta property="og:description" content="Go에서 표준출력 및 입력을 하기 위해선 fmt라는 패키지를 사용해야 한다. 기능에 따라 여러 print가 존재한다. 또한 데이터를 출력 및 받고자 할 때 데이터 타입에 따라 사용해야 하는 포맷이 다르기 때문에 확인을 하고 사용해야 합니다.">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="https://changsikkwon.github.io/react/component-props/">
+<link rel="canonical" href="https://changsikkwon.github.io/go/go-print/">
 
 
 
@@ -175,7 +175,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#react" itemprop="item"><span itemprop="name">React</span></a>
+          <a href="/categories/#go" itemprop="item"><span itemprop="name">Go</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -183,7 +183,7 @@
     
       
       
-        <li class="current">Component & Props</li>
+        <li class="current">Go Print</li>
       
     
   </ol>
@@ -321,10 +321,10 @@
     <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
         <meta
             itemprop="headline"
-            content="Component &amp; Props"
+            content="Go Print"
         /> <meta
             itemprop="description"
-            content="Component"
+            content="Go에서 표준출력 및 입력을 하기 위해선 fmt라는 패키지를 사용해야 한다. 기능에 따라 여러 print가 존재한다. 또한 데이터를 출력 및 받고자 할 때 데이터 타입에 따라 사용해야 하는 포맷이 다르기 때문에 확인을 하고 사용해야 합니다."
         /> <meta itemprop="datePublished" content="2021-02-25T00:00:00+09:00" /> 
 
         <div class="page__inner-wrap">
@@ -332,7 +332,7 @@
             <header>
                 
                 <h1 id="page-title" class="page__title" itemprop="headline">
-                    <p>Component &amp; Props</p>
+                    <p>Go Print</p>
 
                 </h1>
                  
@@ -349,7 +349,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          1 분 소요
         
       </span>
     
@@ -360,49 +360,61 @@
             
 
             <section class="page__content" itemprop="text">
-                 <h2 id="component">Component</h2>
+                 <p>Go에서 표준출력 및 입력을 하기 위해선 fmt라는 패키지를 사용해야 한다. 기능에 따라 여러 print가 존재한다. 또한 데이터를 출력 및 받고자 할 때 데이터 타입에 따라 사용해야 하는 포맷이 다르기 때문에 확인을 하고 사용해야 합니다.</p>
 
-<p>Component란 재사용 가능한 UI 단위이다.</p>
+<h2 id="fmtfprintos">fmt.Fprint(OS)</h2>
 
-<p>컴포넌트는 함수랑 비슷하다. React 컴포넌트에서는 input을 Props라 말하고 return은 보여져야할 React요소가 return된다.</p>
+<p>print 앞에 F가 붙으면 파일 입출력에 해당한다. fprint는 파일에 쓰는 용도이다.</p>
 
-<h2 id="component-만들기">Component 만들기</h2>
+<h3 id="func-fprint-fprintf-fprintlin">func Fprint, Fprintf, Fprintlin</h3>
 
-<h3 id="함수로-컴포넌트-구현">함수로 컴포넌트 구현</h3>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Fprint</span>
+<span class="c">// Fprint가 여러번 호출되도 한 줄로 이어서 파일에 쓰임</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Fprint</span><span class="p">(</span><span class="n">파일</span><span class="p">,</span> <span class="n">파일에</span> <span class="n">쓰고자</span> <span class="n">하는</span> <span class="n">데이터</span><span class="p">)</span>
 
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Welcome</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>hello, <span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
-<span class="p">}</span>
+<span class="n">Fprintln</span>
+<span class="c">// Fprintln 여러번 호출될 때마다 마지막 줄에 줄넘김이 추가됨</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Fprintln</span><span class="p">(</span><span class="n">파일</span><span class="p">,</span> <span class="n">파일에</span> <span class="n">쓰고자</span> <span class="n">하는</span> <span class="n">데이터</span><span class="p">)</span>
+
+<span class="n">Fprintf</span>
+<span class="c">// Fprintf가 호출될 때마다 사용자가 추가한 구분자로 구분</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Fprintf</span><span class="p">(</span><span class="n">파일</span><span class="p">,</span> <span class="n">파일에</span> <span class="n">쓰고자</span> <span class="n">하는</span> <span class="n">데이터</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h3 id="class로-컴포넌트-구현">class로 컴포넌트 구현</h3>
+<h2 id="fmtprint표준출력">fmt.Print(표준출력)</h2>
 
-<p>class로 컴포넌트를 만들려면 <code class="language-plaintext highlighter-rouge">React.Component</code> 를 extend해서 생성한다. 컴포넌트를 생성할 때 <code class="language-plaintext highlighter-rouge">render()</code> 메서드는 무조건 정의해야하고, return도 해주어야한다.</p>
+<p>일반적으로 많이 사용하는 print에 대한 출력이다.</p>
 
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Welcome</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
-    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, <span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<h3 id="func-print-printf-println">func Print, Printf, Println</h3>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Print</span>
+<span class="c">// Print가 여러번 호출되도 한 줄로 이어서 출력</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Print</span><span class="p">(</span><span class="s">"Hello world"</span><span class="p">)</span>
+
+<span class="n">Println</span>
+<span class="c">// Println가 여러번 호출되면 다음줄에 출력</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Hello world"</span><span class="p">)</span>
+
+<span class="n">Printf</span>
+<span class="c">// Printf가 호출될 때마다 사용자가 추가한 포맷에 해당하여 입력된 변수값을 출력</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="n">포맷</span><span class="p">,</span> <span class="n">출력하고자</span> <span class="n">하는</span> <span class="n">데이터</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h2 id="component-사용">Component 사용</h2>
+<h2 id="fmtsprint">fmt.Sprint</h2>
 
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Welcome</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, <span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
-<span class="p">}</span>
+<p>사용법은 fmt.Print와 같지만 해당 문법을 사용하면 표준 출력을 하진 않는다. 해당 문법을 사용하는 경우는 출력되는 값을 string 타입으로 return 할 때 사용한다.</p>
 
-<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">(</span>
-        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nc">Welcome</span> <span class="na">name</span><span class="p">=</span><span class="s">"A"</span> <span class="p">/&gt;</span>
-            <span class="p">&lt;</span><span class="nc">Welcome</span> <span class="na">name</span><span class="p">=</span><span class="s">"B"</span> <span class="p">/&gt;</span>
-            <span class="p">&lt;</span><span class="nc">Welcome</span> <span class="na">name</span><span class="p">=</span><span class="s">"C"</span> <span class="p">/&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">);</span>
-<span class="p">}</span>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Sprint</span>
+<span class="c">// Sprint가 여러번 호출되도 한 줄로 이어서 출력</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Sprint</span><span class="p">(</span><span class="n">출력하고자</span> <span class="n">하는</span> <span class="n">데이터</span><span class="p">)</span>
 
-<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(&lt;</span><span class="nc">App</span> <span class="p">/&gt;,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementByID</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">));</span>
+<span class="n">Sprintln</span>
+<span class="c">// Sprintln가 여러번 호출되면 다음줄에 출력</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Sprintln</span><span class="p">(</span><span class="n">출력하고자</span> <span class="n">하는</span> <span class="n">데이터</span><span class="p">)</span>
+
+<span class="n">Sprintf</span>
+<span class="c">// Sprintf가 호출될 때마다 사용자가 추가한 포맷에 해당하여 입력된 변수값을 string 타입으로 출력</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="n">포맷</span><span class="p">,</span> <span class="n">출력하고자</span> <span class="n">하는</span> <span class="n">데이터</span><span class="p">)</span>
 </code></pre></div></div>
  
             </section>
@@ -418,7 +430,7 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#react" class="page__taxonomy-item" rel="tag">React</a>
+      <a href="/tags/#go" class="page__taxonomy-item" rel="tag">Go</a>
     
     </span>
   </p>
@@ -435,7 +447,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#react" class="page__taxonomy-item" rel="tag">React</a>
+      <a href="/categories/#go" class="page__taxonomy-item" rel="tag">Go</a>
     
     </span>
   </p>
@@ -451,20 +463,20 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Component+%26+Props%20https%3A%2F%2Fchangsikkwon.github.io%2Freact%2Fcomponent-props%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Go+Print%20https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-print%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Freact%2Fcomponent-props%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-print%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Freact%2Fcomponent-props%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-print%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
  
   <nav class="pagination">
     
-      <a href="/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/" class="pagination--pager" title="Array
+      <a href="/react/component-props/" class="pagination--pager" title="Component &amp; Props
 ">이전</a>
     
     
-      <a href="/go/go-print/" class="pagination--pager" title="Go Print
+      <a href="/go/go/" class="pagination--pager" title="Go
 ">다음</a>
     
   </nav>

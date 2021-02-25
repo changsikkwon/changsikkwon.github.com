@@ -29,6 +29,12 @@ var store = [{
         "url": "/react/component-props/",
         "teaser": null
       },{
+        "title": "Go Print",
+        "excerpt":"Go에서 표준출력 및 입력을 하기 위해선 fmt라는 패키지를 사용해야 한다. 기능에 따라 여러 print가 존재한다. 또한 데이터를 출력 및 받고자 할 때 데이터 타입에 따라 사용해야 하는 포맷이 다르기 때문에 확인을 하고 사용해야 합니다.   fmt.Fprint(OS)   print 앞에 F가 붙으면 파일 입출력에 해당한다. fprint는 파일에 쓰는 용도이다.   func Fprint, Fprintf, Fprintlin   Fprint // Fprint가 여러번 호출되도 한 줄로 이어서 파일에 쓰임 fmt.Fprint(파일, 파일에 쓰고자 하는 데이터)  Fprintln // Fprintln 여러번 호출될 때마다 마지막 줄에 줄넘김이 추가됨 fmt.Fprintln(파일, 파일에 쓰고자 하는 데이터)  Fprintf // Fprintf가 호출될 때마다 사용자가 추가한 구분자로 구분 fmt.Fprintf(파일, 파일에 쓰고자 하는 데이터)   fmt.Print(표준출력)   일반적으로 많이 사용하는 print에 대한 출력이다.   func Print, Printf, Println   Print // Print가 여러번 호출되도 한 줄로 이어서 출력 fmt.Print(\"Hello world\")  Println // Println가 여러번 호출되면 다음줄에 출력 fmt.Println(\"Hello world\")  Printf // Printf가 호출될 때마다 사용자가 추가한 포맷에 해당하여 입력된 변수값을 출력 fmt.Printf(포맷, 출력하고자 하는 데이터)   fmt.Sprint   사용법은 fmt.Print와 같지만 해당 문법을 사용하면 표준 출력을 하진 않는다. 해당 문법을 사용하는 경우는 출력되는 값을 string 타입으로 return 할 때 사용한다.   Sprint // Sprint가 여러번 호출되도 한 줄로 이어서 출력 fmt.Sprint(출력하고자 하는 데이터)  Sprintln // Sprintln가 여러번 호출되면 다음줄에 출력 fmt.Sprintln(출력하고자 하는 데이터)  Sprintf // Sprintf가 호출될 때마다 사용자가 추가한 포맷에 해당하여 입력된 변수값을 string 타입으로 출력 fmt.Printf(포맷, 출력하고자 하는 데이터)  ","categories": ["Go"],
+        "tags": ["Go"],
+        "url": "/go/go-print/",
+        "teaser": null
+      },{
         "title": "Go",
         "excerpt":"Go는 2009년 구글에서 일하는 로버트 그리즈머, 롭 파이크, 켄 톰프슨이 개발한 프로그래밍 언어이다. 가비지 컬렉션 기능이 있고, 병행성을 잘 지원하는 컴파일 언어이다. 구문이 C와 비슷하지만 메모리 보안, 가비지 컬렉션, 구조 타이핑, CSP 스타일 병행성을 제공한다. Go는 golang.org라는 도메인 이름 때문에 종종 golang으로도 호칭되지만 정확한 명칭은 Go이다.   2개의 주요 구현체가 있다. 하나는 구글의 셀프 호스팅 컴파일러 툴체인ㅇ로서 여러 운영 체제, 모바일 장치, 웹어셈블리를 대상으로 한다. 나머지 하나는 GCC프론트엔드인 gccgo가 있다.   서드파티 트랜트파일러 Gopher JS는 프론트 웹 개발을 위해 Go를 자바스크립트로 컴파일한다.   언어설계   Go의 문법은 대체로 C와 비슷하다. 코드 블록들은 중괄호로 둘러싸고 for, switch, if를 포함한 일반적인 제어구조를 가지고 있다. C와 다르게 한 라인 끝의 세미콜론은 필수가 아닌 옵션이다. 변수 선언은 다르게 작성되고 대게 옵션이다. 형 변환은 명시적으로 해야한다. 병행 컴퓨팅을 다루기 위해 go와 select 키워드가 사용횐다. 새로운 타입은 map, 유니코드 문자열, 배열 slice, 그리고 내부 쓰레드 통신을 위한 채널이 있다.   언어도구   Go는 수많은 언어 배포판들과 동일한 종류의 디버깅, 테스트, 코드 검사도구들을 포함하고 있다. 그 중에 Go 배포판은 다음을 포함한다.      go build: 소스 파일 자체의 정보만을 사용하여 Go 바이너리를 빌드한다. 별도의 makefile은 없다.   go test: 유닛 테스트 및 마이크로벤치마크   go fmt: 코드 서식 지정   go get: 원격 패키지의 검색 및 설치   go vet: 코드 내의 잠재적인 오류를 찾아내는 정적 분석기   go run: 코드를 빌드하고 실행하는 바로 가기   godoc: 문서를 표시. HTTP를 통해 문서 확인.   gorename: 변수, 함수 등을 형 안전(type-safe) 방식으로 이름 변경   go generate: 코드 생성기를 호출하는 표준 방식  ","categories": ["Go"],
         "tags": ["Go"],
