@@ -1,0 +1,38 @@
+I"B
+<h1 id="tree">Tree</h1>
+
+<ul>
+  <li>Tree는 일반적으로 대상 정보의 각 항목들을 계층적으로 연관되도록 구조화 시키고자 할 때 사용하는 비선형 자료구조이다.</li>
+  <li>데이터 요소들의 단순한 나열이 아닌 부모 - 자식 관곅의 계층적 구조로 표현된다.</li>
+  <li>Tree는 그래프의 한 종류이며 사이클이 없다.</li>
+  <li>Tree 자료구조는 여러유형이 있지만 그 중 가장 기본은 binary tree 구조가 대표적이다.</li>
+  <li>binary tree는 두개의 자식노드를 가진 트리 형태이다.</li>
+  <li>Tree의 자료구조는 데이터를 거꾸로된 나무 형태로 저장하는 모양이다.</li>
+  <li>계층적인 관계의 표현에 쓰이고, 윈도우와 리눅스의 파일시스템 구조도 Tree로 표현된다.</li>
+</ul>
+
+<h1 id="용어">용어</h1>
+
+<p><img src="https://media.vlpt.us/images/kcs15987/post/375d9ee2-73ce-4b23-ae79-4b9c3359a229/image.png" alt="https://media.vlpt.us/images/kcs15987/post/375d9ee2-73ce-4b23-ae79-4b9c3359a229/image.png" /></p>
+
+<ul>
+  <li>Node : Tree구조의 교점이다. Node가 데이터를 가지고 있고 또한 자식노드를 가지고 있다. Tree 자료구조는 노드를 기본으로 구성된다.</li>
+  <li>Root Node: Tree구조의 가장 위 노드.</li>
+  <li>Edge: Tree를 구성하기 위해 노드와 노드를 연결하는 선이다.</li>
+  <li>level: Tree의 특정 깊이를 가지는 노드의 집합이다.</li>
+  <li>degree: 하위 Tree개수 / 각 노드가 지닌 가지의 수를 말한다.</li>
+  <li>Internal Node : Leaf노드를 제외한 중간에 위치한 노드들을 말한다.</li>
+  <li>Leaf Node: 하위에 다른 노드가 연결되어 있지 않은 노드이다.</li>
+  <li>Tree의 속성 중 가장 중요한 것이 ‘루트 노드를 제외한 모든 노드는 단 하나의 부모노드만을 가진다’는 것이다.</li>
+</ul>
+
+<h1 id="tree의-탐색">Tree의 탐색</h1>
+
+<h3 id="tree의-순회란-tree의-각-노드를-체계적인-방법으로-방문하는-과정을-말한다">Tree의 순회란 Tree의 각 노드를 체계적인 방법으로 방문하는 과정을 말한다.</h3>
+
+<ol>
+  <li>전위순회(preorder)루트노드 - 왼쪽 서브Tree - 오른쪽 서브Tree 순으로 순회하는 방식이다.</li>
+  <li>중위순회(inorder)루트노드에서 시작해서 왼쪽 서브Tree - 노드 - 오른쪽 서브Tree 순으로 순회하는 방식이다.</li>
+  <li>후위순회(postorder)루트노드에서 시작해서 왼쪽 서브Tree - 오른쪽 서브Tree - 노드 순으로 순회하는 방식이다.</li>
+</ol>
+:ET

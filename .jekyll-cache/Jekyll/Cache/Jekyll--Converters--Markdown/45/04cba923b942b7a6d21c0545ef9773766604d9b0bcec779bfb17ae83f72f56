@@ -1,0 +1,59 @@
+I"Q<h2 id="특징">특징</h2>
+
+<ul>
+  <li>List와 마찬가지로 데이터를 순차적으로 저장할 수 있는 순열 자료구조이다.</li>
+  <li>LIst와 다르게 한 번 정의되고 나면 수정할 수 없다.</li>
+  <li>2-3개 정도의 적은 수의 소규모 데이터를 저장할 때 많이 사용한다.</li>
+</ul>
+
+<h2 id="장점">장점</h2>
+
+<ul>
+  <li>List보다 더 가볍고 메모리를 적게 차지한다.</li>
+  <li>Tuple은 간단한 값을 빨리 표현하고 싶을때 많이 사용한다.
+    <ul>
+      <li>ex</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span> <span class="n">Tuple을</span> <span class="n">사용하는</span> <span class="n">경우</span>
+<span class="p">[(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)]</span> <span class="o">//</span> <span class="n">Array</span><span class="p">(</span><span class="n">List</span><span class="p">)</span> <span class="n">안의</span> <span class="n">Tuple</span>
+
+<span class="o">//</span> <span class="n">Tuple을</span> <span class="n">안</span> <span class="n">쓰는</span> <span class="n">경우에는</span> <span class="n">class를</span> <span class="n">생성해야함</span>
+<span class="k">class</span> <span class="nc">cord</span><span class="p">:</span>
+	<span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+		<span class="bp">self</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+		<span class="bp">self</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+</code></pre></div></div>
+
+<h2 id="단점">단점</h2>
+
+<ul>
+  <li>Tuple의 데이터는 무슨 의미인지 명확하지 않다.</li>
+  <li>데이터의 의미를 문맥을 보고 가정해야한다.
+    <ul>
+      <li>예를들어 객체의 경우 key-value 쌍으로 이루어진 데이터이기 때문에 무슨 데이터인지 파악이 쉽지만, Tuple의 경우 괄호 안에 데이터만 담겨있기 때문에 문맥에 맞게 의미를 추측해야 한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tuple을-사용하기-좋은-곳">Tuple을 사용하기 좋은 곳</h2>
+
+<ul>
+  <li>
+    <p>List를 쓰기에는 간단한 데이터들을 표현할 때 사용한다.</p>
+
+    <ul>
+      <li>ex) 좌표 데이터</li>
+    </ul>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">coordinations</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="p">]</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET
