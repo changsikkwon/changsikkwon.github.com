@@ -11,6 +11,12 @@ var store = [{
         "url": "/os/Linux/",
         "teaser": null
       },{
+        "title": "Docker",
+        "excerpt":"Docker   Docker는 가상화 기술이다. Docker 라는 회사가 container virtualization 을 개발하였고 그래서 docker가 container virtualization 기술의 또다른 이름으로 오해하시는 분들이 있는데 container virtualization은 docker 이전에 이미 개발되어 존재 하고 있었다. Docker는 가상화 컨테이너에 application 배포를 자동화 시켜주는 오픈소스 엔진이다.   Docker는 container 가상화 실행 환경 위에 application 배포 엔진을 더함으로서 사용자의 코드를 어디서든 빠르고 가볍게 실행시킬수 있는 기술을 제공한다.   Hypervisor 가상화 VS Container 가상화      Docker 구조      Docker client 와 server   Docker 이미지   Docker registries   Docker containers  ","categories": ["Os"],
+        "tags": ["Os"],
+        "url": "/os/docker/",
+        "teaser": null
+      },{
         "title": "Os란?",
         "excerpt":"Operating System의 약자로 사용자가 컴퓨터를 쉽게 다룰 수 있게 해주는 인터페이스이다.  개인뿐 아니라 업무용 서버 등의 컴퓨터를 관리하고 제어하며, 컴퓨터를 작동시키기 위한 토대를 만드는 소프트웨어를 말한다.   OS의 종류   OS의 종류에는 Window, UNIX, LINUX, MS-DOS등이 있다.  단일 작업 처리 시스템에는 DOS, 다중 작업 처리 시스템에는 Windows, UNIX, LINUX등이 사용된다.  주로 Windows는 개인용 UNIX, LINUX는 서버용 운영체제로 사용된다.   OS의 목적   OS의 목적에는 처리능력 향상, 사용 가능도 향상, 신뢰도 향상, 반환 시간 단축 등이 있다.  처리능력, 반환시간, 사용가능도, 신뢰도는 OS의 성능을 평가하는 기준이 된다.           처리능력       일정 시간 내에 시스템이 처리하는 일의 양            반환시간       시스템에 작업을 의뢰한 시간부터 처리가 완료될 때까지 걸린 시간            사용가능도       시스템을 사용할 필요가 있을 때 즉시 사용 가능한 정도            신뢰도       시스템이 주어진 문제를 정확하게 해결하는 정도       OS의 기능      프로세서, 기억장치, 입출력장치, 파일 및 정보 등의 자원을 관리한다.   자원을 효율적으로 관리하기 위해 자원의 스케줄링 기능을 제공한다.   사용자와 시스템간의 편리한 인터페이스를 제공한다.   시스템의 각종 하드웨어와 네트워크를 관리, 제어한다.   데이터를 관리하고, 데이터 및 자원의 공유 기능을 제공한다.   시스템의 오류를 검사하고 복구한다.   자원 보호 기능을 제공한다.   입출력에 대한 보조 기능을 제공한다.   가상 계산기 능력을 제공한다.   OS의 주요 자원관리      프로세스 관리            프로세스 스케줄링 및 동기화 관리담당       프로세스 생성과 제거, 시작과 정지, 메세지 전달등의 기능 담당                기억장치 관리       프로세스에게 메모리 할당 및 회수 관리 담당            주변장치 관리       입출력 장치 스케줄링 및 전반적인 관리 담당            파일 관리       파일의 생성과 삭제, 변경, 유지 등의 관리 담당      ","categories": ["Os"],
         "tags": ["Os"],
