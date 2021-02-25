@@ -9,6 +9,14 @@
 <lastmod>2021-02-24T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>https://changsikkwon.github.io/docker/docker-images/</loc>
+<lastmod>2021-02-24T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>https://changsikkwon.github.io/docker/docker/</loc>
+<lastmod>2021-02-24T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>https://changsikkwon.github.io/os/what-is-os/</loc>
 <lastmod>2021-02-24T00:00:00+09:00</lastmod>
 </url>
@@ -18,6 +26,10 @@
 </url>
 <url>
 <loc>https://changsikkwon.github.io/react/component-props/</loc>
+<lastmod>2021-02-25T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>https://changsikkwon.github.io/django-q/</loc>
 <lastmod>2021-02-25T00:00:00+09:00</lastmod>
 </url>
 <url>
@@ -89,6 +101,10 @@
 <lastmod>2021-02-25T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>https://changsikkwon.github.io/unittest/</loc>
+<lastmod>2021-02-25T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/what-is-data-structure/</loc>
 <lastmod>2021-02-25T00:00:00+09:00</lastmod>
 </url>
@@ -115,5 +131,8 @@
 </url>
 <url>
 <loc>https://changsikkwon.github.io/page5/</loc>
+</url>
+<url>
+<loc>https://changsikkwon.github.io/page6/</loc>
 </url>
 </urlset>

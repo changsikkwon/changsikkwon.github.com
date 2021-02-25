@@ -1,0 +1,681 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Docker Images - Changsik’s Blog</title>
+<meta name="description" content="Docker Images">
+
+
+  <meta name="author" content="권창식">
+  
+  <meta property="article:author" content="권창식">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Changsik's Blog">
+<meta property="og:title" content="Docker Images">
+<meta property="og:url" content="https://changsikkwon.github.io/docker/docker-images/">
+
+
+  <meta property="og:description" content="Docker Images">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-02-24T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://changsikkwon.github.io/docker/docker-images/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "권창식",
+      "url": "https://changsikkwon.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Changsik's Blog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+         
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="https://changsikkwon.github.io/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#docker" itemprop="item"><span itemprop="name">Docker</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Docker Images</li>
+      
+    
+  </ol>
+</nav>
+  
+
+<div id="main" role="main">
+    
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="https://gigazine.kr/data/editor/1803/2fcff996628470bf3ef7e3fe40202ba5_1521093171_407.jpg" alt="권창식" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">권창식</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>개발 꿈나무</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Republic of Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/changsikkwon/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.instagram.com/cs094/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:kcs15987@gmail.com">
+            <meta itemprop="email" content="kcs15987@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+    <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+        <meta
+            itemprop="headline"
+            content="Docker Images"
+        /> <meta
+            itemprop="description"
+            content="Docker Images"
+        /> <meta itemprop="datePublished" content="2021-02-24T00:00:00+09:00" /> 
+
+        <div class="page__inner-wrap">
+            
+            <header>
+                
+                <h1 id="page-title" class="page__title" itemprop="headline">
+                    <p>Docker Images</p>
+
+                </h1>
+                 
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+            </header>
+            
+
+            <section class="page__content" itemprop="text">
+                 <h1 id="docker-images">Docker Images</h1>
+
+<p>Docker image는 파일시스템들의 layer로 만들어져 있다. 가장 base layer는 boot filesystem bootfs로 일반적인 Linux boot 파일시스템으로 되어있다. Docker 유저가 직접적으로 boot filesystem을 사용할 일은 없으며, 실제로 container가 부팅이 되면 메모리로 옴겨지고 boot 파일시스템은 unmount된다.</p>
+
+<p>Boot layer 다음에는 rootfs 라고 하는 root 파일 시스템 layer이다. Root 파일 시스템은 실제 OS 가 설치된다. 원래 리눅스에서는 root filesystem은 처음 mount될때는 read-only로 mount가 된후 integrity check후 read-write으로 바뀐다. 하지만 Docker에서는 계속해서 read-only 모드이다. Read-write 모드로 변환하지 않는 이유는 Docker는 union mount를 사용해서 read-only 파일 시스템들을 root 파일 시스템 위에 덮는 구조로 이루어져 있기 때문이다.</p>
+
+<p>Docker 구조에서는 이러한 파일 시스템 하나 하나가 바로 image이다. 그럼으로 image들을 서로 위에 layer시키는 구조로 되어있다. Base가 되는 이미지를 부모 이미지라고하며 맨 위의 이미지 부터 가장 밑 부분의 이미지 까지 횡단 하는 구조로 되어있다. 즉 filesystem / image를 수정하는 구조가 아니라 read-only filesystem / image 들을 서로 위에 layer 시키되 union mount 기법으로 마지막에는 하나의 파일 시스템으로 보이는 구조를 가지고 있는 것이다.</p>
+
+<p>모든 read-only 파일시스템들이 mount가 되고 docker 컨테이너가 이미지로부터 시작될때 docker는 마지막으로 read-write 파일 시스템을 파일 시스템 layer 맨 위에 mount한다. 마지막에는 read-only가 아니라 read-write으로 올려놓는 이유는 read-write 파일 시스템에 컨테이너가 필요한 프로세스를 생성하고 실행하기 위해서이다.</p>
+
+<p><img src="https://images.velog.io/images/kcs15987/post/2ad5c6f5-74aa-4284-bf36-d7d31d2b4ae3/image.png" alt="" /></p>
+
+<p>이러한 pattern을 copy on write이라고 한다. 이 copy on write 구조는 Dockerfile 을 이용해 docker image 를 빌드할때 효과적이다. Docker image를 빌드할때 Dockerfile의 각각의 instruction이 바로 filesystem / image가 되는것이다.</p>
+ 
+            </section>
+
+            <footer class="page__meta">
+                 
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#docker" class="page__taxonomy-item" rel="tag">Docker</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#docker" class="page__taxonomy-item" rel="tag">Docker</a>
+    
+    </span>
+  </p>
+
+ 
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2021-02-24T00:00:00+09:00">February 24, 2021</time></p>
+
+
+            </footer>
+
+            <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Docker+Images%20https%3A%2F%2Fchangsikkwon.github.io%2Fdocker%2Fdocker-images%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Fdocker%2Fdocker-images%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Fdocker%2Fdocker-images%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+ 
+  <nav class="pagination">
+    
+      <a href="/os/Linux/" class="pagination--pager" title="Linux
+">이전</a>
+    
+    
+      <a href="/docker/docker/" class="pagination--pager" title="Docker
+">다음</a>
+    
+  </nav>
+
+        </div>
+
+        
+    </article>
+
+     
+    <div class="page__related">
+        <h4 class="page__related-title">참고</h4>
+        <div class="grid__wrapper">
+             
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/what-is-data-structure/" rel="permalink">자료구조란?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  자료구조란 데이터에 편리하게 접근하고 조작하기 위한 데이터를 저장하거나 조직하는 방법이다.
+  자료구조의 종류에는 여라가지가 있습니다. 하지만 모든 목적에 부합하는 자료구조는 없다. 따라서 각각의 자료구조가 갖는 장점과 한계를 잘 이해하고 상황에 맞게 올바른 자료구조를 선택하...</p>
+  </article>
+</div>
+  
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/unittest/" rel="permalink">Unit Test
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Unit Test란?
+</p>
+  </article>
+</div>
+  
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tuple/" rel="permalink">Tuple
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">특징
+</p>
+  </article>
+</div>
+  
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree/" rel="permalink">Tree
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Tree
+</p>
+  </article>
+</div>
+ 
+        </div>
+    </div>
+     
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/changsikkwon/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://www.instagram.com/cs094/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 권창식. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

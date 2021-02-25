@@ -11,6 +11,18 @@ var store = [{
         "url": "/os/Linux/",
         "teaser": null
       },{
+        "title": "Docker Images",
+        "excerpt":"Docker Images   Docker image는 파일시스템들의 layer로 만들어져 있다. 가장 base layer는 boot filesystem bootfs로 일반적인 Linux boot 파일시스템으로 되어있다. Docker 유저가 직접적으로 boot filesystem을 사용할 일은 없으며, 실제로 container가 부팅이 되면 메모리로 옴겨지고 boot 파일시스템은 unmount된다.   Boot layer 다음에는 rootfs 라고 하는 root 파일 시스템 layer이다. Root 파일 시스템은 실제 OS 가 설치된다. 원래 리눅스에서는 root filesystem은 처음 mount될때는 read-only로 mount가 된후 integrity check후 read-write으로 바뀐다. 하지만 Docker에서는 계속해서 read-only 모드이다. Read-write 모드로 변환하지 않는 이유는 Docker는 union mount를 사용해서 read-only 파일 시스템들을 root 파일 시스템 위에 덮는 구조로 이루어져 있기 때문이다.   Docker 구조에서는 이러한 파일 시스템 하나 하나가 바로 image이다. 그럼으로 image들을 서로 위에 layer시키는 구조로 되어있다. Base가 되는 이미지를 부모 이미지라고하며 맨 위의 이미지 부터 가장 밑 부분의 이미지 까지 횡단 하는 구조로 되어있다. 즉 filesystem / image를 수정하는 구조가 아니라 read-only filesystem / image 들을 서로 위에 layer 시키되 union mount 기법으로 마지막에는 하나의 파일 시스템으로 보이는 구조를 가지고 있는 것이다.   모든 read-only 파일시스템들이 mount가 되고 docker 컨테이너가 이미지로부터 시작될때 docker는 마지막으로 read-write 파일 시스템을 파일 시스템 layer 맨 위에 mount한다. 마지막에는 read-only가 아니라 read-write으로 올려놓는 이유는 read-write 파일 시스템에 컨테이너가 필요한 프로세스를 생성하고 실행하기 위해서이다.      이러한 pattern을 copy on write이라고 한다. 이 copy on write 구조는 Dockerfile 을 이용해 docker image 를 빌드할때 효과적이다. Docker image를 빌드할때 Dockerfile의 각각의 instruction이 바로 filesystem / image가 되는것이다.  ","categories": ["Docker"],
+        "tags": ["Docker"],
+        "url": "/docker/docker-images/",
+        "teaser": null
+      },{
+        "title": "Docker",
+        "excerpt":"Docker   Docker는 가상화 기술이다. Docker 라는 회사가 container virtualization 을 개발하였고 그래서 docker가 container virtualization 기술의 또다른 이름으로 오해하시는 분들이 있는데 container virtualization은 docker 이전에 이미 개발되어 존재 하고 있었다. Docker는 가상화 컨테이너에 application 배포를 자동화 시켜주는 오픈소스 엔진이다.   Docker는 container 가상화 실행 환경 위에 application 배포 엔진을 더함으로서 사용자의 코드를 어디서든 빠르고 가볍게 실행시킬수 있는 기술을 제공한다.   Hypervisor 가상화 VS Container 가상화      Docker 구조      Docker client 와 server   Docker 이미지   Docker registries   Docker containers  ","categories": ["Docker"],
+        "tags": ["Docker"],
+        "url": "/docker/docker/",
+        "teaser": null
+      },{
         "title": "Os란?",
         "excerpt":"Operating System의 약자로 사용자가 컴퓨터를 쉽게 다룰 수 있게 해주는 인터페이스이다.  개인뿐 아니라 업무용 서버 등의 컴퓨터를 관리하고 제어하며, 컴퓨터를 작동시키기 위한 토대를 만드는 소프트웨어를 말한다.   OS의 종류   OS의 종류에는 Window, UNIX, LINUX, MS-DOS등이 있다.  단일 작업 처리 시스템에는 DOS, 다중 작업 처리 시스템에는 Windows, UNIX, LINUX등이 사용된다.  주로 Windows는 개인용 UNIX, LINUX는 서버용 운영체제로 사용된다.   OS의 목적   OS의 목적에는 처리능력 향상, 사용 가능도 향상, 신뢰도 향상, 반환 시간 단축 등이 있다.  처리능력, 반환시간, 사용가능도, 신뢰도는 OS의 성능을 평가하는 기준이 된다.           처리능력       일정 시간 내에 시스템이 처리하는 일의 양            반환시간       시스템에 작업을 의뢰한 시간부터 처리가 완료될 때까지 걸린 시간            사용가능도       시스템을 사용할 필요가 있을 때 즉시 사용 가능한 정도            신뢰도       시스템이 주어진 문제를 정확하게 해결하는 정도       OS의 기능      프로세서, 기억장치, 입출력장치, 파일 및 정보 등의 자원을 관리한다.   자원을 효율적으로 관리하기 위해 자원의 스케줄링 기능을 제공한다.   사용자와 시스템간의 편리한 인터페이스를 제공한다.   시스템의 각종 하드웨어와 네트워크를 관리, 제어한다.   데이터를 관리하고, 데이터 및 자원의 공유 기능을 제공한다.   시스템의 오류를 검사하고 복구한다.   자원 보호 기능을 제공한다.   입출력에 대한 보조 기능을 제공한다.   가상 계산기 능력을 제공한다.   OS의 주요 자원관리      프로세스 관리            프로세스 스케줄링 및 동기화 관리담당       프로세스 생성과 제거, 시작과 정지, 메세지 전달등의 기능 담당                기억장치 관리       프로세스에게 메모리 할당 및 회수 관리 담당            주변장치 관리       입출력 장치 스케줄링 및 전반적인 관리 담당            파일 관리       파일의 생성과 삭제, 변경, 유지 등의 관리 담당      ","categories": ["Os"],
         "tags": ["Os"],
@@ -27,6 +39,12 @@ var store = [{
         "excerpt":"Component   Component란 재사용 가능한 UI 단위이다.   컴포넌트는 함수랑 비슷하다. React 컴포넌트에서는 input을 Props라 말하고 return은 보여져야할 React요소가 return된다.   Component 만들기   함수로 컴포넌트 구현   function Welcome(props) {     return &lt;h1&gt;hello, {props.name}&lt;/h1&gt;; }   class로 컴포넌트 구현   class로 컴포넌트를 만들려면 React.Component 를 extend해서 생성한다. 컴포넌트를 생성할 때 render() 메서드는 무조건 정의해야하고, return도 해주어야한다.   class Welcome extends React.Component {     render() {         return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;;     } }   Component 사용   function Welcome(props) {     return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; }  function App() {     return (         &lt;div&gt;             &lt;Welcome name=\"A\" /&gt;             &lt;Welcome name=\"B\" /&gt;             &lt;Welcome name=\"C\" /&gt;         &lt;/div&gt;     ); }  ReactDOM.render(&lt;App /&gt;, document.getElementByID('root'));  ","categories": ["React"],
         "tags": ["React"],
         "url": "/react/component-props/",
+        "teaser": null
+      },{
+        "title": "Django Q",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/django-q/",
         "teaser": null
       },{
         "title": "Go 연산자",
@@ -129,6 +147,12 @@ var store = [{
         "excerpt":"특징      List와 마찬가지로 데이터를 순차적으로 저장할 수 있는 순열 자료구조이다.   LIst와 다르게 한 번 정의되고 나면 수정할 수 없다.   2-3개 정도의 적은 수의 소규모 데이터를 저장할 때 많이 사용한다.   장점      List보다 더 가볍고 메모리를 적게 차지한다.   Tuple은 간단한 값을 빨리 표현하고 싶을때 많이 사용한다.            ex           // Tuple을 사용하는 경우 [(1,2), (2,4)] // Array(List) 안의 Tuple  // Tuple을 안 쓰는 경우에는 class를 생성해야함 class cord: \tdef __init__(self, x, y): \t\tself.x = x \t\tself.y = y   단점      Tuple의 데이터는 무슨 의미인지 명확하지 않다.   데이터의 의미를 문맥을 보고 가정해야한다.            예를들어 객체의 경우 key-value 쌍으로 이루어진 데이터이기 때문에 무슨 데이터인지 파악이 쉽지만, Tuple의 경우 괄호 안에 데이터만 담겨있기 때문에 문맥에 맞게 의미를 추측해야 한다.           Tuple을 사용하기 좋은 곳           List를 쓰기에는 간단한 데이터들을 표현할 때 사용한다.              ex) 좌표 데이터           coordinations = [     (1, 2),     (3, 4),     (5, 6) ]          ","categories": ["자료구조","Data Structure"],
         "tags": ["자료구조","Data Structure"],
         "url": "/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tuple/",
+        "teaser": null
+      },{
+        "title": "Unit Test",
+        "excerpt":"Unit Test란?   내가 작성한 코드의 가장 작은 단위인 함수를 테스트하는 메소드이다.   Testing Pyramid   Google Test Automation Conference에서 제안된 테스트 피라미드이며 UI Testing은 10%, intergrating Testing은 20%, 그리고 Unit Testing을 70% 전체 테스트 converage를 구현 하는것이 권장된다.            UI Testing / End-To-End Testing              크롬 브라우저를 띄운 다음에 내가 만든 검색페이지로 들어가서 검색을 해보고 검색한 내용이 제대로 나오는지 화면상에서 확인하거나 직접 회원가입을 해보고 회원가입후에 로그인이되는지 직접 브라우저에서 값을 입력해서 테스트 하는방법                Intergration Testing              최소 두개이상의 클래스 또는 서브 시스템의 결합을 테스트하는 방법       Postman 또는 httpie로 호출해서 Json Response가 제대로 출력되는지 확인                Unit Testing       Unit Test 장점           Unit Test는 UI Test 또는 Intergration Test 보다 테스트 비용이 싸다. 왜냐하면 UI Test는 백엔드 서버와 프론트를 연동하여 사람이 직접 테스트하지만, Unit Test는 사람이 슼립트로 한꺼번에 자동으로 실행하기 때문이다.            Unit Test는 다른 테스트에 비해서 실행 속도가 매우 빠르다. 그래서 Unit Test를 활용하면 하루에도 배포를 여러번 할 수 있어 개발 및 배포 속도에 중요한 영향을 주기 때문에 개발할 때 최대한 활용하는게 좋다.            새로운 기능ㅇ르 구현할때 Unit Test를 잘 작성해놓으면 중장기적으로 유지보수가 쉬운 장점이 있다. 이전에 통과했던 테스트 집합을 가지고 버그를 찾기 위해서 이전에 테스트 되었던 유닛테스트를 반복하는 것을 regressin 테스트라고 하는데 Unit Test만 반복하면 되기 때문에 regression 테스트도 반복적으로 수행 할 수 있다.            Unit Test를 잘 짜놓으면 Unit Test가 되었던 코드에서는 버그가 거의 발견되지 않고 대부분 버그가 발견되는 경우는 Unit Test가 없어서 발생하는 경우가 많다. 만약 사후에 발견된 버그에 대해서도 버그를 수정한 후 Unit Test를 작성해놓으면 버그를 방지할 수 있다.       Unit Test의 일반 원칙           테스트 유닛은 각 기능의 가장 작은 단위에 집중하여, 해당 기능이 정확히 동작하는지를 증명해야한다.            각 테스트 유닛은 반드시 독립적이어야한다. 각 테스트는 혼자서도 실행 가능해야하고, 테스트 슈트로도 실행 가능해야한다. 이 때 호출되는 순서와 무관하게 잘 동작해야한다. 새로운 데이터 셋으로 각각의 테스트를 로딩해야하고, 그 실행 결과는 반드시 삭제해야한다. 보통 setUP()과 tearDown() 메소드로 이런 작업을 한다.            테스트가 빠르게 돌 수 있도록 만들기 위해 노력해야한다. 테스트 하나가 실행하는데 몇 밀리세컨드 이상의 시간이 걸린다면, 개발 속도가 느려지거나 테스트가 충분히 자주 수행되지 못할 것이다. 테스트에 필요한 데이터 구조가 너무 복잡하고, 테스트를 하려면 매번 이 복잡한 데이터를 불러와야 해서 테스트를 빠르게 만들 수 없는 경우도 있다. 이럴 때는 무거운 테스트는 따로 분리하여 별도의 테스트슈트를 만들어 주고 스케줄 작업을 걸어두면 된다. 그리고 그 외의 다른 모든 테스트는 필요한 만큼 자주 수행하면 된다.            지금 사용하고 있는 Tool이 개별 테스트나 테스트 케이스를 어떻게 수행하는지 배워야한다. 모듈안에 들어있는 함수를 개발하고 있다면 그 함수의 테스트를 자주, 가능하다면 코드를 저장할 때마다 자동으로 돌려야한다.            그날의 코딩을 시작하기전에 항상 풀 테스트 슈트를 돌려야한다. 끝난후에도 마찬가지이다.            모두가 공유하는 저장소에다가 코드를 집어넣기 전에 자동으로 모든 테스트를 수행하도록 하는 구현을 하는 것이 좋다.            지금 한창 개발 중인데 그만두고 잠시 다른일을 해야한다면, 다음에 개발할 부분에다가 일부러 고장난 유닛 테스트를 작성하는 것도 좋은 생각이다.            코드를 디버깅할 때 가장 먼저 시작할 일은 버그를 찝어내는 새로운 테스트를 작성하는 것이다. 이런일이 언제나 가능한 것은 아니지만, 이런 버그잡이 테스트들이야말로 당신의 프로젝트에서 가장 가치있는 코드 조각이 될 것이다.            테스트 함수에는 길고 서술적인 이름을 사용해야한다. 테스트에서의 스타일 안내서는 짧은 이름보다 선호하는 다른 일반적인 코드와는 조금 다르다. 테스트 함수는 절대 직접 호출되지 않기 때문이다. 실제로 돌아가는 코드에서는 square()라든가 심지어 sqr() 조차도 괜찮지만 테스트 코드에서는 test_square_of_number_2(), test_square_negative_number() 같은 이름을 붙혀야한다. 이런 함수명들은 테스트가 실패할 때보인다.            무언가 잘못되었거나 뜯어고쳐야만 할 경우, 괜찮은 코드에 테스트 셋이 있다면 당신이나 다른 유지보수 담당자들은 오류를 수정하거나 프로그램의 동작을 수정할 때 필시 그 테스트 슈트에 전적으로 의지할 것이다.            테스트 코드의 또 다른 사용 방법은 개발자들을 위한 안내서로 쓰는 방법이다. 이미 만들어져 있는 코드에서 작업해야할 경우, 관련 테스틀코드를 돌려보고 읽어보는 것이야말로 가장 좋은 시작점일 경우가 많다. 이렇게 테스트 코드를 돌려보면 어느 지점이 문제인지, 수정하기 어려운 곳은 어디일지, 막다른 골목은 어디일지를 발견하게 된다. 몇 가지 기능을 추가해야 한다면 가장 먼저 해야할 일은 그 새로운 기능이 아직 돌아가지 않음을 확인할 수 있는 테스트를 붙혀넣는 것이다.      ","categories": [],
+        "tags": [],
+        "url": "/unittest/",
         "teaser": null
       },{
         "title": "자료구조란?",
