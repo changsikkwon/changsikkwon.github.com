@@ -1,0 +1,106 @@
+I"�<h2 id="for-문">for 문</h2>
+
+<p>Go 언어에서 반복문은 for 루프를 이용한다. Go는 반복문에 for 하나 밖에 없다. for 루프는 다른 언어와 비슷하게 “for 초기값; 조건식; 증감 {…}” 의 형식을 따른다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">sum</span> <span class="o">:=</span> <span class="m">0</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="o">:=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="m">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">{</span>
+		<span class="n">sum</span> <span class="o">+=</span> <span class="n">i</span>
+	<span class="p">}</span>
+	<span class="nb">println</span><span class="p">(</span><span class="n">sum</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="for-문---조건식만-쓰는-for-루프">for 문 - 조건식만 쓰는 for 루프</h2>
+
+<p>Go에서 for 루프는 초기값과 증감식을 생략하고 조건식만을 사용할 수 있는데, 이는 마치 for 루프가 다른 언어의 while과 같이 쓰이도록 한다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">n</span> <span class="o">:=</span> <span class="m">1</span>
+	<span class="k">for</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="m">100</span> <span class="p">{</span>
+		<span class="n">n</span><span class="o">*=</span><span class="m">2</span>
+	<span class="p">}</span>
+	<span class="nb">println</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="for-문---무한루프">for 문 - 무한루프</h2>
+
+<p>for 루프로 무한루프를 만들려면 “초기값; 조건식; 증감” 모두를 생략하면 된다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">for</span> <span class="p">{</span>
+		<span class="nb">println</span><span class="p">(</span><span class="s">"Infinite loop"</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="for-range-문">for range 문</h2>
+
+<p>for range 문은 컬렉션으로 부터 한 요소씩 가져와 차례로 for 블럭의 문장들을 실행한다.</p>
+
+<p>for range 문은 “for 인덱스, 요소값 := range 컬렉션” 같이 for 루프를 구성하는데, range 키워드 다음의 컬렉션으로부터 하나씩 요소를 리턴해서 그 요소의 위치인덱스와 값을 for 키워드 다음의 2개의 변수에 각각 할당한다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">names</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">"홍길동"</span><span class="p">,</span> <span class="s">"김철수"</span><span class="p">,</span> <span class="s">"김영희"</span><span class="p">}</span>
+
+	<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">name</span> <span class="o">:=</span> <span class="k">range</span> <span class="n">names</span> <span class="p">{</span>
+		<span class="nb">println</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="break-continue-goto-문">break, continue, goto 문</h2>
+
+<p>경우에 따라 for 루프내에서 즉시 빠져나올 필요가 있는데, 이때 break 문을 사용한다. 만약 for 루프 중간에서 나머지 문장들을 실행하지 않고 for 루프 시작부분으로 바로 가려면 continue 문을 사용한다. 그리고 기타 임의의 문장으로 이동하기 위해 goto 문을 사용할 수 있다. goto 문은 for 루프와 관련없이 사용될 수 있다.</p>
+
+<p>break 문은 for 루프 이외에 switch 문이나 select 문에서도 사용할 수 있다. 하지만, continue 문은 for 루프와 연관되어 사용된다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">a</span> <span class="o">:=</span> <span class="m">1</span>
+	<span class="k">for</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="m">15</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="m">5</span> <span class="p">{</span>
+			<span class="n">a</span> <span class="o">+=</span> <span class="n">a</span>
+			<span class="k">continue</span>
+		<span class="p">}</span>
+		<span class="n">a</span><span class="o">++</span>
+		<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="m">10</span> <span class="p">{</span>
+			<span class="k">break</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="m">11</span> <span class="p">{</span>
+		<span class="k">goto</span> <span class="n">END</span>
+	<span class="p">}</span>
+	<span class="nb">println</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">END</span><span class="o">:</span>
+	<span class="nb">println</span><span class="p">(</span><span class="s">"END"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>break 문은 보통 단독으로 사용되지만, 경우에 따라 “break 레이블”과 같이 사용하여 지정된 레이블로 이동할 수도 있다. break의 “레이블은” 보통 현재의 for 루프를 바로 위에 적게 되는데, 이러한 “break 레이블”은 현재의 로프를 빠져나와 지정된 레이블로 이동하고, break 문의 직속 for 로프 전체의 다음 문장을 실행하게 한다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">i</span> <span class="o">:=</span> <span class="m">0</span>
+
+<span class="n">L1</span><span class="o">:</span>
+	<span class="k">for</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="m">0</span> <span class="p">{</span>
+			<span class="k">break</span> <span class="n">L1</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="nb">println</span><span class="p">(</span><span class="s">"OK"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

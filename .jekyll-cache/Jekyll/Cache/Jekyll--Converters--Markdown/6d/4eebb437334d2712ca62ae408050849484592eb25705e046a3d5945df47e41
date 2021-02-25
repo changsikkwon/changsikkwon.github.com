@@ -1,0 +1,57 @@
+I"�<p>Go에서 표준출력 및 입력을 하기 위해선 fmt라는 패키지를 사용해야 한다. 기능에 따라 여러 print가 존재한다. 또한 데이터를 출력 및 받고자 할 때 데이터 타입에 따라 사용해야 하는 포맷이 다르기 때문에 확인을 하고 사용해야 합니다.</p>
+
+<h2 id="fmtfprintos">fmt.Fprint(OS)</h2>
+
+<p>print 앞에 F가 붙으면 파일 입출력에 해당한다. fprint는 파일에 쓰는 용도이다.</p>
+
+<h3 id="func-fprint-fprintf-fprintlin">func Fprint, Fprintf, Fprintlin</h3>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Fprint</span>
+<span class="c">// Fprint가 여러번 호출되도 한 줄로 이어서 파일에 쓰임</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Fprint</span><span class="p">(</span><span class="n">파일</span><span class="p">,</span> <span class="n">파일에</span> <span class="n">쓰고자</span> <span class="n">하는</span> <span class="n">데이터</span><span class="p">)</span>
+
+<span class="n">Fprintln</span>
+<span class="c">// Fprintln 여러번 호출될 때마다 마지막 줄에 줄넘김이 추가됨</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Fprintln</span><span class="p">(</span><span class="n">파일</span><span class="p">,</span> <span class="n">파일에</span> <span class="n">쓰고자</span> <span class="n">하는</span> <span class="n">데이터</span><span class="p">)</span>
+
+<span class="n">Fprintf</span>
+<span class="c">// Fprintf가 호출될 때마다 사용자가 추가한 구분자로 구분</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Fprintf</span><span class="p">(</span><span class="n">파일</span><span class="p">,</span> <span class="n">파일에</span> <span class="n">쓰고자</span> <span class="n">하는</span> <span class="n">데이터</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="fmtprint표준출력">fmt.Print(표준출력)</h2>
+
+<p>일반적으로 많이 사용하는 print에 대한 출력이다.</p>
+
+<h3 id="func-print-printf-println">func Print, Printf, Println</h3>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Print</span>
+<span class="c">// Print가 여러번 호출되도 한 줄로 이어서 출력</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Print</span><span class="p">(</span><span class="s">"Hello world"</span><span class="p">)</span>
+
+<span class="n">Println</span>
+<span class="c">// Println가 여러번 호출되면 다음줄에 출력</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Hello world"</span><span class="p">)</span>
+
+<span class="n">Printf</span>
+<span class="c">// Printf가 호출될 때마다 사용자가 추가한 포맷에 해당하여 입력된 변수값을 출력</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="n">포맷</span><span class="p">,</span> <span class="n">출력하고자</span> <span class="n">하는</span> <span class="n">데이터</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="fmtsprint">fmt.Sprint</h2>
+
+<p>사용법은 fmt.Print와 같지만 해당 문법을 사용하면 표준 출력을 하진 않는다. 해당 문법을 사용하는 경우는 출력되는 값을 string 타입으로 return 할 때 사용한다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Sprint</span>
+<span class="c">// Sprint가 여러번 호출되도 한 줄로 이어서 출력</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Sprint</span><span class="p">(</span><span class="n">출력하고자</span> <span class="n">하는</span> <span class="n">데이터</span><span class="p">)</span>
+
+<span class="n">Sprintln</span>
+<span class="c">// Sprintln가 여러번 호출되면 다음줄에 출력</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Sprintln</span><span class="p">(</span><span class="n">출력하고자</span> <span class="n">하는</span> <span class="n">데이터</span><span class="p">)</span>
+
+<span class="n">Sprintf</span>
+<span class="c">// Sprintf가 호출될 때마다 사용자가 추가한 포맷에 해당하여 입력된 변수값을 string 타입으로 출력</span>
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="n">포맷</span><span class="p">,</span> <span class="n">출력하고자</span> <span class="n">하는</span> <span class="n">데이터</span><span class="p">)</span>
+</code></pre></div></div>
+:ET

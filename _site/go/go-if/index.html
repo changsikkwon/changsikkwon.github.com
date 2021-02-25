@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Go - Changsik’s Blog</title>
-<meta name="description" content="Go는 2009년 구글에서 일하는 로버트 그리즈머, 롭 파이크, 켄 톰프슨이 개발한 프로그래밍 언어이다. 가비지 컬렉션 기능이 있고, 병행성을 잘 지원하는 컴파일 언어이다. 구문이 C와 비슷하지만 메모리 보안, 가비지 컬렉션, 구조 타이핑, CSP 스타일 병행성을 제공한다. Go는 golang.org라는 도메인 이름 때문에 종종 golang으로도 호칭되지만 정확한 명칭은 Go이다.">
+<!-- begin _includes/seo.html --><title>Go 조건문 - Changsik’s Blog</title>
+<meta name="description" content="if 문">
 
 
   <meta name="author" content="권창식">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Changsik's Blog">
-<meta property="og:title" content="Go">
-<meta property="og:url" content="https://changsikkwon.github.io/go/go/">
+<meta property="og:title" content="Go 조건문">
+<meta property="og:url" content="https://changsikkwon.github.io/go/go-if/">
 
 
-  <meta property="og:description" content="Go는 2009년 구글에서 일하는 로버트 그리즈머, 롭 파이크, 켄 톰프슨이 개발한 프로그래밍 언어이다. 가비지 컬렉션 기능이 있고, 병행성을 잘 지원하는 컴파일 언어이다. 구문이 C와 비슷하지만 메모리 보안, 가비지 컬렉션, 구조 타이핑, CSP 스타일 병행성을 제공한다. Go는 golang.org라는 도메인 이름 때문에 종종 golang으로도 호칭되지만 정확한 명칭은 Go이다.">
+  <meta property="og:description" content="if 문">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="https://changsikkwon.github.io/go/go/">
+<link rel="canonical" href="https://changsikkwon.github.io/go/go-if/">
 
 
 
@@ -183,7 +183,7 @@
     
       
       
-        <li class="current">Go</li>
+        <li class="current">Go 조건문</li>
       
     
   </ol>
@@ -321,10 +321,10 @@
     <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
         <meta
             itemprop="headline"
-            content="Go"
+            content="Go 조건문"
         /> <meta
             itemprop="description"
-            content="Go는 2009년 구글에서 일하는 로버트 그리즈머, 롭 파이크, 켄 톰프슨이 개발한 프로그래밍 언어이다. 가비지 컬렉션 기능이 있고, 병행성을 잘 지원하는 컴파일 언어이다. 구문이 C와 비슷하지만 메모리 보안, 가비지 컬렉션, 구조 타이핑, CSP 스타일 병행성을 제공한다. Go는 golang.org라는 도메인 이름 때문에 종종 golang으로도 호칭되지만 정확한 명칭은 Go이다."
+            content="if 문"
         /> <meta itemprop="datePublished" content="2021-02-25T00:00:00+09:00" /> 
 
         <div class="page__inner-wrap">
@@ -332,7 +332,7 @@
             <header>
                 
                 <h1 id="page-title" class="page__title" itemprop="headline">
-                    <p>Go</p>
+                    <p>Go 조건문</p>
 
                 </h1>
                  
@@ -360,30 +360,102 @@
             
 
             <section class="page__content" itemprop="text">
-                 <p>Go는 2009년 구글에서 일하는 로버트 그리즈머, 롭 파이크, 켄 톰프슨이 개발한 프로그래밍 언어이다. 가비지 컬렉션 기능이 있고, 병행성을 잘 지원하는 컴파일 언어이다. 구문이 C와 비슷하지만 메모리 보안, 가비지 컬렉션, 구조 타이핑, CSP 스타일 병행성을 제공한다. Go는 golang.org라는 도메인 이름 때문에 종종 golang으로도 호칭되지만 정확한 명칭은 Go이다.</p>
+                 <h2 id="if-문">if 문</h2>
 
-<p>2개의 주요 구현체가 있다. 하나는 구글의 셀프 호스팅 컴파일러 툴체인ㅇ로서 여러 운영 체제, 모바일 장치, 웹어셈블리를 대상으로 한다. 나머지 하나는 GCC프론트엔드인 gccgo가 있다.</p>
+<p>if문은 해당 조건이 맞으면 {} 블럭안의 내용을 실행한다. Go의 if 조건문은 괄호()로 둘러 싸지 않아도 된다. 그리고 반드시 조건 블럭 시작 {}를 if문과 같은 라인에 두어야한다.</p>
 
-<p>서드파티 트랜트파일러 Gopher JS는 프론트 웹 개발을 위해 Go를 자바스크립트로 컴파일한다.</p>
+<p>그리고 한가지 주목할 점은 if문의 조건식은 반드시 Boolean식으로 표현되어야 한다는 것이다.</p>
 
-<h2 id="언어설계">언어설계</h2>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
 
-<p>Go의 문법은 대체로 C와 비슷하다. 코드 블록들은 중괄호로 둘러싸고 for, switch, if를 포함한 일반적인 제어구조를 가지고 있다. C와 다르게 한 라인 끝의 세미콜론은 필수가 아닌 옵션이다. 변수 선언은 다르게 작성되고 대게 옵션이다. 형 변환은 명시적으로 해야한다. 병행 컴퓨팅을 다루기 위해 go와 select 키워드가 사용횐다. 새로운 타입은 map, 유니코드 문자열, 배열 slice, 그리고 내부 쓰레드 통신을 위한 채널이 있다.</p>
+<span class="k">import</span> <span class="s">"fmt"</span>
 
-<h2 id="언어도구">언어도구</h2>
+<span class="k">var</span> <span class="n">k</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">1</span>
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="n">k</span><span class="o">==</span><span class="m">1</span><span class="p">{</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"one"</span><span class="p">)</span> <span class="c">// one</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-<p>Go는 수많은 언어 배포판들과 동일한 종류의 디버깅, 테스트, 코드 검사도구들을 포함하고 있다. 그 중에 Go 배포판은 다음을 포함한다.</p>
+<p>if문은 else if, 혹은 else문을 함께 가질 수 있다. else if문은 if 조건문이 거짓일 대 다시 다른 if 조건식을 검사하는데 사용되며, else문은 이전의 if 문들이 모두 거짓일 때 실행된다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="s">"fmt"</span>
+
+<span class="k">var</span> <span class="n">k</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">1</span>
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="n">k</span><span class="o">==</span><span class="m">1</span><span class="p">{</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"one"</span><span class="p">)</span> <span class="c">// one</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">k</span><span class="o">==</span><span class="m">2</span><span class="p">{</span>
+		<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"two"</span><span class="p">)</span> <span class="c">// k가 2일경우 two</span>
+	<span class="p">}</span> <span class="k">else</span><span class="p">{</span>
+		<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"other"</span><span class="p">)</span> <span class="c">// k가 1 혹은 2가 아닐경우 other</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>if문에서 조건식을 사용하기 이전에 간단한 문장을 함께 실행할 수 있다. 즉 아래 코드 처럼 <code class="language-plaintext highlighter-rouge">a:= k+1</code> 라는 문장을 조건식 이전에 실행할 수 있는데, 여기서 주의할 점은 이때 정의된 변수 a는 if문 블럭 scope 안에서만 사용할 수 있다는 것이다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="s">"fmt"</span>
+
+<span class="k">var</span> <span class="n">k</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">1</span>
+<span class="k">var</span> <span class="n">b</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">5</span>
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="n">a</span><span class="o">:=</span> <span class="n">k</span><span class="o">+</span><span class="m">1</span><span class="p">;</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">b</span> <span class="p">{</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c">// 2</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="switch-문">switch 문</h2>
+
+<p>여러 값을 비교해야 하는 경우 혹은 다수의 조건식을 체크해야 하는 경우 switch 문을 사용한다. 다른 언어들과 비슷하게 switch 문 뒤에 하나의 변수를 지정하고, case 문에 해당 변수가 가질 수 있는 값들을 지정하여 각 경우에 다른 문장 블럭들을 실행할 수 있다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="s">"fmt"</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">var</span> <span class="n">name</span> <span class="kt">string</span>
+	<span class="k">var</span> <span class="n">number</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">1</span>
+  <span class="k">switch</span> <span class="n">number</span><span class="p">{</span>
+	<span class="k">case</span> <span class="m">1</span><span class="o">:</span>
+		<span class="n">name</span> <span class="o">=</span> <span class="s">"John"</span>
+	<span class="k">case</span> <span class="m">2</span><span class="o">:</span>
+		<span class="n">name</span> <span class="o">=</span> <span class="s">"Mike"</span>
+	<span class="k">case</span> <span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="o">:</span>
+		<span class="n">name</span> <span class="o">=</span> <span class="s">"Harry"</span>
+	<span class="k">default</span><span class="o">:</span>
+		<span class="n">name</span> <span class="o">=</span> <span class="s">"Nothing"</span>
+	<span class="p">}</span>
+	<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c">// John</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>다음은 Go언어만의 특별한 switch 용법들이다.</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">go build</code>: 소스 파일 자체의 정보만을 사용하여 Go 바이너리를 빌드한다. 별도의 makefile은 없다.</li>
-  <li><code class="language-plaintext highlighter-rouge">go test</code>: 유닛 테스트 및 마이크로벤치마크</li>
-  <li><code class="language-plaintext highlighter-rouge">go fmt</code>: 코드 서식 지정</li>
-  <li><code class="language-plaintext highlighter-rouge">go get</code>: 원격 패키지의 검색 및 설치</li>
-  <li><code class="language-plaintext highlighter-rouge">go vet</code>: 코드 내의 잠재적인 오류를 찾아내는 정적 분석기</li>
-  <li><code class="language-plaintext highlighter-rouge">go run</code>: 코드를 빌드하고 실행하는 바로 가기</li>
-  <li><code class="language-plaintext highlighter-rouge">godoc</code>: 문서를 표시. HTTP를 통해 문서 확인.</li>
-  <li><code class="language-plaintext highlighter-rouge">gorename</code>: 변수, 함수 등을 형 안전(type-safe) 방식으로 이름 변경</li>
-  <li><code class="language-plaintext highlighter-rouge">go generate</code>: 코드 생성기를 호출하는 표준 방식</li>
+  <li>
+    <p><strong>switch 뒤에 표현이 없을 수 있음</strong></p>
+
+    <p>다른 언어는 switch 키워드 뒤에 변수나 표현을 반드시 두지만, Go는 이를 쓰지 않아도 된다. 이 경우 Go는 switch 표현을 true로 생각하고 첫번째 case문으로 이동하여 검사한다.</p>
+  </li>
+  <li><strong>case문에 표현을 쓸 수 있음</strong>
+다른 언어의 case 문은 일반적으로 리터럴 값만을 갖지만, Go는 case문에 복잡한 표현을 가질 수 있다.</li>
+  <li>
+    <p><strong>No default fall through</strong></p>
+
+    <p>다른 언어의 case문은 break를 쓰지 않는 한 다음 case로 이동하지만, Go는 다음 case로 가지 않는다.</p>
+  </li>
+  <li>
+    <p><strong>type switch</strong></p>
+
+    <p>다른 언어의 switch는 일반적으로 변수의 값을 기준으로 case로 분기하지만, Go는 그 변수의 type에 따라 case로 분기할 수 있다.</p>
+  </li>
 </ul>
  
             </section>
@@ -432,20 +504,20 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Go%20https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Go+%EC%A1%B0%EA%B1%B4%EB%AC%B8%20https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-if%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-if%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-if%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
  
   <nav class="pagination">
     
-      <a href="/go/go-variable/" class="pagination--pager" title="Go 변수와 상수
+      <a href="/go/go-function/" class="pagination--pager" title="Go 함수
 ">이전</a>
     
     
-      <a href="/python/iterator-generator/" class="pagination--pager" title="Iterator, Generator
+      <a href="/go/go-operator/" class="pagination--pager" title="Go Data type
 ">다음</a>
     
   </nav>
