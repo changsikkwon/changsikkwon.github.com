@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Go 연산자 - Changsik’s Blog</title>
-<meta name="description" content="산술연산자">
+<!-- begin _includes/seo.html --><title>Go 조건문 - Changsik’s Blog</title>
+<meta name="description" content="if 문">
 
 
   <meta name="author" content="권창식">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Changsik's Blog">
-<meta property="og:title" content="Go 연산자">
-<meta property="og:url" content="https://changsikkwon.github.io/go/go-data-type/">
+<meta property="og:title" content="Go 조건문">
+<meta property="og:url" content="https://changsikkwon.github.io/go/go-if/">
 
 
-  <meta property="og:description" content="산술연산자">
+  <meta property="og:description" content="if 문">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="https://changsikkwon.github.io/go/go-data-type/">
+<link rel="canonical" href="https://changsikkwon.github.io/go/go-if/">
 
 
 
@@ -183,7 +183,7 @@
     
       
       
-        <li class="current">Go 연산자</li>
+        <li class="current">Go 조건문</li>
       
     
   </ol>
@@ -321,10 +321,10 @@
     <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
         <meta
             itemprop="headline"
-            content="Go 연산자"
+            content="Go 조건문"
         /> <meta
             itemprop="description"
-            content="산술연산자"
+            content="if 문"
         /> <meta itemprop="datePublished" content="2021-02-25T00:00:00+09:00" /> 
 
         <div class="page__inner-wrap">
@@ -332,7 +332,7 @@
             <header>
                 
                 <h1 id="page-title" class="page__title" itemprop="headline">
-                    <p>Go 연산자</p>
+                    <p>Go 조건문</p>
 
                 </h1>
                  
@@ -349,7 +349,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          1 분 소요
         
       </span>
     
@@ -360,90 +360,103 @@
             
 
             <section class="page__content" itemprop="text">
-                 <h2 id="산술연산자">산술연산자</h2>
+                 <h2 id="if-문">if 문</h2>
 
-<p>산술연산자는 사칙연산자(+, -, *, /, % (Modulus))와 증감연산자(++, –)를 사용한다.</p>
+<p>if문은 해당 조건이 맞으면 {} 블럭안의 내용을 실행한다. Go의 if 조건문은 괄호()로 둘러 싸지 않아도 된다. 그리고 반드시 조건 블럭 시작 {}를 if문과 같은 라인에 두어야한다.</p>
+
+<p>그리고 한가지 주목할 점은 if문의 조건식은 반드시 Boolean식으로 표현되어야 한다는 것이다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="s">"fmt"</span>
+
+<span class="k">var</span> <span class="n">k</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">1</span>
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="n">k</span><span class="o">==</span><span class="m">1</span><span class="p">{</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"one"</span><span class="p">)</span> <span class="c">// one</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>if문은 else if, 혹은 else문을 함께 가질 수 있다. else if문은 if 조건문이 거짓일 대 다시 다른 if 조건식을 검사하는데 사용되며, else문은 이전의 if 문들이 모두 거짓일 때 실행된다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="s">"fmt"</span>
+
+<span class="k">var</span> <span class="n">k</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">1</span>
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="n">k</span><span class="o">==</span><span class="m">1</span><span class="p">{</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"one"</span><span class="p">)</span> <span class="c">// one</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">k</span><span class="o">==</span><span class="m">2</span><span class="p">{</span>
+		<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"two"</span><span class="p">)</span> <span class="c">// k가 2일경우 two</span>
+	<span class="p">}</span> <span class="k">else</span><span class="p">{</span>
+		<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"other"</span><span class="p">)</span> <span class="c">// k가 1 혹은 2가 아닐경우 other</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>if문에서 조건식을 사용하기 이전에 간단한 문장을 함께 실행할 수 있다. 즉 아래 코드 처럼 <code class="language-plaintext highlighter-rouge">a:= k+1</code> 라는 문장을 조건식 이전에 실행할 수 있는데, 여기서 주의할 점은 이때 정의된 변수 a는 if문 블럭 scope 안에서만 사용할 수 있다는 것이다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="s">"fmt"</span>
+
+<span class="k">var</span> <span class="n">k</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">1</span>
+<span class="k">var</span> <span class="n">b</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">5</span>
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="n">a</span><span class="o">:=</span> <span class="n">k</span><span class="o">+</span><span class="m">1</span><span class="p">;</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">b</span> <span class="p">{</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c">// 2</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="switch-문">switch 문</h2>
+
+<p>여러 값을 비교해야 하는 경우 혹은 다수의 조건식을 체크해야 하는 경우 switch 문을 사용한다. 다른 언어들과 비슷하게 switch 문 뒤에 하나의 변수를 지정하고, case 문에 해당 변수가 가질 수 있는 값들을 지정하여 각 경우에 다른 문장 블럭들을 실행할 수 있다.</p>
 
 <div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
 
 <span class="k">import</span> <span class="s">"fmt"</span>
 
 <span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">a</span><span class="o">:=</span><span class="m">5</span>
-  <span class="n">b</span><span class="o">:=</span><span class="m">10</span>
-  <span class="n">c</span><span class="o">:=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span> <span class="o">/</span> <span class="m">5</span>
-  <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c">// 3</span>
+	<span class="k">var</span> <span class="n">name</span> <span class="kt">string</span>
+	<span class="k">var</span> <span class="n">number</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">1</span>
+  <span class="k">switch</span> <span class="n">number</span><span class="p">{</span>
+	<span class="k">case</span> <span class="m">1</span><span class="o">:</span>
+		<span class="n">name</span> <span class="o">=</span> <span class="s">"John"</span>
+	<span class="k">case</span> <span class="m">2</span><span class="o">:</span>
+		<span class="n">name</span> <span class="o">=</span> <span class="s">"Mike"</span>
+	<span class="k">case</span> <span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="o">:</span>
+		<span class="n">name</span> <span class="o">=</span> <span class="s">"Harry"</span>
+	<span class="k">default</span><span class="o">:</span>
+		<span class="n">name</span> <span class="o">=</span> <span class="s">"Nothing"</span>
+	<span class="p">}</span>
+	<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c">// John</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h2 id="관계연산자">관계연산자</h2>
+<p>다음은 Go언어만의 특별한 switch 용법들이다.</p>
 
-<p>관계연산자는 서로의 크기를 비교하거나 동일함을 체크하는데 사용된다.</p>
+<ul>
+  <li>
+    <p><strong>switch 뒤에 표현이 없을 수 있음</strong></p>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+    <p>다른 언어는 switch 키워드 뒤에 변수나 표현을 반드시 두지만, Go는 이를 쓰지 않아도 된다. 이 경우 Go는 switch 표현을 true로 생각하고 첫번째 case문으로 이동하여 검사한다.</p>
+  </li>
+  <li><strong>case문에 표현을 쓸 수 있음</strong>
+다른 언어의 case 문은 일반적으로 리터럴 값만을 갖지만, Go는 case문에 복잡한 표현을 가질 수 있다.</li>
+  <li>
+    <p><strong>No default fall through</strong></p>
 
-<span class="k">import</span> <span class="s">"fmt"</span>
+    <p>다른 언어의 case문은 break를 쓰지 않는 한 다음 case로 이동하지만, Go는 다음 case로 가지 않는다.</p>
+  </li>
+  <li>
+    <p><strong>type switch</strong></p>
 
-<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">a</span><span class="o">:=</span><span class="m">5</span>
-  <span class="n">b</span><span class="o">:=</span><span class="m">10</span>
-  <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="p">)</span> <span class="c">// false</span>
-  <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">a</span><span class="o">!=</span><span class="n">b</span><span class="p">)</span> <span class="c">// true</span>
-  <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">a</span><span class="o">&lt;=</span><span class="n">b</span><span class="p">)</span> <span class="c">// true</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="논리연산자">논리연산자</h2>
-
-<p>논리연산자는 AND, OR, NOT을 표현하는데 사용된다.</p>
-
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">A</span> <span class="o">&amp;&amp;</span> <span class="n">B</span>
-<span class="n">A</span> <span class="o">||</span> <span class="o">!</span><span class="p">(</span><span class="n">C</span> <span class="o">&amp;&amp;</span> <span class="n">B</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h2 id="bitwise연산자">Bitwise연산자</h2>
-
-<p>Bitwise연산자는 비트단위 연산을 위해 사용되는데, 바이너리 AND, OR, XOR과 바이너리 쉬프트 연산자가 있다.</p>
-
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
-
-<span class="k">import</span> <span class="s">"fmt"</span>
-
-<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">a</span><span class="o">:=</span><span class="m">3</span>
-  <span class="n">b</span><span class="o">:=</span><span class="m">2</span>
-  <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"%08b"</span><span class="p">,</span> <span class="n">a</span><span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="c">// 00000010</span>
-  <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"%08b"</span><span class="p">,</span> <span class="n">a</span><span class="o">|</span><span class="n">b</span><span class="p">)</span> <span class="c">// 00000011</span>
-  <span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"%08b"</span><span class="p">,</span> <span class="n">a</span><span class="o">^</span><span class="n">b</span><span class="p">)</span> <span class="c">// 00000001</span>
-	<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"%08b"</span><span class="p">,</span> <span class="n">a</span><span class="o">&lt;&lt;</span><span class="m">2</span><span class="p">)</span><span class="c">// 00001100</span>
-	<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"%08b"</span><span class="p">,</span> <span class="n">a</span><span class="o">&lt;&lt;</span><span class="m">1</span><span class="p">)</span><span class="c">// 00000001</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="할당연산자">할당연산자</h2>
-
-<p>할당연산자는 값을 할당하는 = 연산자 외에 사칙연산, 비트연산을 축약한 +=, &amp;=, «= 같은 연산자들도 있다.</p>
-
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="m">100</span>
-<span class="n">a</span> <span class="o">*=</span> <span class="m">10</span>
-<span class="n">a</span> <span class="o">&gt;&gt;=</span><span class="m">2</span>
-<span class="n">a</span> <span class="o">|=</span> <span class="m">1</span>
-</code></pre></div></div>
-
-<h2 id="포인터연산자">포인터연산자</h2>
-
-<p>포인터연산자는 &amp;혹은 *을 사용하여 해당 변수의 주소를 얻어내거나 이를 반대로 Dereference 할 때 사용한다. Go는 비록 포인터연산자를 제공하지만 포인터 산술 즉 포인터에 더하고 빼는 기능은 제공하지 않는다.</p>
-
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
-
-<span class="k">import</span> <span class="s">"fmt"</span>
-
-<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">a</span><span class="o">:=</span><span class="m">10</span>
-  <span class="n">p</span><span class="o">:=&amp;</span><span class="n">a</span> <span class="c">// a의 주소를 할당</span>
-  <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="c">// p가 가르키는 주소에 있는 실제 내용출력</span>
-<span class="p">}</span>
-</code></pre></div></div>
+    <p>다른 언어의 switch는 일반적으로 변수의 값을 기준으로 case로 분기하지만, Go는 그 변수의 type에 따라 case로 분기할 수 있다.</p>
+  </li>
+</ul>
  
             </section>
 
@@ -491,20 +504,20 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Go+%EC%97%B0%EC%82%B0%EC%9E%90%20https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-data-type%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Go+%EC%A1%B0%EA%B1%B4%EB%AC%B8%20https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-if%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-data-type%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-if%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-data-type%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fchangsikkwon.github.io%2Fgo%2Fgo-if%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
  
   <nav class="pagination">
     
-      <a href="/react/component-props/" class="pagination--pager" title="Component &amp; Props
+      <a href="/go/go-data-type/" class="pagination--pager" title="Go 연산자
 ">이전</a>
     
     
-      <a href="/go/go-if/" class="pagination--pager" title="Go 조건문
+      <a href="/go/go-operator/" class="pagination--pager" title="Go Data type
 ">다음</a>
     
   </nav>

@@ -1,0 +1,98 @@
+I"d<h2 id="if-문">if 문</h2>
+
+<p>if문은 해당 조건이 맞으면 {} 블럭안의 내용을 실행한다. Go의 if 조건문은 괄호()로 둘러 싸지 않아도 된다. 그리고 반드시 조건 블럭 시작 {}를 if문과 같은 라인에 두어야한다.</p>
+
+<p>그리고 한가지 주목할 점은 if문의 조건식은 반드시 Boolean식으로 표현되어야 한다는 것이다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="s">"fmt"</span>
+
+<span class="k">var</span> <span class="n">k</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">1</span>
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="n">k</span><span class="o">==</span><span class="m">1</span><span class="p">{</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"one"</span><span class="p">)</span> <span class="c">// one</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>if문은 else if, 혹은 else문을 함께 가질 수 있다. else if문은 if 조건문이 거짓일 대 다시 다른 if 조건식을 검사하는데 사용되며, else문은 이전의 if 문들이 모두 거짓일 때 실행된다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="s">"fmt"</span>
+
+<span class="k">var</span> <span class="n">k</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">1</span>
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="n">k</span><span class="o">==</span><span class="m">1</span><span class="p">{</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"one"</span><span class="p">)</span> <span class="c">// one</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">k</span><span class="o">==</span><span class="m">2</span><span class="p">{</span>
+		<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"two"</span><span class="p">)</span> <span class="c">// k가 2일경우 two</span>
+	<span class="p">}</span> <span class="k">else</span><span class="p">{</span>
+		<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"other"</span><span class="p">)</span> <span class="c">// k가 1 혹은 2가 아닐경우 other</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>if문에서 조건식을 사용하기 이전에 간단한 문장을 함께 실행할 수 있다. 즉 아래 코드 처럼 <code class="language-plaintext highlighter-rouge">a:= k+1</code> 라는 문장을 조건식 이전에 실행할 수 있는데, 여기서 주의할 점은 이때 정의된 변수 a는 if문 블럭 scope 안에서만 사용할 수 있다는 것이다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="s">"fmt"</span>
+
+<span class="k">var</span> <span class="n">k</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">1</span>
+<span class="k">var</span> <span class="n">b</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">5</span>
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="n">a</span><span class="o">:=</span> <span class="n">k</span><span class="o">+</span><span class="m">1</span><span class="p">;</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">b</span> <span class="p">{</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c">// 2</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="switch-문">switch 문</h2>
+
+<p>여러 값을 비교해야 하는 경우 혹은 다수의 조건식을 체크해야 하는 경우 switch 문을 사용한다. 다른 언어들과 비슷하게 switch 문 뒤에 하나의 변수를 지정하고, case 문에 해당 변수가 가질 수 있는 값들을 지정하여 각 경우에 다른 문장 블럭들을 실행할 수 있다.</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="s">"fmt"</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">var</span> <span class="n">name</span> <span class="kt">string</span>
+	<span class="k">var</span> <span class="n">number</span> <span class="kt">int</span> <span class="o">=</span> <span class="m">1</span>
+  <span class="k">switch</span> <span class="n">number</span><span class="p">{</span>
+	<span class="k">case</span> <span class="m">1</span><span class="o">:</span>
+		<span class="n">name</span> <span class="o">=</span> <span class="s">"John"</span>
+	<span class="k">case</span> <span class="m">2</span><span class="o">:</span>
+		<span class="n">name</span> <span class="o">=</span> <span class="s">"Mike"</span>
+	<span class="k">case</span> <span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="o">:</span>
+		<span class="n">name</span> <span class="o">=</span> <span class="s">"Harry"</span>
+	<span class="k">default</span><span class="o">:</span>
+		<span class="n">name</span> <span class="o">=</span> <span class="s">"Nothing"</span>
+	<span class="p">}</span>
+	<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c">// John</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>다음은 Go언어만의 특별한 switch 용법들이다.</p>
+
+<ul>
+  <li>
+    <p><strong>switch 뒤에 표현이 없을 수 있음</strong></p>
+
+    <p>다른 언어는 switch 키워드 뒤에 변수나 표현을 반드시 두지만, Go는 이를 쓰지 않아도 된다. 이 경우 Go는 switch 표현을 true로 생각하고 첫번째 case문으로 이동하여 검사한다.</p>
+  </li>
+  <li><strong>case문에 표현을 쓸 수 있음</strong>
+다른 언어의 case 문은 일반적으로 리터럴 값만을 갖지만, Go는 case문에 복잡한 표현을 가질 수 있다.</li>
+  <li>
+    <p><strong>No default fall through</strong></p>
+
+    <p>다른 언어의 case문은 break를 쓰지 않는 한 다음 case로 이동하지만, Go는 다음 case로 가지 않는다.</p>
+  </li>
+  <li>
+    <p><strong>type switch</strong></p>
+
+    <p>다른 언어의 switch는 일반적으로 변수의 값을 기준으로 case로 분기하지만, Go는 그 변수의 type에 따라 case로 분기할 수 있다.</p>
+  </li>
+</ul>
+:ET
