@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://changsikkwon.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://changsikkwon.github.io/" rel="alternate" type="text/html" /><updated>2021-02-25T12:52:35+09:00</updated><id>https://changsikkwon.github.io/feed.xml</id><title type="html">Changsik’s Blog</title><subtitle>An amazing website.</subtitle><author><name>권창식</name><email>kcs15987@gmail.com</email></author><entry><title type="html">Tree</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree/" rel="alternate" type="text/html" title="Tree" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree/">&lt;h1 id=&quot;tree&quot;&gt;Tree&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://changsikkwon.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://changsikkwon.github.io/" rel="alternate" type="text/html" /><updated>2021-02-25T12:53:20+09:00</updated><id>https://changsikkwon.github.io/feed.xml</id><title type="html">Changsik’s Blog</title><subtitle>An amazing website.</subtitle><author><name>권창식</name><email>kcs15987@gmail.com</email></author><entry><title type="html">Tree</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree/" rel="alternate" type="text/html" title="Tree" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/tree/">&lt;h1 id=&quot;tree&quot;&gt;Tree&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Tree는 일반적으로 대상 정보의 각 항목들을 계층적으로 연관되도록 구조화 시키고자 할 때 사용하는 비선형 자료구조이다.&lt;/li&gt;
@@ -90,62 +90,85 @@
 &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="자료구조" /><category term="Data Structure" /><category term="자료구조" /><category term="Data Structure" /><summary type="html">특징</summary></entry><entry><title type="html">Go Print</title><link href="https://changsikkwon.github.io/go/go-print/" rel="alternate" type="text/html" title="Go Print" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/go/go-print</id><content type="html" xml:base="https://changsikkwon.github.io/go/go-print/">&lt;p&gt;Go에서 표준출력 및 입력을 하기 위해선 fmt라는 패키지를 사용해야 한다. 기능에 따라 여러 print가 존재한다. 또한 데이터를 출력 및 받고자 할 때 데이터 타입에 따라 사용해야 하는 포맷이 다르기 때문에 확인을 하고 사용해야 합니다.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="자료구조" /><category term="Data Structure" /><category term="자료구조" /><category term="Data Structure" /><summary type="html">특징</summary></entry><entry><title type="html">Go 변수와 상수</title><link href="https://changsikkwon.github.io/go/go-variable/" rel="alternate" type="text/html" title="Go 변수와 상수" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/go/go-variable</id><content type="html" xml:base="https://changsikkwon.github.io/go/go-variable/">&lt;h2 id=&quot;변수&quot;&gt;변수&lt;/h2&gt;
 
-&lt;h2 id=&quot;fmtfprintos&quot;&gt;fmt.Fprint(OS)&lt;/h2&gt;
+&lt;p&gt;변수는 Go 키워드 var를 사용하여 선언한다. var 키워드 뒤에 변수명을 적고, 그 뒤에 변수 타입을 적는다.&lt;/p&gt;
 
-&lt;p&gt;print 앞에 F가 붙으면 파일 입출력에 해당한다. fprint는 파일에 쓰는 용도이다.&lt;/p&gt;
-
-&lt;h3 id=&quot;func-fprint-fprintf-fprintlin&quot;&gt;func Fprint, Fprintf, Fprintlin&lt;/h3&gt;
-
-&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Fprint&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Fprint가 여러번 호출되도 한 줄로 이어서 파일에 쓰임&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fprint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;파일&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;파일에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;쓰고자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;데이터&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;Fprintln&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Fprintln 여러번 호출될 때마다 마지막 줄에 줄넘김이 추가됨&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fprintln&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;파일&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;파일에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;쓰고자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;데이터&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;Fprintf&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Fprintf가 호출될 때마다 사용자가 추가한 구분자로 구분&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fprintf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;파일&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;파일에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;쓰고자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;데이터&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;fmtprint표준출력&quot;&gt;fmt.Print(표준출력)&lt;/h2&gt;
+&lt;p&gt;변수 선언문에서 변수 초기값을 할당할 수도 있다.&lt;/p&gt;
 
-&lt;p&gt;일반적으로 많이 사용하는 print에 대한 출력이다.&lt;/p&gt;
-
-&lt;h3 id=&quot;func-print-printf-println&quot;&gt;func Print, Printf, Println&lt;/h3&gt;
-
-&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Print&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Print가 여러번 호출되도 한 줄로 이어서 출력&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello world&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;Println&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Println가 여러번 호출되면 다음줄에 출력&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello world&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Printf가 호출될 때마다 사용자가 추가한 포맷에 해당하여 입력된 변수값을 출력&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;포맷&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;출력하고자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;데이터&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float32&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;11.0&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;fmtsprint&quot;&gt;fmt.Sprint&lt;/h2&gt;
+&lt;p&gt;일단 선언된 변수는 그 뒤의 문장에서 해당 타입의 값을 할당할 수 있다.&lt;/p&gt;
 
-&lt;p&gt;사용법은 fmt.Print와 같지만 해당 문법을 사용하면 표준 출력을 하진 않는다. 해당 문법을 사용하는 경우는 출력되는 값을 string 타입으로 return 할 때 사용한다.&lt;/p&gt;
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12.0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Sprint&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Sprint가 여러번 호출되도 한 줄로 이어서 출력&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sprint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;출력하고자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;데이터&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;p&gt;만약 선언된 변수가 Go 프로그램 내에서 사용되지 않는다면, 에러를 발생시킨다.&lt;/p&gt;
 
-&lt;span class=&quot;n&quot;&gt;Sprintln&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Sprintln가 여러번 호출되면 다음줄에 출력&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sprintln&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;출력하고자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;데이터&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;p&gt;동일한 타입의 변수가 여러개 있을 경우, 변수들을 나열하고 마지막에 타입을 한번만 지정할 수 있다.&lt;/p&gt;
 
-&lt;span class=&quot;n&quot;&gt;Sprintf&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// Sprintf가 호출될 때마다 사용자가 추가한 포맷에 해당하여 입력된 변수값을 string 타입으로 출력&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;포맷&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;출력하고자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;데이터&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="Go" /><category term="Go" /><summary type="html">Go에서 표준출력 및 입력을 하기 위해선 fmt라는 패키지를 사용해야 한다. 기능에 따라 여러 print가 존재한다. 또한 데이터를 출력 및 받고자 할 때 데이터 타입에 따라 사용해야 하는 포맷이 다르기 때문에 확인을 하고 사용해야 합니다.</summary></entry><entry><title type="html">Array</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/" rel="alternate" type="text/html" title="Array" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/">&lt;h2 id=&quot;특징&quot;&gt;특징&lt;/h2&gt;
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;마찬가지로 복수 변수들이 선언된 상황에서 초기값을 지정할 수 있다. 초기값은 순서대로 변수에 할당된다.&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;변수를 선언하면서 초기값을 지정하지 않으면, Go는 0을 기본적으로 할당한다.&lt;/p&gt;
+
+&lt;p&gt;숫자형에는 0, bool타입에는 false, string타입에는 ““(빈문자열)을 할당한다.&lt;/p&gt;
+
+&lt;p&gt;변수를 선언하는 또 다른 방식으로 Short Assignment Statement ( := ) 를 사용할 수 있다. var i =1을 쓰는 대신 i:=1 이라고 var를 생략하고 사용할 수 있다. 하지만 이러한 표현은 함수 내에서만 사용할 수 있고, 함수 밖에서는 var를 사용해야한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;상수&quot;&gt;상수&lt;/h2&gt;
+
+&lt;p&gt;상수는 Go 키워드 const를 사용하여 선언한다. const 키워드 뒤에 상수명을 적고, 그 뒤에 상수타입, 그리고 상수값을 할당한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello world&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Go에서는 할당되는 값을보고 그 타입을 추론하는 기능이 자주 사용된다. 위의 경우 타입 int, string을 생략하면 Go에서 자동으로 그 타입을 추론하게 된다.&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello world&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;여러 개의 상수들을 묶어서 지정할 수 있는데, 아래와 같이 괄호 안에 상수들을 나열하여 사용할 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;Hello&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello&quot;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;world&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;world&quot;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;Go&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Go&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;상수값을 0부터 순차적으로 부여하기 위해 iota라를 identifier를 사용할 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;iota&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;// 0&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;        &lt;span class=&quot;c&quot;&gt;// 1&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;        &lt;span class=&quot;c&quot;&gt;// 2&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;3-go-키워드&quot;&gt;3. Go 키워드&lt;/h2&gt;
+
+&lt;p&gt;Go 프로그래밍 언어는 다음과 같은 25개의 예약 키워드들을 갖는다. Go 키워드들은 변수명, 상수명, 함수명 등의 identifier로 사용할 수 없다.&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;      &lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;interface&lt;/span&gt;   &lt;span class=&quot;k&quot;&gt;select&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt;      &lt;span class=&quot;k&quot;&gt;defer&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;go&lt;/span&gt;       &lt;span class=&quot;k&quot;&gt;map&lt;/span&gt;         &lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;chan&lt;/span&gt;      &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;         &lt;span class=&quot;k&quot;&gt;goto&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;package&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;fallthrough&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;       &lt;span class=&quot;k&quot;&gt;range&lt;/span&gt;       &lt;span class=&quot;k&quot;&gt;type&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;          &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt;   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;      &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="Go" /><category term="Go" /><summary type="html">변수</summary></entry><entry><title type="html">Array</title><link href="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/" rel="alternate" type="text/html" title="Array" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array</id><content type="html" xml:base="https://changsikkwon.github.io/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/data%20structure/array/">&lt;h2 id=&quot;특징&quot;&gt;특징&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;가장 큰 특징은 순차적으로 데이터를 저장한다는 것이다.&lt;/li&gt;
@@ -191,56 +214,7 @@
 
 &lt;p&gt;즉 메모리를 추가 할당해야한다. 그리고 추가적으로 할당된 메모리 또한 순차적이어야 하기때문에 resizing은 오래걸리는 작업이다.&lt;/p&gt;
 
-&lt;p&gt;그렇기 때문에 Array는 사이즈 예측이 잘 안되는 데이터를 다루기에 적절치 않다.&lt;/p&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="자료구조" /><category term="Data Structure" /><category term="자료구조" /><category term="Data Structure" /><summary type="html">특징</summary></entry><entry><title type="html">Component의 Lifecycle</title><link href="https://changsikkwon.github.io/react/component-lifecycle/" rel="alternate" type="text/html" title="Component의 Lifecycle" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/react/component-lifecycle</id><content type="html" xml:base="https://changsikkwon.github.io/react/component-lifecycle/">&lt;p&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/secure.notion-static.com/847f6771-4a65-4f24-ab42-d5b41c252500/Untitled.png&quot; alt=&quot;https://s3-us-west-2.amazonaws.com/secure.notion-static.com/847f6771-4a65-4f24-ab42-d5b41c252500/Untitled.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;render&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;componentDidMount&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;componentDidUpdate&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;componentWillUnmount&lt;/code&gt; 등의 함수는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;React.Component&lt;/code&gt; class 에서 제공하는 메서드이다. 컴포넌트를 만들 때 class로 생성하면 위의 메서드를 사용할 수 있고, 컴포넌트가 lifecycle에 따라 각자의 메서드가 호출된다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Clock&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;nx&quot;&gt;componentDidMount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timerID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;nx&quot;&gt;componentWillUnmount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;clearInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timerID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;nx&quot;&gt;tick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Hello, world!&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;It is &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toLocaleTimeString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;.&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;ReactDOM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Clock&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ReactDOM.render()&lt;/code&gt; 에서 첫 인자로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;Clock /&amp;gt;&lt;/code&gt; 을 넘길 때, React는 Clock 컴포넌트의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;constructor&lt;/code&gt; 를 호출한다.&lt;/li&gt;
-  &lt;li&gt;Clock에서 초기 시간이 필요하므로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;this.state&lt;/code&gt; 에 현재 시간으로 초기화 한다.&lt;/li&gt;
-  &lt;li&gt;Clock 컴포넌트의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;render()&lt;/code&gt; 메서드가 호출된다.&lt;/li&gt;
-  &lt;li&gt;DOM에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;render()&lt;/code&gt; 의 return된 요소가 추가되면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;componentDidMount&lt;/code&gt; 함수가 호출된다.&lt;/li&gt;
-  &lt;li&gt;Clock 컴포넌트의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tick&lt;/code&gt; 메서드가 매 초 호출될 수 있도록 timer를 추가한다.&lt;/li&gt;
-  &lt;li&gt;매 초 브라우저가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tick&lt;/code&gt; 메서드를 호출하면서 &lt;a href=&quot;http://this.state.date&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;this.state.date&lt;/code&gt;&lt;/a&gt; 값이 변한다.&lt;/li&gt;
-  &lt;li&gt;state가 변경되면 원래 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;componentDidUpdate&lt;/code&gt; 함수가 호출되지만, 위에서 정의하지 않았으므로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;render()&lt;/code&gt; 가 다시 호출되면서 바뀐 부분이 변경된다.&lt;/li&gt;
-  &lt;li&gt;DOM에서 Clock 컴포넌트가 삭제될 때, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;componentWillUnmount&lt;/code&gt; 가 호출되고 timer도 같이 멈추게 된다.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="React" /><category term="React" /><summary type="html"></summary></entry><entry><title type="html">Component &amp;amp; Props</title><link href="https://changsikkwon.github.io/react/component-props/" rel="alternate" type="text/html" title="Component &amp;amp; Props" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/react/component-props</id><content type="html" xml:base="https://changsikkwon.github.io/react/component-props/">&lt;h2 id=&quot;component&quot;&gt;Component&lt;/h2&gt;
+&lt;p&gt;그렇기 때문에 Array는 사이즈 예측이 잘 안되는 데이터를 다루기에 적절치 않다.&lt;/p&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="자료구조" /><category term="Data Structure" /><category term="자료구조" /><category term="Data Structure" /><summary type="html">특징</summary></entry><entry><title type="html">Component &amp;amp; Props</title><link href="https://changsikkwon.github.io/react/component-props/" rel="alternate" type="text/html" title="Component &amp;amp; Props" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/react/component-props</id><content type="html" xml:base="https://changsikkwon.github.io/react/component-props/">&lt;h2 id=&quot;component&quot;&gt;Component&lt;/h2&gt;
 
 &lt;p&gt;Component란 재사용 가능한 UI 단위이다.&lt;/p&gt;
 
@@ -691,4 +665,64 @@
 
     &lt;p&gt;다른 언어의 switch는 일반적으로 변수의 값을 기준으로 case로 분기하지만, Go는 그 변수의 type에 따라 case로 분기할 수 있다.&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="Go" /><category term="Go" /><summary type="html">if 문</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="Go" /><category term="Go" /><summary type="html">if 문</summary></entry><entry><title type="html">Go Data type</title><link href="https://changsikkwon.github.io/go/go-operator/" rel="alternate" type="text/html" title="Go Data type" /><published>2021-02-25T00:00:00+09:00</published><updated>2021-02-25T00:00:00+09:00</updated><id>https://changsikkwon.github.io/go/go-operator</id><content type="html" xml:base="https://changsikkwon.github.io/go/go-operator/">&lt;h2 id=&quot;데이터-타입&quot;&gt;데이터 타입&lt;/h2&gt;
+
+&lt;p&gt;Go 프로그래밍 언어는 다음과 같은 기본적인 데이터 타입들을 갖고 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.notion.so/6d4d011314f1495c9d10975d08cfa5f3&quot;&gt;제목 없음&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;문자열&quot;&gt;문자열&lt;/h2&gt;
+
+&lt;p&gt;문자열 리터럴은 Back Quote(``) 혹은 이중인용부호(“ “)를 사용하여 표현할 수 있다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Back Quote로 둘러싸인 문자열은 Raw String Literal이라고 부르는데, 이 안에 있는 문자열은 별도로 해석되지 않고 Raw string 그대로의 값을 갖는다.&lt;/li&gt;
+  &lt;li&gt;이중인용부호로 둘러싸인 문자열은 Interpreted String Literal이라 부르는데, 복수 라인에 걸쳐 쓸수 없으며, 인용부호 안의 escape 문자열들은 특별한 의미로 해석된다. 예를 들어, 문자열 안에 \n 이 있을 경우 이는 NewLine으로 해석된다. 이중인용부호를 이용해 문자열을 여러 라인에 걸쳐 쓰기 위해서는 + 연산자를 이용해 결합하여 사용한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;fmt&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;c&quot;&gt;// Raw String Literal. 복수라인.&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;rawLiteral&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;`hello wolrd\n
+hello wolrd\n
+	hello wolrd`&lt;/span&gt;
+
+		&lt;span class=&quot;n&quot;&gt;interLiteral&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;hello world&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;hello wolrd&quot;&lt;/span&gt;
+	&lt;span class=&quot;c&quot;&gt;// or interLiteral := &quot;hello world\n&quot; +&lt;/span&gt;
+	&lt;span class=&quot;c&quot;&gt;//										&quot;hello wolrd&quot;&lt;/span&gt;
+
+		&lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rawLiteral&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;interLiteral&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+	&lt;span class=&quot;c&quot;&gt;// 출력&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;world&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;world&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;world&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;world&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;world&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;데이터-타입-변환&quot;&gt;데이터 타입 변환&lt;/h2&gt;
+
+&lt;p&gt;하나의 데이타 타입에서 다른 데이타 타입으로 변환하기 위해서는 T(v) 와 같이 표현하고 이를 Type Conversion이라 부르는데, 여기서 T는 변환하고자 하는 타입을 표시하고, v는 변환될 값(value)을 지정한 것이다. 예를 들어, 정수 100을 float로 변경하기 위하여 float32(100) 처럼 표현하고, 문자열을 바이트배열로 변경하기 위하여 []byte(“ABC”) 처럼 표현할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;주의할 점은 Go에서 타입간 변환은 명시적으로 지정해 주어야 한다는 점인데, 예를 들어 정수형 int에서 uint로 변환할 때, 암묵적(implicit) 변환이 일어나지 않으므로 uint(i) 처럼 반드시 변환을 지정해 주어야 한다. 만약 명시적 지정이 없이 변환이 일어나면 런타임 에러가 발생한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float32&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ABC&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;bytes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;str2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>권창식</name><email>kcs15987@gmail.com</email></author><category term="Go" /><category term="Go" /><summary type="html">데이터 타입</summary></entry></feed>

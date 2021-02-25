@@ -1,0 +1,150 @@
+I"�2<h2 id="routing">Routing</h2>
+
+<ul>
+  <li>Routing이란 다른 경로(url 주소)에 따라 다른 View를 보여주는 것이다.</li>
+  <li>React 자체에는 이러한 기능이 내장되어 있지 않다.</li>
+</ul>
+
+<h3 id="react가-framework가-아닌-library로-분류되는-이유">React가 framework가 아닌 library로 분류되는 이유</h3>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/202f43c3-298e-4264-9441-101e2c023a43/Untitled.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/202f43c3-298e-4264-9441-101e2c023a43/Untitled.png" /></p>
+
+<h2 id="react-router">React Router</h2>
+
+<p>CRA(Create React App)에 특별히 routing을 위한 로직이 들어있지 않기 때문에, 가장 인기있는 <code class="language-plaintext highlighter-rouge">react-router</code> 를 추가하여 routing을 구현하겠다.</p>
+
+<h3 id="react-router-설치">react-router 설치</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">react</span><span class="o">-</span><span class="nx">router</span><span class="o">-</span><span class="nx">dom</span> <span class="o">--</span><span class="nx">save</span>
+</code></pre></div></div>
+
+<h3 id="routes-컴포넌트-구현하기">Routes 컴포넌트 구현하기</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">BrowserRouter</span> <span class="k">as</span> <span class="nx">Router</span><span class="p">,</span> <span class="nx">Switch</span><span class="p">,</span> <span class="nx">Route</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="nx">Login</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./pages/Login/Login</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Signup</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./pages/Signup/Signup</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Main</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./pages/Main/Main</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nx">Routes</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nc">Router</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nc">Switch</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">exact</span> <span class="na">path</span><span class="p">=</span><span class="s">"/"</span> <span class="na">component</span><span class="p">=</span><span class="si">{</span><span class="nx">Login</span><span class="si">}</span> <span class="p">/&gt;</span>
+                    <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">exact</span> <span class="na">paht</span><span class="p">=</span><span class="s">"/signup"</span> <span class="na">component</span><span class="p">=</span><span class="si">{</span><span class="nx">Signup</span><span class="si">}</span> <span class="p">/&gt;</span>
+                    <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">exact</span> <span class="na">path</span><span class="p">=</span><span class="s">"/main"</span> <span class="na">component</span><span class="p">=</span><span class="si">{</span><span class="nx">Main</span><span class="si">}</span> <span class="p">/&gt;</span>
+                <span class="p">&lt;/</span><span class="nc">Switch</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nc">Router</span><span class="p">&gt;</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Routes</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="indexjs">index.js</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(&lt;</span><span class="nc">Routes</span> <span class="p">/&gt;,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementByID</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">));</span>
+</code></pre></div></div>
+
+<h2 id="route-이동하기">Route 이동하기</h2>
+
+<p>Route 이동하는 방법은 두 가지가 있다.</p>
+
+<ol>
+  <li>
+    <link />
+    <p>컴포넌트 사용</p>
+  </li>
+  <li>withRouterHOC로 구현</li>
+</ol>
+
+<h3 id="-컴포넌트-사용-방법"><link /> 컴포넌트 사용 방법</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Link</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nx">Login</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nc">Link</span> <span class="na">to</span><span class="p">=</span><span class="s">"/signup"</span><span class="p">&gt;</span>회원가입<span class="p">&lt;/</span><span class="nc">Link</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Login</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Route.js</code> 에서 설정한 path로 이동하는 첫 번째 방법은 <code class="language-plaintext highlighter-rouge">&lt;Link&gt;</code> 컴포넌트를 사용하는 방법이다.</li>
+  <li><code class="language-plaintext highlighter-rouge">react-router-dom</code> 에서 제공하는 <code class="language-plaintext highlighter-rouge">&lt;Link&gt;</code> 컴포넌트는 DOM에서 <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> 태그로 변환된다.</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> 태그와 마찬가지로 <code class="language-plaintext highlighter-rouge">&lt;Link&gt;</code> 태그도 지정한 경로로 바로 이동 시켜주는 기능을 한다.</li>
+  <li>cf) <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> vs <code class="language-plaintext highlighter-rouge">&lt;Link&gt;</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> : 외부 사이트로 이동하는 경우</li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;Link&gt;</code> : 프로젝트 내에서 페이지 전환하는 경우</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="withrouterhoc로-구현-방법">withRouterHoc로 구현 방법</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">withRouter</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nx">Login</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+    <span class="nx">goToMain</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">'</span><span class="s1">/signup</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">};</span>
+
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">className</span><span class="p">=</span><span class="s">"loginBtn"</span> <span class="na">onClick</span><span class="p">=</span><span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">goToMain</span><span class="si">}</span><span class="p">&gt;</span>
+                    로그인
+                <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">withRouter</span><span class="p">(</span><span class="nx">Login</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;Link /&gt;</code> 를 사용하지 않고 요소에 <code class="language-plaintext highlighter-rouge">onClick</code> 이벤트를 통해 페이지를 이동하는 방법도 있다.</li>
+  <li><code class="language-plaintext highlighter-rouge">goToMain</code> 이라는 event handler에서 구현한 것 처럼 props 객체의 history에 접근해서 이동할 수 있다.</li>
+  <li>받은 history의 <code class="language-plaintext highlighter-rouge">push</code> 메서더의 인자로 <code class="language-plaintext highlighter-rouge">Routes.js</code> 에서 설정한 path를 넘겨주면, 해당 route로 이동할 수 있다.</li>
+  <li>이 컴포넌트에서 props에 route 정보를 받으려면 <code class="language-plaintext highlighter-rouge">export</code>하는 컴포넌트에 <code class="language-plaintext highlighter-rouge">withRouter</code>로 감싸주어야 한다.</li>
+  <li>이렇게 <code class="language-plaintext highlighter-rouge">withRouter</code> 와 같이 해당 컴포넌트를 감싸주는 것을 <strong>HOC(Higher Order Component)</strong> 라고 한다.</li>
+</ul>
+
+<h3 id="두-방법의-활용법">두 방법의 활용법</h3>
+
+<ol>
+  <li><strong><link /></strong>
+    <ul>
+      <li>클릭 시 바로 이동하는 로직 구현 시에 사용한다.</li>
+      <li>ex) Nav Bar, Aside Menu, item list 페이지에서 item 클릭시 &gt; 상세 페이지로 이동</li>
+    </ul>
+  </li>
+  <li><strong>withRouterHOC</strong>
+    <ul>
+      <li>페이지 전환 시 추가로 처리해야 하는 로직이 있는 경우 withRouterHOC 방법으로 구현한다.</li>
+      <li>ex)
+        <ul>
+          <li>Backend API로 데이터 전송</li>
+          <li>User Data 인증/인가</li>
+          <li>response message</li>
+          <li>Case 1 : 회원 가입되어 있는 사용자 &gt; 메인 페이지로 이동</li>
+          <li>Case 2 : 회원 가입이 되어 있지 않은 사용자 &gt; Signup 페이지로 이동</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+:ET
