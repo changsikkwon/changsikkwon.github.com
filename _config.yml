@@ -20,7 +20,7 @@ title                    : "Changsik's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "권창식"
-description              : "An amazing website."
+description              : "Changsik's Blog"
 url                      : "https://changsikkwon.github.io"
 # baseurl                  : "https://changsikkwon.github.io"
 repository               : "changsikkwon/changsikkwon.github.com"
@@ -96,7 +96,7 @@ analytics:
 author:
   name             : "권창식"
   avatar           : "https://gigazine.kr/data/editor/1803/2fcff996628470bf3ef7e3fe40202ba5_1521093171_407.jpg"
-  bio              : "개발 꿈나무"
+  bio              : "무럭무럭 자라는 중"
   location         : "Republic of Korea"
   email            : "kcs15987@gmail.com"
   links:
