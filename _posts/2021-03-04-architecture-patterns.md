@@ -39,11 +39,13 @@ tag:
 -   서로 마주보는 두 개의 계층 사이에서만 상호작용이 이루어지며, 변경 사항을 적용할 때도 서로 마주보는 두 개의 계층에만 영향을 미치므로 변경 작업이 용이합니다.
   
 -   특정 계층만을 교체해 시스템을 개선하는 것이 가능합니다.  
-    <br/><center>
+<br>
+<center>
 
-    ![layers pattern](https://media.vlpt.us/images/taeha7b/post/9a8d2d18-1ffb-4da0-b19f-88774e1533c9/layerd.png) 
+![layers pattern](https://media.vlpt.us/images/taeha7b/post/9a8d2d18-1ffb-4da0-b19f-88774e1533c9/layerd.png) 
+</center>
 
-<br/>
+<br>
 
 ## 클라이언트-서버 패턴(Client-Server Pattern)
 
@@ -54,11 +56,11 @@ tag:
 -   서버는 클라이언트의 요청에 대비해 항상 대기 상태를 유지해야 합니다.
   
 -   클라이언트나 서버는 요청과 응답을 받기 위해 동기화되는 경우를 제외하고는 서로 독립적입니다.
-    <br/><center>
-    
-    ![client-server pattern](https://mingrammer.com/images/2017-09-10-client-server-pattern.png)
+<br>
+<center>
 
-<br/>
+![client-server pattern](https://mingrammer.com/images/2017-09-10-client-server-pattern.png)
+</center>
 
 ## 파이프-필터 패턴(Pipe-Filter Pattern)
 
@@ -69,13 +71,11 @@ tag:
 -   필터 컴포넌트들을 재배치하여 다양한 파이프라인을 구축하는 것이 가능합니다.
 
 -   파이프-필터 패턴은 데이터 변환, 버퍼링, 동기화 등에 주로 사용됩니다.  
-    <br/><center>
-
-    ![pipe-filter pattern](https://mingrammer.com/images/2017-09-10-pipe-filter-pattern.png)
-
-  
 <br>
+<center>
 
+![pipe-filter pattern](https://mingrammer.com/images/2017-09-10-pipe-filter-pattern.png)
+</center>
 
 ## 모델-뷰-컨트롤러 패턴(Model-View-Controller Pattern)
 
@@ -90,6 +90,8 @@ tag:
 -   각 부분은 별도의 컴포넌트로 분리되어 있으므로 서로 영향을 받지 않고 개발 작업을 수행할 수 있습니다.
   
 -   여러 개의 뷰를 만들 수 있으므로 한 개의 모델에 대해 여러 개의 뷰를 필요로 하는 대화형 애플리케이션에 적합합니다.
-    <br/><center>
+<br>
+<center>
 
-    ![mvc pattern](https://mingrammer.com/images/2017-09-10-model-view-controller-pattern.png)
+![mvc pattern](https://mingrammer.com/images/2017-09-10-model-view-controller-pattern.png)
+</center>
