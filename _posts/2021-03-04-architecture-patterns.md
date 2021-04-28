@@ -10,7 +10,7 @@ tag:
 
 아키텍처 패턴은 아키텍처를 설계할 때 참조할 수 있는 전형적인 해결 방식 또는 예제를 의미합니다.
 
--   아키텍쳐 패턴은 소프트웨어 시스템의 구조를 구성하기 위한 기본적인 윤곽을 제시합니다.
+-   아키텍처 패턴은 소프트웨어 시스템의 구조를 구성하기 위한 기본적인 윤곽을 제시합니다.
   
 -   아키텍처 패턴에는 서브시스템들과 그 역할이 정의되어 있으며, 서브시스템 사이의 관계와 여러 규칙, 지침 등이 포함되어 있습니다.
      
@@ -31,7 +31,6 @@ tag:
 <br/>
 
 ## 레이어 패턴(Layers Pattern)
----
 
 레이어 패턴은 시스템을 계층으로 구분하여 구성하는 고전적인 방법 중의 하나입니다.
 
@@ -40,15 +39,14 @@ tag:
 -   서로 마주보는 두 개의 계층 사이에서만 상호작용이 이루어지며, 변경 사항을 적용할 때도 서로 마주보는 두 개의 계층에만 영향을 미치므로 변경 작업이 용이합니다.
   
 -   특정 계층만을 교체해 시스템을 개선하는 것이 가능합니다.  
-    <br/>
-    <center>
-
-    ![layers pattern](https://media.vlpt.us/images/taeha7b/post/9a8d2d18-1ffb-4da0-b19f-88774e1533c9/layerd.png)
   
+    <br/><center>
+
+    ![layers pattern](https://media.vlpt.us/images/taeha7b/post/9a8d2d18-1ffb-4da0-b19f-88774e1533c9/layerd.png) 
+
 <br/>
 
 ## 클라이언트-서버 패턴(Client-Server Pattern)
----
 
 클라이언트-서버 패턴은 하나의 서버 컴포넌트와 다수의 클라이언트 컴포넌트로 구성되는 패턴입니다.
 
@@ -58,9 +56,7 @@ tag:
   
 -   클라이언트나 서버는 요청과 응답을 받기 위해 동기화되는 경우를 제외하고는 서로 독립적입니다.
   
-    <br/>
-    <center>
-
+    <br/><center>
     ![client-server pattern](https://mingrammer.com/images/2017-09-10-client-server-pattern.png)
 
 <br/>
@@ -75,8 +71,7 @@ tag:
 
 -   파이프-필터 패턴은 데이터 변환, 버퍼링, 동기화 등에 주로 사용됩니다.  
   
-    <br/>
-    <center>
+    <br/><center>
 
     ![pipe-filter pattern](https://mingrammer.com/images/2017-09-10-pipe-filter-pattern.png)
 
@@ -97,7 +92,7 @@ tag:
 -   각 부분은 별도의 컴포넌트로 분리되어 있으므로 서로 영향을 받지 않고 개발 작업을 수행할 수 있습니다.
   
 -   여러 개의 뷰를 만들 수 있으므로 한 개의 모델에 대해 여러 개의 뷰를 필요로 하는 대화형 애플리케이션에 적합합니다.
+  
+    <br/><center>
 
-<br/><center>
-
-![mvc pattern](https://mingrammer.com/images/2017-09-10-model-view-controller-pattern.png)
+    ![mvc pattern](https://mingrammer.com/images/2017-09-10-model-view-controller-pattern.png)
