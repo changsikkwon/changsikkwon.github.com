@@ -42,7 +42,7 @@ tag:
     <br><center>
 
     ![layers pattern](https://media.vlpt.us/images/taeha7b/post/9a8d2d18-1ffb-4da0-b19f-88774e1533c9/layerd.png) 
-    </center>
+
 
 <br>
 
@@ -58,7 +58,7 @@ tag:
     <br><center>
 
     ![client-server pattern](https://mingrammer.com/images/2017-09-10-client-server-pattern.png)
-    </center>
+
 
 ## 파이프-필터 패턴(Pipe-Filter Pattern)
 
@@ -72,7 +72,7 @@ tag:
     <br><center>
 
     ![pipe-filter pattern](https://mingrammer.com/images/2017-09-10-pipe-filter-pattern.png)
-    </center>
+
 
 ## 모델-뷰-컨트롤러 패턴(Model-View-Controller Pattern)
 
@@ -90,4 +90,3 @@ tag:
     <br><center>
 
     ![mvc pattern](https://mingrammer.com/images/2017-09-10-model-view-controller-pattern.png)
-    </center>
